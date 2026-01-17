@@ -20,9 +20,9 @@ Recently switched to NixOS for my server as it automates a lot of things I would
 
 ## SSH Configuration
 - **Port:** 2222 
-- **Authentication:** Password and Keyboard-Interactive authentication disabled; Public Key authentication required
+- **Authentication:** Password and Keyboard-Interactive authentication disabled, public Key authentication required
 - **Authorized Keys:** Public key configured for user tanvir to allow secure, key-based remote access
-- **Root Access:** Root login via SSH is strictly prohibited
+- **Root Access:** Root login via ssh is strictly prohibited
 
 
 ## Automation and Maintenance
