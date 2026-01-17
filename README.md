@@ -36,9 +36,9 @@ Recently switched to NixOS for my server as it automates a lot of things I would
 - **Packages:** Includes git, wget, rsync, mosh, btop, fzf, and pfetch-rs
 - **Editor:** Vim enabled as the default system editor
 - **Shell Aliases:**
-`nix-switch`: Rebuild and apply system configuration
-`nix-conf`: Edit configuration file with sudo privileges
-`nix-clean`: Manually trigger garbage collection
+	- `nix-switch`: Rebuild and apply system configuration
+	- `nix-conf`: Edit configuration file with sudo privileges 
+	- `nix-clean`: Manually trigger garbage collection
 
 ## Firewall
 - **Status:** Enabled with open TCP ports for 80, 443, 2222 (SSH), and 4533 (Navidrome)
