@@ -3,7 +3,7 @@ Recently switched to NixOS for my server as it automates a lot of things I would
 
 ## System Overview
 - **Hostname:** nixos
-- **Primary User:** tanvir (added to wheel and networkmanager groups) 
+- **User:** tanvir (added user to wheel and networkmanager groups) 
  - **bootloader:** GRUB bootloader installed on /dev/sda
  - **State Version:** 25.11 
  - **Timezone:** Asia/Dhaka 
@@ -11,18 +11,18 @@ Recently switched to NixOS for my server as it automates a lot of things I would
 
 ## Hardware and Services
 
-- **Music Streaming:** Navidrome active on port 4533, serving music from /mnt/Files/Music
+- **Music Streaming:** Navidrome active on port 4533, grabbing music from /mnt/Files/Music
 - **Network:** Tailscale enabled with firewall support for the tailscale0 interface.
 - **Storage:** NTFS partition (UUID: 01D858C886F164A0) mounted at /mnt/Files with systemd automount
-- **Power Management:** Laptop lid switch set to ignore (stay awake) and lock on external power
+- **Power Management:** Laptop lid switch set to ignore to keep it awake and lock on external power
 - **CPU:** Intel microcode updates enabled for security and auto-cpufreq for optimization
 
 
 ## SSH Configuration
 - **Port:** 2222 
-- **Authentication:** Password and Keyboard-Interactive authentication disabled; Public Key authentication required
+- **Authentication:** Password and Keyboard-Interactive authentication disabled, public Key authentication required
 - **Authorized Keys:** Public key configured for user tanvir to allow secure, key-based remote access
-- **Root Access:** Root login via SSH is strictly prohibited
+- **Root Access:** Root login via ssh is strictly prohibited
 
 
 ## Automation and Maintenance
@@ -33,7 +33,7 @@ Recently switched to NixOS for my server as it automates a lot of things I would
 
 
 ## Environment and Shell
-- **Packages:** Includes git, wget, rsync, mosh, btop, fzf, and pfetch-rs
+- **Packages:** Includes basic things like git, wget, rsync, mosh, btop, fzf, and pfetch-rs
 - **Editor:** Vim enabled as the default system editor
 
 - **Shell Aliases:**
