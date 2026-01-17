@@ -4,7 +4,7 @@ Recently switched to NixOS for my server as it automates a lot of things I would
 ## System Overview
 - **Hostname:** nixos
 - **Primary User:** tanvir (added to wheel and networkmanager groups) 
- - **bootloader:** GRUB bootloader installed on /dev/sda
+ - **Bootloader:** GRUB bootloader installed on /dev/sda
  - **State Version:** 25.11 
  - **Timezone:** Asia/Dhaka 
 
@@ -20,7 +20,7 @@ Recently switched to NixOS for my server as it automates a lot of things I would
 
 ## SSH Configuration
 - **Port:** 2222 
-- **Authentication:** Password and Keyboard-Interactive authentication disabled, public Key authentication required
+- **Authentication:** Password and Keyboard-Interactive authentication disabled, public key authentication required
 - **Authorized Keys:** Public key configured for user tanvir to allow secure, key-based remote access
 - **Root Access:** Root login via ssh is strictly prohibited
 
