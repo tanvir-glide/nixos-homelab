@@ -1,5 +1,5 @@
 # NixOS Configuration
-Recently switched to NixOS for my server as it automates a lot of things I would have to rather change manually. It is even better than ansible in my opinion.
+Recently switched to NixOS for my server as it automates a lot of things I would have to rather change manually. It is even better than ansible in my opinion. The whole thing is very similar to what I did on Minimal-server-setup, aside from the whole music streaming thing.
 
 ## System Overview
 - **Hostname:** nixos
