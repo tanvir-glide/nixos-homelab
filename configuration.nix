@@ -88,6 +88,7 @@
   mosh
   tailscale
   auto-cpufreq
+  docker-compose
   ];
 
   # Enabling vim to be default EDITOR
@@ -110,7 +111,7 @@
     ports = [ 2222 ];
     settings = {
       PermitRootLogin = "no";
-      PasswordAuthentication = false;
+      PasswordAuthentication = true;
       PubkeyAuthentication = "yes";
       KbdInteractiveAuthentication = false;
    };
@@ -141,6 +142,15 @@
     checkReversePath = "loose";
     trustedInterfaces = [ "tailscale0" ];
   };
+  
+  # Enable docker 
+  virtualisation.docker = {
+  enable = true;
+  rootless = {
+    enable = true;
+    setSocketVariable = true;
+    };
+  };  
 
   # Enable tailscale daemon
   services.tailscale.enable = true;
