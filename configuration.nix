@@ -65,7 +65,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEGi19HiyLBNK9BZT++d7c0pTv0wSDicgUmKgw+CqlYq mac -> nixOSssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEGi19HiyLBNK9BZT++d7c0pTv0wSDicgUmKgw+CqlYq mac -> nixOS"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFU9j1i/3KN3QX+AwM1eaiNbS4+ALPZyR/tvLYj95gY/ mac -> nix"
     ];
 
     packages = with pkgs; [
