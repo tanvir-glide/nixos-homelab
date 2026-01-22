@@ -152,17 +152,6 @@
     options = [ "defaults" "uid=1000" "gid=1000" "umask=022" "nofail" "noauto" "force" "x-systemd.automount" ];
   };
 
-  # Settings up navidrome
-  services.navidrome = {
-  enable = true;
-  settings = {
-    Address = "0.0.0.0";
-    Port = 4533;
-    MusicFolder = "/mnt/Files/Music"; # Ensure this exact path exists on your NTFS drive
-   };
-  };
-
-
   # Enabling Zram 
   zramSwap.enable = true;
 
