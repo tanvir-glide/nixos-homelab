@@ -11,7 +11,7 @@ Recently switched to NixOS for my server as it automates a lot of things I would
 
 ## Hardware and Services
 
-- **Music Streaming:** Navidrome active on port 4533, serving music from /mnt/Files/Music
+- **Music Streaming:** Navidrome active on port 4533 via docker, serving music from /mnt/Files/Music
 - **Network:** Tailscale enabled with firewall support for the tailscale0 interface.
 - **Storage:** NTFS partition (UUID: 01D858C886F164A0) mounted at /mnt/Files with systemd automount
 - **Power Management:** Laptop lid switch set to ignore (stay awake) and lock on external power
