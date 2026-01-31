@@ -1,0 +1,12 @@
+services:
+  dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro  # Read-only access to logs
+    ports:
+      - 8888:8080
+    environment:
+      - DOZZLE_LEVEL=info
+      - DOZZLE_TAILSIZE=300  # Only show last 300 lines by default to save RAM
+    restart: unless-stopped

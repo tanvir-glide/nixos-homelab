@@ -1,0 +1,18 @@
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    network_mode: "host"
+    environment:
+      - PUID=1000 # Run 'id -u' to check your ID
+      - PGID=1000 # Run 'id -g' to check your Group ID
+      - TZ=Etc/UTC
+      - WEBUI_PORT=8080
+    volumes:
+      - ./config:/config
+      - /mnt/Files/Torrent:/downloads # Change this to your actual hard drive path
+    ports:
+      - 8080:8080
+      - 6881:6881
+      - 6881:6881/udp
+    restart: unless-stopped

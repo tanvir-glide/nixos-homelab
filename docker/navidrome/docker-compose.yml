@@ -11,6 +11,9 @@ services:
       ND_SESSIONTIMEOUT: 24h
       ND_BASEURL: ""
       ND_IMAGECACHESIZE: "500MB"
+      ND_LASTFM_ENABLED: "true"
+      ND_LASTFM_APIKEY: "da4e6e71bc0b9284b2477e138a10ae65"
+      ND_LASTFM_SECRET: "d87581db7df6a4e502771aa91506a1f0"
     volumes:
       - "./data:/data"
       - "/mnt/Files/Music:/music:ro"

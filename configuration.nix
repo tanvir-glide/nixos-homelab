@@ -33,6 +33,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.nameservers = [ "8.8.8.8" "1.1.1.1" ];
+
 
   # Set your time zone.
   time.timeZone = "Asia/Dhaka";
@@ -111,7 +113,7 @@
     ports = [ 2222 ];
     settings = {
       PermitRootLogin = "no";
-      PasswordAuthentication = true;
+      PasswordAuthentication = false;
       PubkeyAuthentication = "yes";
       KbdInteractiveAuthentication = false;
    };
@@ -138,7 +140,8 @@
   # Enable firewall with necessary ports
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 80 443 2222 4533 ];
+    allowedTCPPorts = [ 80 443 2222 4533 5030 50300 ];
+    allowedUDPPorts = [ 50300 ];
     checkReversePath = "loose";
     trustedInterfaces = [ "tailscale0" ];
   };
@@ -154,6 +157,7 @@
 
   # Enable tailscale daemon
   services.tailscale.enable = true;
+  services.tailscale.extraUpFlags = [ "--accept-dns=false" ];
 
   # Mounting my other ntfs drives
   fileSystems."/mnt/Files" = {

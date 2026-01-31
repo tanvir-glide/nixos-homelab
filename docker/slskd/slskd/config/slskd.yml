@@ -1,0 +1,11 @@
+soulseek:
+  username: "YourSoulseekUsername"
+  password: "YourSoulseekPassword"
+
+directories:
+  downloads: /music
+  incomplete: /music/.incomplete
+
+shares:
+  directories:
+    - /music
