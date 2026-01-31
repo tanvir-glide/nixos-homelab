@@ -149,6 +149,17 @@
     trustedInterfaces = [ "tailscale0" ];
   };
 
+  # Fail2Ban to automatically ban sus IPs
+  services.fail2ban = {
+    enable = true;
+    # Bans the IP for 1 hour after 5 failed attempts
+    maxretry = 5;
+    ignoreIP = [
+      "127.0.0.1/8"
+      "100.64.0.0/10" # This ignores your Tailscale network so you don't ban yourself!
+    ];
+  };
+
   # Enable docker
   virtualisation.docker = {
   enable = true;
@@ -170,7 +181,11 @@
   };
 
   # Enabling Zram
-  zramSwap.enable = true;
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 50;
+  };
 
   # Settings up garbage collector
   nix.gc = {
