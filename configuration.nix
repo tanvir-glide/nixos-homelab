@@ -9,8 +9,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-  
-  # Making sure closing the laptop lid doesn't put it to sleep 
+
+  # Making sure closing the laptop lid doesn't put it to sleep
   services.logind.settings = {
     Login = {
       HandleLidSwitch = "ignore";
@@ -18,7 +18,7 @@
       HandleLidSwitchDocked = "ignore";
     };
   };
-  
+
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
@@ -65,9 +65,9 @@
     isNormalUser = true;
     description = "Tanvir";
     extraGroups = [ "networkmanager" "wheel" ];
-    
+
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFU9j1i/3KN3QX+AwM1eaiNbS4+ALPZyR/tvLYj95gY/ mac -> nix"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB6KaudWVwILSHjzNOCF3RDH27uiJOTlRXzkpVbeHvAf mac -> hp"
     ];
 
     packages = with pkgs; [
@@ -145,15 +145,15 @@
     checkReversePath = "loose";
     trustedInterfaces = [ "tailscale0" ];
   };
-  
-  # Enable docker 
+
+  # Enable docker
   virtualisation.docker = {
   enable = true;
   rootless = {
     enable = true;
     setSocketVariable = true;
     };
-  };  
+  };
 
   # Enable tailscale daemon
   services.tailscale.enable = true;
@@ -166,7 +166,7 @@
     options = [ "defaults" "uid=1000" "gid=1000" "umask=022" "nofail" "noauto" "force" "x-systemd.automount" ];
   };
 
-  # Enabling Zram 
+  # Enabling Zram
   zramSwap.enable = true;
 
   # Settings up garbage collector
