@@ -64,7 +64,7 @@
   users.users.tanvir = {
     isNormalUser = true;
     description = "Tanvir";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
 
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB6KaudWVwILSHjzNOCF3RDH27uiJOTlRXzkpVbeHvAf mac -> hp"
@@ -138,10 +138,13 @@
   #networking.firewall.enable=false
 
   # Enable firewall with necessary ports
+  # 4533 - Navidrome
+  # 5030, 50300 - s1skd
+  # 6881 = qbittorrent
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 80 443 2222 4533 5030 50300 ];
-    allowedUDPPorts = [ 50300 ];
+    allowedTCPPorts = [ 80 443 2222 4533 5030 50300 8080 6881 ];
+    allowedUDPPorts = [ 50300 6881 ];
     checkReversePath = "loose";
     trustedInterfaces = [ "tailscale0" ];
   };
@@ -182,7 +185,7 @@
   system.autoUpgrade = {
     enable = true;
     allowReboot = false;
-    dates = "04:00";
+    dates = "Fri 04:00";
   };
 
   # This value determines the NixOS release from which the default
