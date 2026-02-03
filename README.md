@@ -29,7 +29,7 @@ Recently switched to NixOS for my server as it automates a lot of things I would
 ---
 
 ## Automation and Maintenance
-- **System Upgrades:** Automated upgrades scheduled daily at 4 AM
+- **System Upgrades:** Automated upgrades scheduled weekly on Friday at 4 AM
 - **Garbage Collection:** Weekly automated cleanup of system generations older than 7 days
 - **Optimization:** Automatic Nix store optimization enabled to save disk space.
 - **Memory:** Zram swap enabled for improved memory efficiency
