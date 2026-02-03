@@ -173,7 +173,7 @@
   fileSystems."/mnt/Files" = {
     device = "/dev/disk/by-uuid/01D858C886F164A0";
     fsType = "ntfs3";
-    options = [ "defaults" "uid=1000" "gid=1000" "umask=022" "nofail" "noauto" "force" "x-systemd.automount" ];
+    options = [ "defaults" "uid=1000" "gid=1000" "umask=022" "nofail" "force" "x-systemd.automount" ];
   };
 
   # Enabling Zram
