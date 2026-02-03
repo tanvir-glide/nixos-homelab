@@ -70,5 +70,14 @@ A web-based client for the Soulseek file-sharing network.
 - **Downloads Path:** `/mnt/Files/Music` (Read/Write)
 - **Configuration:** - Enabled remote configuration for easy management.
 
+### qBittorrent
+A lightweight BitTorrent client with a Web User Interface.
+- **WEB UI Port:** `8080`
+- Default Credentials
+    - username: admin
+    - password: run `docker logs qbittorrent` in the terminal to find the temporary password.
+
+- **Download Path:** `/mnt/Files/Torrent`
+
 ---
 **Note:** Both services are configured to use `/mnt/Files/Music` as the central music library, allowing `slskd` to download new tracks directly into the directory.
