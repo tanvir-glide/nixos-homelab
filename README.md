@@ -73,7 +73,7 @@ A web-based client for the Soulseek file-sharing network.
 ### qBittorrent
 A lightweight BitTorrent client with a Web User Interface.
 - **WEB UI Port:** `8080`
-- Default Credentials
+- **Default Credentials**
     - username: admin
     - password: run `docker logs qbittorrent` in the terminal to find the temporary password.
 
