@@ -9,7 +9,8 @@ services:
       - TZ=Etc/UTC
     volumes:
       - ./slskd/config:/config
-      - /mnt/Files/Music:/music # This maps your actual music drive into the container
+      - ./slskd/data:/app/slskd
+      - /mnt/Files/Music:/music 
     ports:
       - 5030:5030
       - 5031:5031
