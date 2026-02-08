@@ -91,6 +91,7 @@
   tailscale
   auto-cpufreq
   docker-compose
+  tree
   ];
 
   # Enabling vim to be default EDITOR
@@ -122,7 +123,7 @@
   # Enabling intel microcode
   hardware.cpu.intel.updateMicrocode = true;
 
-  # Some shell aliases
+  # Some shell aliases for long commands
   environment.shellAliases = {
     nix-switch = "sudo nixos-rebuild switch";
     nix-clean = "sudo nix-collect-garbage -d";
@@ -143,7 +144,7 @@
   # 6881 = qbittorrent
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 80 443 2222 4533 5030 50300 8080 6881 ];
+    allowedTCPPorts = [ 80 443 2222 4533 5030 50300 8080 6881 8383 ];
     allowedUDPPorts = [ 50300 6881 ];
     checkReversePath = "loose";
     trustedInterfaces = [ "tailscale0" ];
@@ -167,7 +168,8 @@
 
   # Enable tailscale daemon
   services.tailscale.enable = true;
-  services.tailscale.extraUpFlags = [ "--accept-dns=false" ];
+ #services.tailscale.extraUpFlags = [ "--accept-dns=false" ];
+  services.tailscale.useRoutingFeatures = "both";
 
   # Mounting my other ntfs drives
   fileSystems."/mnt/Files" = {
