@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Server | Dark</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --card-bg: rgba(28, 28, 30, 0.7);
+            --text-main: #ffffff;
+            --text-sub: #8e8e93;
+            --accent: #0a84ff;
+            --blur: 25px;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at top right, #1c1c1e, #000000);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            background: linear-gradient(180deg, #fff 0%, #a1a1a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-sub);
+            font-size: 19px;
+            margin-top: 12px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(var(--blur));
+            -webkit-backdrop-filter: blur(var(--blur));
+            border-radius: 28px;
+            padding: 32px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(44, 44, 46, 0.8);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Container for the custom image */
+        .icon-wrapper {
+            width: 72px;
+            height: 72px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 18px; /* Classic Apple Squircle look */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .card span {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 36px; }
+            .grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Docker Applications</h1>
+        <p>http://100.120.226.4</p>
+    </header>
+
+    <div class="grid">
+        <a href="http://100.120.226.4:4533" class="card" target="_blank">
+            <div class="icon-wrapper">
+                <img src="https://raw.githubusercontent.com/navidrome/navidrome/master/resources/logo-192x192.png" alt="Navidrome" class="icon-img">
+            </div>
+            <h2>Navidrome</h2>
+            <span>Music Streaming</span>
+        </a>
+
+        <a href="http://100.120.226.4:5030" class="card" target="_blank">
+            <div class="icon-wrapper">
+                <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/slskd.svg" alt="slskd" class="icon-img">
+            </div>
+            <h2>slskd</h2>
+            <span>Soulseek Client</span>
+        </a>
+
+        <a href="http://100.120.226.4:8080" class="card" target="_blank">
+            <div class="icon-wrapper">
+                <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/qbittorrent.svg" alt="qBittorrent" class="icon-img">
+            </div>
+            <h2>qBittorrent</h2>
+            <span>Torrent Client</span>
+        </a>
+
+        <a href="http://100.120.226.4:8338" class="card" target="_blank">
+            <div class="icon-wrapper">
+                <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/musicbrainz.svg" alt="Metadata" class="icon-img">
+            </div>
+            <h2>metadata-remote</h2>
+            <span>Music Tag Editor</span>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

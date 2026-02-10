@@ -171,6 +171,24 @@
  #services.tailscale.extraUpFlags = [ "--accept-dns=false" ];
   services.tailscale.useRoutingFeatures = "both";
 
+
+  # Caddy service for website
+  services.caddy = {
+  enable = true;
+  virtualHosts."100.120.226.4" = {
+    extraConfig = ''
+      root * /var/www/dashboard
+      file_server
+      header {
+        # Optional: Security headers for that Apple-clean feel
+        Strict-Transport-Security "max-age=31536000;"
+        X-Content-Type-Options nosniff
+        X-Frame-Options DENY
+        }
+      '';
+    };
+  };
+
   # Mounting my other ntfs drives
   fileSystems."/mnt/Files" = {
     device = "/dev/disk/by-uuid/01D858C886F164A0";
