@@ -164,11 +164,16 @@
   # Enable docker
   virtualisation.docker = {
     enable = true;
+    
+    daemon.settings = {
+      dns = ["8.8.8.8" "1.1.1.1"];
+      "live-restore" = true;
+    };
+
   };
 
   # Enable tailscale daemon
   services.tailscale.enable = true;
- #services.tailscale.extraUpFlags = [ "--accept-dns=false" ];
   services.tailscale.useRoutingFeatures = "both";
 
 
