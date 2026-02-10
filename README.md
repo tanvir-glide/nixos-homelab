@@ -52,7 +52,7 @@ Recently switched to NixOS for my server as it automates a lot of things I would
 
 ---
 
-## This server hosts a dedicated music streaming service via [Navidrome](https://github.com/navidrome/navidrome) using Docker
+## Docker containers:
 
 ### Navidrome (Music Streaming)
 A modern, high-performance music server and streamer.
@@ -79,5 +79,16 @@ A lightweight BitTorrent client with a Web User Interface.
 
 - **Download Path:** `/mnt/Files/Torrent`
 
+### Metadata-remote
+A web-based metadata management tool for music files.
+- **Web UI Port:** `5031`
+
+### Focalboard
+A notion like management tool for organizing and sharing information.
+- **Web UI Port:** `8000`
+
+### Dozzle
+A lightweight web-based log viewer for Docker containers.
+- **Web UI Port:** `8888`
+
 ---
-**Note:** Both services are configured to use `/mnt/Files/Music` as the central music library, allowing `slskd` to download new tracks directly into the directory.
