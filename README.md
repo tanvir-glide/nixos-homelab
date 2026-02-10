@@ -65,14 +65,14 @@ A modern, high-performance music server and streamer.
 
 ### slskd (Soulseek Web Client)
 A web-based client for the Soulseek file-sharing network.
-- **Web UI Port:** `5030`
+- **Port:** `5030`
 - **Soulseek Port:** `50300`
 - **Downloads Path:** `/mnt/Files/Music` (Read/Write)
 - **Configuration:** - Enabled remote configuration for easy management.
 
 ### qBittorrent
 A lightweight BitTorrent client with a Web User Interface.
-- **WEB UI Port:** `8080`
+- **Port:** `8080`
 - **Default Credentials**
     - username: admin
     - password: run `docker logs qbittorrent` in the terminal to find the temporary password.
@@ -81,14 +81,14 @@ A lightweight BitTorrent client with a Web User Interface.
 
 ### Metadata-remote
 A web-based metadata management tool for music files.
-- **Web UI Port:** `5031`
+- **Port:** `5031`
 
 ### Focalboard
 A notion like management tool for organizing and sharing information.
-- **Web UI Port:** `8000`
+- **Port:** `8000`
 
 ### Dozzle
 A lightweight web-based log viewer for Docker containers.
-- **Web UI Port:** `8888`
+- **Port:** `8888`
 
 ---
