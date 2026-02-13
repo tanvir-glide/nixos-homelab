@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  focalboard:
+    image: mattermost/focalboard:latest
+    container_name: focalboard
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - FB_DB_TYPE=sqlite3
+      - FB_DB_CONFIG_STRING=/opt/focalboard/data/focalboard.db
+    volumes:
+      - ./fbdata:/opt/focalboard/data
+    user: "0:0"
