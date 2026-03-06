@@ -1,5 +1,10 @@
 # modules/hardware/storage.nix
 { config, pkgs, lib, ... }:
+
+let
+    isCI = builtins.getEnv "CI" == "true";
+in
+lib.mkIf (!isCI)
 {
   fileSystems."/mnt/Files" = {
     device = "/dev/disk/by-uuid/01D858C886F164A0";
