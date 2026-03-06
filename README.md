@@ -1,4 +1,4 @@
-# NixOS Configuration
+# NixOS Configuration (OUTDATED)
 Recently switched to NixOS for my server as it automates a lot of things I would have to rather change manually. It is even better than ansible in my opinion.
 
 ## System Overview
