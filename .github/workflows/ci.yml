@@ -19,4 +19,6 @@ jobs:
               run: nix flake check
 
             - name: Check nixOS config
-              run: nix eval .#nixosConfigurations.nixos.config.system.build.toplevel 
+              run: |
+                echo "Warnings are normal and harmless"
+                nix eval .#nixosConfigurations.nixos.config.system.build.toplevel 
