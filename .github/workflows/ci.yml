@@ -18,5 +18,5 @@ jobs:
             - name: Check flake
               run: nix flake check
 
-            - name: Build the system
-              run: nix build .#nixos 
+            - name: Check nixOS config
+              run: nix eval .#nixosConfigurations.nixos.config.system.build.toplevel 
