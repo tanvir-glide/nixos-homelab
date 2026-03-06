@@ -4,6 +4,7 @@ let
   # User-specific package lists
   userPackages = with pkgs; [
     # fetch / montioring tools
+    fastfetch
     btop
     pfetch-rs
     

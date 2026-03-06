@@ -17,9 +17,8 @@
 
   # Some shell aliases for long commands
   environment.shellAliases = {
-    nix-switch = "sudo nixos-rebuild switch";
-    nix-clean = "sudo nix-collect-garbage -d";
-    nix-conf = "sudoedit /etc/nixos/configuration.nix";
+    nix-switch = "sudo nixos-rebuild switch --flake .#nixos";
+    nix-clean = "sudo nixos-collect-garbage -d && sudo nix-store --gc && sudo nix-store --optimise";
     neofetch = "clear ; fastfetch";
   };
 

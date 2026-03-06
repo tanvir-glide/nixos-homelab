@@ -181,6 +181,7 @@ in
     description = "Docker Compose Containers";
 
     after = [ "docker.service" "network-online.target" ];
+    wants = [ "network-online.target" ];
     requires = [ "docker.service" ];
 
     wantedBy = [ "multi-user.target" ];
