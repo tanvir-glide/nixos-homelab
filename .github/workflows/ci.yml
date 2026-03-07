@@ -1,24 +1,47 @@
-name: Nix CI
+name: NixOS Flake CI
 
 on:
-    push:
-        pull_request:
+  push:
+    branches: ["main"]
+  pull_request:
+
+permissions:
+  contents: read
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  validate:
+    name: Validate NixOS Flake
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repo
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
-            - name: Install nix
-              uses: cachix/install-nix-action@v25
+      - name: Install Nix with flakes support
+        uses: cachix/install-nix-action@v31
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+            # Allow substitutes
+            substituters = https://cache.nixos.org/
+            trusted-public-keys = cache.nixos.org-1:...
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Check flake
-              run: nix flake check
+      - name: Show flake outputs (debug)
+        run: |
+          nix flake show
 
-            - name: Check nixOS config
-              run: |
-                echo "Warnings are normal and harmless"
-                nix eval .#nixosConfigurations.nixos.config.system.build.toplevel -show-trace 
+      - name: Evaluate NixOS toplevel (raw)
+        run: |
+          echo "Evaluating toplevel for config build"
+          nix eval --raw .#nixosConfigurations.nixos.config.system.build.toplevel
+
+      - name: Check all outputs
+        run: |
+          nix flake check --accept-flake-config
+
+      - name: Build NixOS toplevel
+        run: |
+          nix build .#nixosConfigurations.nixos.config.system.build.toplevel
