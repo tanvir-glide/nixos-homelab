@@ -21,4 +21,4 @@ jobs:
             - name: Check nixOS config
               run: |
                 echo "Warnings are normal and harmless"
-                nix eval .#nixosConfigurations.nixos.config.system.build.toplevel 
+                nix eval .#nixosConfigurations.nixos.config.system.build.toplevel -show-trace 
