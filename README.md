@@ -8,6 +8,30 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 
 ---
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Repository Structure](#repository-structure)
+- [Flake Inputs (Dependencies)](#flake-inputs-dependencies)
+- [System Overview](#system-overview)
+- [Docker Services](#docker-services)
+- [Networking & Security](#networking--security)
+- [Automation & Maintenance](#automation--maintenance)
+- [Shell Aliases](#shell-aliases)
+- [Quick Start](#quick-start)
+  - [Prerequisites](#prerequisites)
+  - [1. Clone the repository](#1-clone-the-repository)
+  - [2. Replace the hardware configuration](#2-replace-the-hardware-configuration)
+  - [3. Review and customize](#3-review-and-customize)
+  - [4. Apply the configuration](#4-apply-the-configuration)
+  - [5. Verify services](#5-verify-services)
+- [Adding a New Module](#adding-a-new-module)
+- [To-do](#to-do)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
 ## Overview
 
 This repository hosts the complete NixOS configuration for a home server running several self-hosted services via Docker. The entire system is defined declaratively using **Nix Flakes**, making it fully reproducible and easy to roll back.
