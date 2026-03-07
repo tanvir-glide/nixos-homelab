@@ -1,94 +1,224 @@
-# NixOS Configuration (OUTDATED)
-Recently switched to NixOS for my server as it automates a lot of things I would have to rather change manually. It is even better than ansible in my opinion.
+# 🏠 NixOS Homelab
+
+A fully declarative, reproducible NixOS server configuration for self-hosted services, managed with Nix Flakes.
+
+![NixOS](https://img.shields.io/badge/NixOS-25.11-blue?logo=nixos&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Architecture](https://img.shields.io/badge/arch-x86__64--linux-lightgrey)
+
+---
+
+## Overview
+
+This repository hosts the complete NixOS configuration for a home server running several self-hosted services via Docker. The entire system is defined declaratively using **Nix Flakes**, making it fully reproducible and easy to roll back.
+
+**Key highlights:**
+- Declarative infrastructure, so no manual configuration drift
+- Modular layout separating core, services, security, and hardware
+- Automated weekly upgrades and garbage collection
+- Hardened SSH with key-only authentication
+- Reverse proxy via Caddy with Tailscale networking
+
+---
+
+## Repository Structure
+
+```bash
+nixos-homelab/
+├── flake.nix                  # Flake entry point & input declarations
+├── flake.lock                 # Pinned dependency versions
+├── configuration.nix          # Top-level NixOS configuration
+├── hardware-configuration.nix # Auto-generated hardware config
+└── modules/
+    ├── core/
+    │   ├── system.nix         # Bootloader, locale, timezone, zram
+    │   ├── users.nix          # User accounts & groups
+    │   ├── network.nix        # Tailscale, networking
+    │   └── packages/
+    │       ├── system-pkgs.nix  # System-wide packages
+    │       └── user-pkgs.nix    # Per-user packages
+    ├── hardware/
+    │   └── storage.nix          # NTFS mount, automount
+    ├── services/
+    │   ├── docker-containers.nix  # All Docker Services
+    │   ├── minecraft.nix          # Minecraft server
+    │   └── caddy.nix              # Reverse proxy
+    └── security/
+        ├── ssh.nix            # SSH hardening
+        ├── firewall.nix       # Firewall rules
+        └── fail2ban.nix       # Intrusion prevention
+```
+
+---
+
+## Flake Inputs (Dependencies)
+
+Defined in [`flake.nix`](./flake.nix):
+
+| Input | Source | Purpose |
+|---|---|---|
+| `nixpkgs` | `NixOS/nixpkgs/nixos-25.11` | Core NixOS packages & modules |
+| `nixos-hardware` | `NixOS/nixos-hardware` | Hardware-specific modules (Intel CPU) |
+| `flake-utils` | `numtide/flake-utils` | Flake helper utilities |
+| `agenix` | `ryantm/agenix` | Secret management |
+
+---
 
 ## System Overview
-- **Hostname:** nixos
-- **Primary User:** tanvir (added to wheel and networkmanager groups) 
- - **Bootloader:** GRUB bootloader installed on /dev/sda
- - **State Version:** 25.11 
- - **Timezone:** Asia/Dhaka 
 
- ---
-
-## Hardware and Services
-
-- **Music Streaming:** Navidrome active on port 4533 via docker, serving music from /mnt/Files/Music
-- **Network:** Tailscale enabled with firewall support for the tailscale0 interface.
-- **Storage:** NTFS partition (UUID: 01D858C886F164A0) mounted at /mnt/Files with systemd automount
-- **Power Management:** Laptop lid switch set to ignore (stay awake) and lock on external power
-- **CPU:** Intel microcode updates enabled for security and auto-cpufreq for optimization
+| Property | Value |
+|---|---|
+| **Hostname** | `nixos` |
+| **Primary User** | `tanvir` |
+| **Architecture** | `x86_64-linux` |
+| **NixOS Version** | `25.11` |
+| **Timezone** | `Asia/Dhaka` |
+| **Bootloader** | GRUB on `/dev/sda` |
+| **CPU** | Intel (microcode + auto-cpufreq) |
+| **Filesystem** | ext4 root + NTFS FUSE mount at `/mnt/Files` |
 
 ---
 
-## SSH Configuration
-- **Port:** 2222 
-- **Authentication:** Password and Keyboard-Interactive authentication disabled, public key authentication required
-- **Authorized Keys:** Public key configured for user tanvir to allow secure, key-based remote access
-- **Root Access:** Root login via ssh is strictly prohibited
+## Docker Services
+
+| Service | Port(s) | Description |
+|---|---|---|
+| [Navidrome](https://www.navidrome.org/) | `4533` | Music streaming server (Subsonic-compatible) |
+| [slskd](https://github.com/slskd/slskd) | `5030` / `50300` | Soulseek web client |
+| [qBittorrent](https://www.qbittorrent.org/) | `8080` | BitTorrent client with Web UI |
+| [Metadata-remote](https://github.com/floatingpurr/sync_with_poetry) | `5031` | Music metadata management |
+| [Focalboard](https://www.focalboard.com/) | `8000` | Notion-like project management board |
+| [Dozzle](https://dozzle.dev/) | `8888` | Real-time Docker log viewer |
+| [Minecraft (PaperMC)](https://papermc.io/) | `46565` | Minecraft game server |
 
 ---
 
-## Automation and Maintenance
-- **System Upgrades:** Automated upgrades scheduled weekly on Friday at 4 AM
-- **Garbage Collection:** Weekly automated cleanup of system generations older than 7 days
-- **Optimization:** Automatic Nix store optimization enabled to save disk space.
-- **Memory:** Zram swap enabled for improved memory efficiency
+## Networking & Security
+
+- **Tailscale** enabled with firewall support for the `tailscale0` interface
+- **Reverse proxy:** Caddy handles external HTTPS routing
+- **Firewall:** 
+  - Open TCP ports: `80`, `443`, `2222` (SSH), `4533` (Navidrome), `5030` (slskd), `8080` (qBittorrent), and `46565` (Minecraft)
+  - Open UDP ports: `50300` (slskd-transfer), and `41641` (tailscale)
+- **SSH:** Port `2222`, password auth disabled, public key only, root login prohibited
+- **Fail2ban:** Active intrusion prevention
+- **Reverse path filtering:** Set to `loose`
 
 ---
 
-## Environment and Shell
-- **Packages:** Includes git, wget, rsync, mosh, btop, fzf, and pfetch-rs
-- **Editor:** Vim enabled as the default system editor
-- **Shell Aliases:**
-	- `nix-switch`: Rebuild and apply system configuration
-	- `nix-conf`: Edit configuration file with sudo privileges 
-	- `nix-clean`: Manually trigger garbage collection
+## Automation & Maintenance
+
+| Feature | Schedule / Detail |
+|---|---|
+| **System Upgrades** | Weekly, Fridays at 04:00 (no auto-reboot) |
+| **Garbage Collection** | Weekly, removes generations older than 7 days |
+| **Store Optimization** | Automatic Nix store deduplication |
+| **Memory** | Zram swap enabled |
+| **Power** | Laptop lid ignored; stays awake on external power |
 
 ---
 
-## Firewall
-- **Status:** Enabled with open TCP ports for 80, 443, 2222 (SSH), and 4533 (Navidrome)
- - **Reverse Path:** Check set to loose to accommodate specific network configurations
+## Shell Aliases
+
+| Alias | Command | Description |
+|---|---|---|
+| `nix-switch` | `sudo nixos-rebuild switch --flake .#nixos` | Rebuild & apply configuration |
+| `nix-clean` | `sudo nixos-collect-garbage -d && sudo nix-store --gc && sudo nix-store --optimise` | Full Nix store cleanup |
+| `neofetch` | `clear ; fastfetch` | Fetch system info |
 
 ---
 
-## Docker containers:
+## Quick Start
 
-### Navidrome (Music Streaming)
-A modern, high-performance music server and streamer.
-- **Port:** `4533`
-- **Library Path:** `/mnt/Files/Music` (Read-only)
-- **Features:** - Automatically scans music library every hour.
-  - Persistent data storage for user settings and metadata.
-  - Compatible with Subsonic clients. I personally use [Feishin](https://github.com/jeffvli/feishin) (for PC) + [Substracks](https://github.com/austinried/subtracks) (for android)
-  - Supports multiple music formats including MP3, FLAC, and WAV.
+### Prerequisites
 
-### slskd (Soulseek Web Client)
-A web-based client for the Soulseek file-sharing network.
-- **Port:** `5030`
-- **Soulseek Port:** `50300`
-- **Downloads Path:** `/mnt/Files/Music` (Read/Write)
-- **Configuration:** - Enabled remote configuration for easy management.
+- A bare-metal or VM machine running [NixOS](https://nixos.org/download/)
+- Nix Flakes enabled
+- Git installed
 
-### qBittorrent
-A lightweight BitTorrent client with a Web User Interface.
-- **Port:** `8080`
-- **Default Credentials**
-    - username: admin
-    - password: run `docker logs qbittorrent` in the terminal to find the temporary password.
+### 1. Clone the repository
 
-- **Download Path:** `/mnt/Files/Torrent`
+```bash
+git clone https://github.com/Tanvir101cmd/nixos-homelab.git
+cd nixos-homelab
+```
 
-### Metadata-remote
-A web-based metadata management tool for music files.
-- **Port:** `5031`
+### 2. Replace the hardware configuration
 
-### Focalboard
-A notion like management tool for organizing and sharing information.
-- **Port:** `8000`
+Generate your own hardware config and replace the existing one:
 
-### Dozzle
-A lightweight web-based log viewer for Docker containers.
-- **Port:** `8888`
+```bash
+sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
+```
+
+### 3. Review and customize
+
+Update the following files to match your system:
+
+- `modules/core/users.nix` — set your username and SSH public key
+- `modules/core/system.nix` — set your hostname, timezone, locale
+- `modules/hardware/storage.nix` — update UUIDs and mount paths
+- `modules/services/docker-containers.nix` — adjust service ports and volume paths
+
+### 4. Apply the configuration
+
+```bash
+sudo nixos-rebuild switch --flake .#nixos
+```
+
+Or use the built-in alias after the first apply:
+
+```bash
+nix-switch
+```
+
+### 5. Verify services
+
+```bash
+docker ps          # Check running containers
+systemctl status   # Check systemd service health
+```
 
 ---
+
+## Adding a New Module
+
+1. Create a new `.nix` file under the appropriate `modules/` subdirectory.
+2. Add your module to the `modules` list in `flake.nix`.
+3. Rebuild with `nix-switch`.
+
+Example skeleton for a new service:
+
+```nix
+# modules/services/my-service.nix
+{ config, pkgs, ... }:
+{
+  virtualisation.oci-containers.containers.my-service = {
+    image = "my-image:latest";
+    ports = [ "9000:9000" ];
+    volumes = [ "/mnt/Files/MyService:/data" ];
+  };
+}
+```
+
+---
+
+## Contributing
+
+Contributions, suggestions, and improvements are welcome!
+
+1. **Fork** this repository
+2. **Create** a feature branch: `git checkout -b feat/my-improvement`
+3. **Commit** your changes: `git commit -m "feat: add my improvement"`
+4. **Push** to your branch: `git push origin feat/my-improvement`
+5. **Open a Pull Request** against `main`
+
+Please keep changes modular — one logical change per PR. If you're adding a new service, place it in `modules/services/` and register it in `flake.nix`.
+
+---
+
+## License
+
+This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
+
+Copyright (c) 2026 [@Tanvir101cmd](https://github.com/Tanvir101cmd)
