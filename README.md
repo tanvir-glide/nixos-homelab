@@ -2,9 +2,17 @@
 
 A fully declarative, reproducible NixOS server configuration for self-hosted services, managed with Nix Flakes.
 
-![NixOS](https://img.shields.io/badge/NixOS-25.11-blue?logo=nixos&logoColor=white)
+![NixOS](https://img.shields.io/badge/NixOS-25.11-blue?logo=nixos&logoColor=white) 
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Architecture](https://img.shields.io/badge/arch-x86__64--linux-lightgrey)
+![Architecture](https://img.shields.io/badge/arch-x86_64--linux-lightgrey)
+![Docker](https://img.shields.io/badge/Docker-enabled-2496ED?logo=docker&logoColor=white)
+![Caddy](https://img.shields.io/badge/Caddy-reverse--proxy-00ADD8?logo=caddy&logoColor=white)
+![Tailscale](https://img.shields.io/badge/Tailscale-enabled-242424?logo=tailscale&logoColor=white)
+![Nix Flakes](https://img.shields.io/badge/Nix-Flakes-5277C3?logo=nixos&logoColor=white)
+![Fail2ban](https://img.shields.io/badge/Fail2ban-active-green)
+![SSH Hardened](https://img.shields.io/badge/SSH-hardened-orange)
+![Last Commit](https://img.shields.io/github/last-commit/Tanvir101cmd/nixos-homelab)
+![Repo Size](https://img.shields.io/github/repo-size/Tanvir101cmd/nixos-homelab)
 
 ---
 
