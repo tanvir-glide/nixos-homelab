@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
+   
   dataDir = "/var/lib/docker-containers";
 
   defaultContainer = {
@@ -42,11 +43,23 @@ let
       ports = [
         "5030:5030"
         "5031:5031"
+        "50300:50300"
+        "50300:50300/udp"
       ];
 
       environment = {
         SLSKD_REMOTE_CONFIGURATION = "true";
+
+        SLSKD_SOULSEEK_USERNAME = "YouSoulSeekUsername";
+        SLSKD_SOULSEEK_PASSWORD = "YOurSoulSeekPasswrd";
+
+        SLSKD_DIRECTORIES_DOWNLOADS = "/music";
+        SLSKD_DIRECTORIES_INCOMPLETE = "/music/.incomplete";
+
+        SLSKD_SHARES_DIRECTORIES__0 = "/music";
+
       };
+      
 
       volumes = [
         "${dataDir}/slskd/config:/config"
@@ -55,7 +68,7 @@ let
       ];
     };
 
-    # Qbittorrent
+    # qBittorrent
     qbittorrent = lib.recursiveUpdate defaultContainer {
       image = "lscr.io/linuxserver/qbittorrent:latest";
 

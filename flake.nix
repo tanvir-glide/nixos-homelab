@@ -18,13 +18,14 @@
   };
 
   outputs = { self, nixpkgs, nixos-hardware, flake-utils, agenix, ... }@inputs: {
-
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+  
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
         nixos-hardware.nixosModules.common-cpu-intel
         ./configuration.nix
+        agenix.nixosModules.default
 
         # Core
         ./modules/core/system.nix
@@ -44,7 +45,7 @@
         ./modules/security/ssh.nix
         ./modules/security/firewall.nix
         ./modules/security/fail2ban.nix
-
+        
       ];
     };
     
