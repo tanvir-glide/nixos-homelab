@@ -88,7 +88,6 @@ Defined in [`flake.nix`](./flake.nix):
 | [qBittorrent](https://www.qbittorrent.org/) | `8080` | BitTorrent client with Web UI |
 | [Metadata-remote](https://github.com/floatingpurr/sync_with_poetry) | `5031` | Music metadata management |
 | [Focalboard](https://www.focalboard.com/) | `8000` | Notion-like project management board |
-| [Dozzle](https://dozzle.dev/) | `8888` | Real-time Docker log viewer |
 | [Minecraft (PaperMC)](https://papermc.io/) | `46565` | Minecraft game server |
 
 ---
