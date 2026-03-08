@@ -137,7 +137,7 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 | [Navidrome](https://www.navidrome.org/) | `4533` | Music streaming server (Subsonic-compatible) |
 | [slskd](https://github.com/slskd/slskd) | `5030` / `50300` | Soulseek web client |
 | [qBittorrent](https://www.qbittorrent.org/) | `8080` | BitTorrent client with Web UI |
-| [Metadata-remote](https://github.com/floatingpurr/sync_with_poetry) | `5031` | Music metadata management |
+| [Metadata-remote](https://github.com/wow-signal-dev/metadata-remote) | `5031` | Music metadata management |
 | [Focalboard](https://www.focalboard.com/) | `8000` | Notion-like project management board |
 | [Minecraft (PaperMC)](https://papermc.io/) | `46565` | Minecraft game server |
 
