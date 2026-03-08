@@ -25,8 +25,7 @@
   
   # Hardware optimization
   services.auto-cpufreq.enable = true;
-  hardware.cpu.intel.updateMicrocode = true;
-  
+   
   # Making sure closing the laptop lid doesn't put it to sleep
   services.logind.settings = {
     Login = {

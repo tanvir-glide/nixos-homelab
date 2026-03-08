@@ -26,7 +26,7 @@
     # Nix-specific tools
     nix-tree
     nix-output-monitor
- 
+
     # laptop specific
     auto-cpufreq
     
