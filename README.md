@@ -252,12 +252,12 @@ Contributions, suggestions, and improvements are welcome!
 4. **Push** to your branch: `git push origin feat/my-improvement`
 5. **Open a Pull Request** against `main`
 
-Please keep changes modular — one logical change per PR. If you're adding a new service, place it in `modules/services/` and register it in `flake.nix`.
+Please keep changes modular, one logical change per PR. If you're adding a new service, place it in `modules/services/` and register it in `flake.nix`.
 
 ---
 
 ## License
 
-This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
 
 Copyright (c) 2026 [@Tanvir101cmd](https://github.com/Tanvir101cmd)
