@@ -22,6 +22,7 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 - [Repository Structure](#repository-structure)
 - [Flake Inputs (Dependencies)](#flake-inputs-dependencies)
 - [System Overview](#system-overview)
+- [Hardware](#hardware)
 - [Docker Services](#docker-services)
 - [Networking & Security](#networking--security)
 - [Automation & Maintenance](#automation--maintenance)
@@ -111,6 +112,24 @@ Defined in [`flake.nix`](./flake.nix):
 
 ---
 
+## Hardware
+
+This configuration runs on a repurposed laptop serving as a 24/7 home server.
+
+| Component | Details |
+|---|---|
+| **Machine** | HP Pavilion 15-au016tx |
+| **CPU** | Intel Core i3-6100U (6th Gen Skylake, 2C/4T, 2.3 GHz, 3MB Cache) |
+| **iGPU** | Intel HD Graphics 520 |
+| **dGPU** | NVIDIA GeForce 940MX (2GB DDR3 VRAM) |
+| **RAM** | 8GB DDR4 2133MHz (max supported: 16GB) |
+| **Storage** | 1TB HDD (5400rpm SATA) |
+| **Wireless** | 802.11 b/g/n/ac + Bluetooth 4.0 |
+
+> **Note:** The laptop lid is configured to be ignored so the machine stays on while closed (see `modules/core/system.nix`).
+
+---
+
 ## Docker Services
 
 | Service | Port(s) | Description |
@@ -186,10 +205,10 @@ sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
 
 Update the following files to match your system:
 
-- `modules/core/users.nix` — set your username and SSH public key
-- `modules/core/system.nix` — set your hostname, timezone, locale
-- `modules/hardware/storage.nix` — update UUIDs and mount paths
-- `modules/services/docker-containers.nix` — adjust service ports and volume paths
+- `modules/core/users.nix` - set your username and SSH public key
+- `modules/core/system.nix` - set your hostname, timezone, locale
+- `modules/hardware/storage.nix` - update UUIDs and mount paths
+- `modules/services/docker-containers.nix` - adjust service ports and volume paths
 
 ### 4. Apply the configuration
 
@@ -252,7 +271,7 @@ Contributions, suggestions, and improvements are welcome!
 4. **Push** to your branch: `git push origin feat/my-improvement`
 5. **Open a Pull Request** against `main`
 
-Please keep changes modular, one logical change per PR. If you're adding a new service, place it in `modules/services/` and register it in `flake.nix`.
+Please keep changes modular - one logical change per PR. If you're adding a new service, place it in `modules/services/` and register it in `flake.nix`.
 
 ---
 
