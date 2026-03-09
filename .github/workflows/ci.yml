@@ -23,6 +23,12 @@ jobs:
       - name: Flake check
         run: nix flake check
 
+      - name: Lint (statix)
+        run: nix run nixpkgs#statix check .
+
+      - name: Dead code check (deadnix)
+        run: nix run nixpkgs#deadnix .
+
       - name: Evaluate config
         run: nix eval --raw .#nixosConfigurations.nixos.config.system.build.toplevel
 
