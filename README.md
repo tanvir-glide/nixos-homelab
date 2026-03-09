@@ -184,7 +184,7 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 | Alias | Command | Description |
 |---|---|---|
 | `nix-switch` | `sudo nixos-rebuild switch --flake .#nixos` | Rebuild & apply configuration |
-| `nix-clean` | `sudo nixos-collect-garbage -d && sudo nix-store --gc && sudo nix-store --optimise` | Full Nix store cleanup |
+| `nix-clean` | `sudo nix-collect-garbage -d` | Full Nix store cleanup |
 | `neofetch` | `clear ; fastfetch` | Fetch system info |
 
 ---
