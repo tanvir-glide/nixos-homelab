@@ -16,15 +16,6 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 
 ---
 
-## Features
-- Reproducible NixOS configuration
-- Native + Docker containers defined declaratively
-- Prometheus + Grafana monitoring
-- Tailscale networking to bypass CGNAT
-- GitHub Actions CI validation
-
----
-
 ## Table of Contents
 
 - [Overview](#overview)
