@@ -23,6 +23,7 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 - [Flake Inputs (Dependencies)](#flake-inputs-dependencies)
 - [System Overview](#system-overview)
 - [Hardware](#hardware)
+- [Native Services](#native-services)
 - [Docker Services](#docker-services)
 - [Networking & Security](#networking--security)
 - [Automation & Maintenance](#automation--maintenance)
@@ -58,28 +59,31 @@ This repository hosts the complete NixOS configuration for a home server running
 
 ```bash
 nixos-homelab/
-├── flake.nix                  # Flake entry point & input declarations
-├── flake.lock                 # Pinned dependency versions
-├── configuration.nix          # Top-level NixOS configuration
-├── hardware-configuration.nix # Auto-generated hardware config
-└── modules/
-    ├── core/
-    │   ├── system.nix         # Bootloader, locale, timezone, zram
-    │   ├── users.nix          # User accounts & groups
-    │   ├── network.nix        # Tailscale, networking
-    │   └── packages/
-    │       ├── system-pkgs.nix  # System-wide packages
-    │       └── user-pkgs.nix    # Per-user packages
-    ├── hardware/
-    │   └── storage.nix          # NTFS mount, automount
-    ├── services/
-    │   ├── docker-containers.nix  # All Docker Services
-    │   ├── minecraft.nix          # Minecraft server
-    │   └── caddy.nix              # Reverse proxy
-    └── security/
-        ├── ssh.nix            # SSH hardening
-        ├── firewall.nix       # Firewall rules
-        └── fail2ban.nix       # Intrusion prevention
+.
+├── configuration.nix
+├── flake.lock
+├── flake.nix
+├── hardware-configuration.nix
+├── modules
+│   ├── core
+│   │   ├── network.nix
+│   │   ├── packages
+│   │   │   ├── system-pkgs.nix
+│   │   │   └── user-pkgs.nix
+│   │   ├── system.nix
+│   │   └── users.nix
+│   ├── hardware
+│   │   └── storage.nix
+│   ├── security
+│   │   ├── fail2ban.nix
+│   │   ├── firewall.nix
+│   │   └── ssh.nix
+│   └── services
+│       ├── caddy.nix
+│       ├── docker-containers.nix
+│       ├── minecraft.nix
+│       ├── monitoring.nix
+│       └── navidrome.nix
 ```
 
 ---
@@ -130,16 +134,22 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 
 ---
 
-## Docker Services
+## Native Services
 
 | Service | Port(s) | Description |
 |---|---|---|
 | [Navidrome](https://www.navidrome.org/) | `4533` | Music streaming server (Subsonic-compatible) |
+| [Grafana](https://github.com/grafana/grafana) | `3000` | The open-source platform for monitoring and observability |
+| [Minecraft (PaperMC)](https://papermc.io/) | `46565` | Minecraft game server |
+
+## Docker Services
+
+| Service | Port(s) | Description |
+|---|---|---|
 | [slskd](https://github.com/slskd/slskd) | `5030` / `50300` | Soulseek web client |
 | [qBittorrent](https://www.qbittorrent.org/) | `8080` | BitTorrent client with Web UI |
 | [Metadata-remote](https://github.com/wow-signal-dev/metadata-remote) | `5031` | Music metadata management |
 | [Focalboard](https://www.focalboard.com/) | `8000` | Notion-like project management board |
-| [Minecraft (PaperMC)](https://papermc.io/) | `46565` | Minecraft game server |
 
 ---
 
