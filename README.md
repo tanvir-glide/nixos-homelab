@@ -139,7 +139,8 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 | Service | Port(s) | Description |
 |---|---|---|
 | [Navidrome](https://www.navidrome.org/) | `4533` | Music streaming server (Subsonic-compatible) |
-| [Grafana](https://github.com/grafana/grafana) | `3000` | The open-source platform for monitoring and observability |
+| [Grafana](https://grafana.com/) | `3000` | The open-source platform for monitoring and observability |
+| [Prometheus](https://prometheus.io/) | `9090` | The open-source monitoring and alerting toolkit |
 | [Minecraft (PaperMC)](https://papermc.io/) | `46565` | Minecraft game server |
 
 ## Docker Services
