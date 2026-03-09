@@ -10,5 +10,25 @@
     };
   };  
 
+  services.prometheus = {
+  enable = true;
+
+  scrapeConfigs = [
+    {
+      job_name = "node";
+      static_configs = [
+        {
+          targets = [ "localhost:9100" ];
+        }
+      ];
+    }
+  ];
+};
+
+  services.prometheus.exporters.node = {
+    enable = true;
+    port = 9100;
+  };
+
 
 }
