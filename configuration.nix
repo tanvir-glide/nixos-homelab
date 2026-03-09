@@ -13,7 +13,19 @@
 
   
   # Enabling flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+      auto-optimise-store = true;
+      };
+
+  # Settings up garbage collector
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
 
   # Some shell aliases for long commands
   environment.shellAliases = {
@@ -22,14 +34,6 @@
     neofetch = "clear ; fastfetch";
   };
 
-  # Settings up garbage collector
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
-  };
-
-  nix.settings.auto-optimise-store = true;
 
   # Automatic update at 4am
   system.autoUpgrade = {

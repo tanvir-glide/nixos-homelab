@@ -6,8 +6,16 @@
   time.timeZone = "Asia/Dhaka";
   
   # Bootloader
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot = {
+    loader = {
+      grub = {
+        enable = true;
+        device = "/dev/sda";
+        };
+      };
+      
+    kernelModules = [ "ntfs3" ];
+    };
 
   # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";
@@ -34,10 +42,7 @@
       HandleLidSwitchDocked = "ignore";
     };
   };
-    
-  # Kernel modules and firmware
-  boot.kernelModules = [ "ntfs3" ];
-  
+      
   # Zram for memory efficiency
   zramSwap.enable = true;
   zramSwap.memoryPercent = 50;  # Use half of RAM for zram
