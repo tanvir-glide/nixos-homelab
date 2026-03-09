@@ -40,7 +40,11 @@
         ./modules/services/docker-containers.nix
         ./modules/services/minecraft.nix
         ./modules/services/caddy.nix
+        ./modules/services/navidrome.nix
 
+        # Monitoring
+        ./modules/services/monitoring.nix
+        
         # Security Hardening
         ./modules/security/ssh.nix
         ./modules/security/firewall.nix

@@ -15,27 +15,6 @@ let
 
   containers = {
 
-    # Navidrome
-    navidrome = lib.recursiveUpdate defaultContainer {
-      image = "deluan/navidrome:latest";
-
-      ports = [ "4533:4533" ];
-
-      environment = {
-        ND_SCANSCHEDULE = "1h";
-        ND_LOGLEVEL = "info";
-        ND_SESSIONTIMEOUT = "24h";
-        ND_IMAGECACHESIZE = "500MB";
-        ND_LASTFM_ENABLED = "true";
-      };
-
-      volumes = [
-        "${dataDir}/data:/data"
-        "/mnt/Files/Music:/music:ro"
-      ];
-    };
-
-
     # Slskd 
     slskd = lib.recursiveUpdate defaultContainer {
       image = "ghcr.io/slskd/slskd:latest";

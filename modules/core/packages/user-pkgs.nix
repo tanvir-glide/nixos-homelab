@@ -1,4 +1,4 @@
-# modules/core/packages/user-pkgs.nix
+# modules/core/packages/user-packages.nix
 { config, pkgs, lib, ... }:
 let
   # User-specific package lists
