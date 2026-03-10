@@ -53,7 +53,6 @@ This repository hosts the complete NixOS configuration for a home server running
 - Hardened SSH with key-only authentication
 - Reverse proxy via Caddy with Tailscale networking
 
----
 
 ![NixOS Fastfetch Output](./.assets/fastfetch.png)
 
