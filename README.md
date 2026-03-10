@@ -55,6 +55,10 @@ This repository hosts the complete NixOS configuration for a home server running
 
 ---
 
+![NixOS Fastfetch Output](./assets/fastfetch.png)
+
+---
+
 ## Repository Structure
 
 ```bash
