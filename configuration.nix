@@ -29,7 +29,7 @@
 
   # Some shell aliases for long commands
   environment.shellAliases = {
-    nix-switch = "sudo nixos-rebuild switch --flake .#nixos";
+    nix-switch = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
     nix-clean = "sudo nix-collect-garbage -d";
     neofetch = "clear ; fastfetch";
   };
