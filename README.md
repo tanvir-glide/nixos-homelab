@@ -115,7 +115,7 @@ Defined in [`flake.nix`](./flake.nix):
 | **Timezone** | `Asia/Dhaka` |
 | **Bootloader** | GRUB on `/dev/sda` |
 | **CPU** | Intel (microcode + auto-cpufreq) |
-| **Filesystem** | ext4 root + NTFS FUSE mount at `/mnt/Files` |
+| **Filesystem** | ext4 root + NTFS FUSE mount at `/mnt/Files`, `/mnt/Games` & `/mnt/More` |
 
 ---
 
