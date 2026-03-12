@@ -208,7 +208,9 @@ cd nixos-homelab
 
 ### 2. Replace the hardware configuration
 
-Generate your own hardware config and replace the existing one:
+**DO NOT USE THE GIVEN `hardware-configuration.nix`** 
+
+Instead, generate your own and replace the existing one:
 
 ```bash
 sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
