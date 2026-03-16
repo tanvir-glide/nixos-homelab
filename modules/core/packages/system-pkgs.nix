@@ -7,6 +7,7 @@
     wget
     curl
     rsync
+    git
 
     # Editor
     vim                     # Default editor

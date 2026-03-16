@@ -18,7 +18,10 @@
     };
   };
 
-  systemd.services.navidrome.serviceConfig = {
+  systemd.services.navidrome= {
+    serviceConfig = {
     SupplementaryGroups = [ "users" ];   };
-
+    requires = [ "mnt-Files.mount" ];
+    after = [ "mnt-Files.mount" ];
+  };
 }

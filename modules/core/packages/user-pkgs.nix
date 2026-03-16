@@ -8,6 +8,9 @@ let
     btop
     pfetch-rs
     
+    # Help
+    tldr
+    
     # Shell enhancements
     fzf
     tree
