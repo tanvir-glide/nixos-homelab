@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 let
   dataDir = "/var/lib/docker-containers";
@@ -11,6 +11,21 @@ let
 
   mkData = name: "${dataDir}/${name}";
 
+  slskdConfig = pkgs.writeText "slskd.yml" ''
+    soulseek:
+      username: "YourSoulseekUsername"
+      password: "YourSoulseekPassword"
+
+    directories:
+      downloads: /music
+      incomplete: /music/.incomplete
+
+    shares:
+      directories:
+        - /music
+
+    '';
+
 in
 
 {
@@ -21,6 +36,8 @@ in
       backend = "docker";
 
       containers = {
+
+        # SLSKD
         slskd = {
           image = "ghcr.io/slskd/slskd:latest";
 
@@ -33,20 +50,17 @@ in
 
           environment = commonEnv // {
             SLSKD_REMOTE_CONFIGURATION = "true";
-            SLSKD_SOULSEEK_USERNAME = "YouSoulSeekUsername";
-            SLSKD_SOULSEEK_PASSWORD = "YOurSoulSeekPasswrd";
-            SLSKD_DIRECTORIES_DOWNLOADS = "/music";
-            SLSKD_DIRECTORIES_INCOMPLETE = "/music/.incomplete";
-            SLSKD_SHARES_DIRECTORIES__0 = "/music";
           };
 
           volumes = [
             "${mkData "slskd/config"}:/config"
             "${mkData "slskd/data"}:/app/slskd"
             "/mnt/Files/Music:/music"
+            "${slskdConfig}:/app/slskd.yml"
           ];
         };
-
+        
+        # Qbittorrent
         qbittorrent = {
           image = "lscr.io/linuxserver/qbittorrent:latest";
 
@@ -66,6 +80,7 @@ in
           ];
         };
 
+        # Microbin
         microbin = {
           image = "danielszabo99/microbin:latest";
 
@@ -77,7 +92,8 @@ in
             "${mkData "microbin-data"}:/app/persist"
           ];
         };
-
+        
+        # Music Metadata Editor
         metadata-remote = {
           image = "ghcr.io/wow-signal-dev/metadata-remote:latest";
 
@@ -98,6 +114,7 @@ in
           ];
         };
 
+        # Focalboard
         focalboard = {
           image = "mattermost/focalboard:latest";
 

@@ -221,7 +221,7 @@ sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
 Update the following files to match your system:
 
 - `modules/core/users.nix` - set your username and SSH public key
-- `modules/core/system.nix` - set your hostname, timezone, locale
+- `modules/core/system.nix` - set your hostname, timezone, locale, bootloader
 - `modules/hardware/storage.nix` - update UUIDs and mount paths
 - `modules/services/docker-containers.nix` - adjust service ports and volume paths
 
