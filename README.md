@@ -66,6 +66,7 @@ nixos-homelab/
 ├── flake.lock
 ├── flake.nix
 ├── hardware-configuration.nix
+├── LICENSE
 ├── modules
 │   ├── core
 │   │   ├── network.nix
@@ -83,9 +84,12 @@ nixos-homelab/
 │   └── services
 │       ├── caddy.nix
 │       ├── docker-containers.nix
+│       ├── gotify.nix
 │       ├── minecraft.nix
 │       ├── monitoring.nix
 │       └── navidrome.nix
+├── README.md
+└── setup.sh
 ```
 
 ---
