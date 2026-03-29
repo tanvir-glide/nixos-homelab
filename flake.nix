@@ -41,6 +41,7 @@
         ./modules/services/minecraft.nix
         ./modules/services/caddy.nix
         ./modules/services/navidrome.nix
+        ./modules/services/gotify.nix
 
         # Monitoring
         ./modules/services/monitoring.nix
