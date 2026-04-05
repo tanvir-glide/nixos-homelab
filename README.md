@@ -50,7 +50,7 @@ This repository hosts the complete NixOS configuration for a home server running
 - Modular layout separating core, services, security, and hardware
 - Automated weekly upgrades and garbage collection
 - Hardened SSH with key-only authentication
-- Accessable from anywhere via tailscale
+- Accessible from anywhere via tailscale
 
 
 ![NixOS Fastfetch Output](./.assets/fastfetch.png)
