@@ -157,6 +157,7 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 | [qBittorrent](https://www.qbittorrent.org/) | `8080` | BitTorrent client with Web UI |
 | [Metadata-remote](https://github.com/wow-signal-dev/metadata-remote) | `8338` | Music metadata management |
 | [Focalboard](https://www.focalboard.com/) | `8000` | Notion-like project management board |
+| [Microbin](https://microbin.eu/) | `8081` | Pastebin alternative
 
 ---
 
@@ -165,7 +166,7 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 - **Tailscale** enabled with firewall support for the `tailscale0` interface
 - **Reverse proxy:** Caddy handles external HTTPS routing
 - **Firewall:** 
-  - Open TCP ports: `80`, `443`, `2222` (SSH), `4533` (Navidrome), `5030` (slskd), `8080` (qBittorrent), and `46565` (Minecraft)
+  - Open TCP ports: `80`, `443`, `2222` (SSH), `4533` (Navidrome), `5030` (slskd), `8080` (qBittorrent), `8081` (microbin) and `46565` (Minecraft)
   - Open UDP ports: `50300` (slskd-transfer), and `41641` (tailscale)
 - **SSH:** Port `2222`, password auth disabled, public key only, root login prohibited
 - **Fail2ban:** Active intrusion prevention
