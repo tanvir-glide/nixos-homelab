@@ -7,21 +7,22 @@ let
     fastfetch
     btop
     pfetch-rs
-    
+    ctop
+
     # Help
     tldr
-    
+
     # Shell enhancements
     fzf
     tree
-    
+
     # Remote access
     mosh
-    
+
     # File management
     ranger
     gdu
-    
+
     # Text processing
     jq      # JSON processor
     yq      # YAML processor
