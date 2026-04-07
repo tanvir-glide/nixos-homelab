@@ -189,7 +189,7 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 
 | Alias | Command | Description |
 |---|---|---|
-| `nix-switch` | `sudo nixos-rebuild switch --flake .#nixos` | Rebuild & apply configuration |
+| `nix-switch` | `sudo nixos-rebuild switch --flake /etc/nixos#nixos` | Rebuild & apply configuration |
 | `nix-clean` | `sudo nix-collect-garbage -d` | Full Nix store cleanup |
 | `neofetch` | `clear ; fastfetch` | Fetch system info |
 
