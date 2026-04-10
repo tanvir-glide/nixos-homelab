@@ -1,4 +1,3 @@
-# modules/security/fail2ban
 { config, pkgs, ... }:
 
 {

@@ -1,5 +1,5 @@
-# modules/security/firewall.nix
 { config, pkgs, lib, ... }:
+
 let
   ports = {
     navidrome = 4533;
@@ -12,7 +12,9 @@ let
     caddy = 80;
     caddy-ssl = 443;
   };
-in
+
+  in
+
 {
   networking.firewall = {
     enable = true;

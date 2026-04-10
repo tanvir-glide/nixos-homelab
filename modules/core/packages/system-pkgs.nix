@@ -1,5 +1,5 @@
-# modules/core/packages/system-pkgs.nix
 { config, pkgs, lib, ... }:
+
 {
   
   environment.systemPackages = with pkgs; [

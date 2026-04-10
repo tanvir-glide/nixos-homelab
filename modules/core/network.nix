@@ -1,5 +1,5 @@
-# modules/core/network.nix
 { config, pkgs, lib, ... }:
+
 {
     networking = {
         hostName = "nixos";

@@ -1,5 +1,5 @@
-# modules/core/packages/user-packages.nix
 { config, pkgs, lib, ... }:
+
 let
   # User-specific package lists
   userPackages = with pkgs; [
@@ -31,7 +31,6 @@ in
 {
   # Apply to your user
   users.users.tanvir = {
-    # ... existing user config ...
     packages = userPackages;
   };
 }
