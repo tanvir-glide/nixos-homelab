@@ -1,20 +1,47 @@
 { config, pkgs, ... }:
 
 {
-  # Caddy service for website
   services.caddy = {
     enable = true;
-    virtualHosts."100.120.226.4" = {
+    user = "caddy";
+    group = "caddy";
+
+    # Main Dashboard
+    virtualHosts."nixos-server.tail223014.ts.net" = {
       extraConfig = ''
-        root * /var/www/dashboard
+        root * /var/www/
         file_server
-        header {
-          # Optional: Security headers for that Apple-clean feel
-          Strict-Transport-Security "max-age=31536000;"
-          X-Content-Type-Options nosniff
-          X-Frame-Options DENY
-        }
       '';
+    };
+
+    # Navidrome
+    virtualHosts."nixos-server.tail223014.ts.net:14533" = {
+      extraConfig = "reverse_proxy 127.0.0.1:4533";
+    };
+
+    # Slskd
+    virtualHosts."nixos-server.tail223014.ts.net:15030" = {
+      extraConfig = "reverse_proxy 127.0.0.1:5030";
+    };
+
+    # qBittorrent
+    virtualHosts."nixos-server.tail223014.ts.net:18080" = {
+      extraConfig = "reverse_proxy 127.0.0.1:8080" ;
+    };
+
+    # Focalboard 
+    virtualHosts."nixos-server.tail223014.ts.net:18000" = {
+      extraConfig = "reverse_proxy 127.0.0.1:8000";
+    };
+
+    # Microbin
+    virtualHosts."nixos-server.tail223014.ts.net:18081" = {
+      extraConfig = "reverse_proxy 127.0.0.1:8081";
+    };
+    
+    # Metadata-remote
+    virtualHosts."nixos-server.tail223014.ts.net:18338" = {
+      extraConfig = "reverse_proxy 127.0.0.1:8338";
     };
   };
 }

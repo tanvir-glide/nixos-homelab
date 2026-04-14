@@ -42,8 +42,8 @@ in
           image = "ghcr.io/slskd/slskd:latest";
 
           ports = [
-            "5030:5030"
-            "5031:5031"
+            "127.0.0.1:5030:5030"
+            "127.0.0.1:5031:5031"
             "50300:50300"
             "50300:50300/udp"
           ];
@@ -60,23 +60,26 @@ in
           ];
         };
         
-        # Qbittorrent
+        # qBittorrent
         qbittorrent = {
           image = "lscr.io/linuxserver/qbittorrent:latest";
 
           ports = [
-            "8080:8080"
+            "127.0.0.1:8080:8080"
             "6881:6881"
             "6881:6881/udp"
           ];
 
           environment = commonEnv // {
             WEBUI_PORT = "8080";
+
+            WEBUI_REVERSE_PROXY = "true";
+            WEBUI_HOST_HEADER_VALIDATION = "false";
           };
 
           volumes = [
             "${mkData "config"}:/config"
-            "/mnt/Files/Torrent:/downloads"
+            "/mnt/More/Torrent:/downloads"
           ];
         };
 
@@ -84,7 +87,7 @@ in
         microbin = {
           image = "danielszabo99/microbin:latest";
 
-          ports = [ "8081:8080" ];
+          ports = [ "127.0.0.1:8081:8080" ];
 
           environment = commonEnv;
 
@@ -97,7 +100,7 @@ in
         metadata-remote = {
           image = "ghcr.io/wow-signal-dev/metadata-remote:latest";
 
-          ports = [ "8338:8338" ];
+          ports = [ "127.0.0.1:8338:8338" ];
 
           environment = commonEnv;
 
@@ -118,7 +121,7 @@ in
         focalboard = {
           image = "mattermost/focalboard:latest";
 
-          ports = [ "8000:8000" ];
+          ports = [ "127.0.0.1:8000:8000" ];
 
           environment = commonEnv;
 
@@ -126,6 +129,8 @@ in
             "${mkData "fbdata"}:/data"
           ];
         };
+
+                
       };
     };
   };
