@@ -5,7 +5,6 @@ let
   userPackages = with pkgs; [
     # fetch / montioring tools
     fastfetch
-    btop
     pfetch-rs
     ctop
 
