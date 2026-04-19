@@ -18,29 +18,21 @@ in
 {
   networking.firewall = {
     enable = true;
-    
+
     # Trust Tailscale interface
     trustedInterfaces = [ "tailscale0" ];
-    
+
     # Open TCP ports
     allowedTCPPorts = [
-      ports.caddy
-      ports.caddy-ssl
-      ports.navidrome
-      ports.slskd-web
-      ports.qbittorrent
-      ports.minecraft
-      ports.focalboard
-      ports.microbin
     ];
-    
+
     # Open UDP ports
     allowedUDPPorts = [
       ports.slskd-transfer
       ports.tailscale
     ];
-    
-    checkReversePath = "loose";    
+
+    checkReversePath = "loose";
   };
-  
+
 }
