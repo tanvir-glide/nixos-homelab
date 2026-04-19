@@ -7,6 +7,7 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 ![Architecture](https://img.shields.io/badge/arch-x86_64--linux-lightgrey)
 ![Docker](https://img.shields.io/badge/Docker-enabled-2496ED?logo=docker&logoColor=white)
 ![Tailscale](https://img.shields.io/badge/Tailscale-enabled-242424?logo=tailscale&logoColor=white)
+![Reverse Proxy: Caddy](https://img.shields.io/badge/Reverse_Proxy-Caddy-125da9?logo=caddy&logoColor=white)
 ![Nix Flakes](https://img.shields.io/badge/Nix-Flakes-5277C3?logo=nixos&logoColor=white)
 ![Fail2ban](https://img.shields.io/badge/Fail2ban-active-green)
 ![SSH Hardened](https://img.shields.io/badge/SSH-hardened-orange)
