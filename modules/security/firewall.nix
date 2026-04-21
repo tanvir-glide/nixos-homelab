@@ -1,14 +1,19 @@
 # modules/security/firewall.nix
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 let
   ports = {
     navidrome = 14533;
     slskd-web = 15030;
-    slskd-transfer = 50300;  # UDP
+    slskd-transfer = 50300; # UDP
     qbittorrent = 18080;
     gotify = 8085;
     minecraft = 46565;
-    tailscale = 41641;        # UDP
+    tailscale = 41641; # UDP
     microbin = 18081;
     focalboard = 18000;
     caddy = 80;

@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
   # User-specific package lists
@@ -23,8 +28,8 @@ let
     gdu
 
     # Text processing
-    jq      # JSON processor
-    yq      # YAML processor
+    jq # JSON processor
+    yq # YAML processor
   ];
 in
 {

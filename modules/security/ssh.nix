@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   services.openssh = {
@@ -17,4 +22,4 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB6KaudWVwILSHjzNOCF3RDH27uiJOTlRXzkpVbeHvAf mac -> hp"
   ];
 
- }
+}

@@ -9,16 +9,19 @@
     # Storage
     ./modules/hardware/storage.nix
 
-    ];
+  ];
 
   # Enabling flakes
   nix = {
     settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
       auto-optimise-store = true;
-      };
+    };
 
-  # Settings up garbage collector
+    # Settings up garbage collector
     gc = {
       automatic = true;
       dates = "weekly";
@@ -33,7 +36,6 @@
     neofetch = "clear ; fastfetch";
   };
 
-
   # Automatic update at 4am
   system.autoUpgrade = {
     enable = true;
@@ -41,4 +43,4 @@
     dates = "Fri 04:00";
   };
 
- }
+}

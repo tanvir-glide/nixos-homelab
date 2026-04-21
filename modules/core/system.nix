@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   # System state and timezone
@@ -12,15 +17,15 @@
         enable = true;
         device = "/dev/sda";
         useOSProber = true;
-        };
       };
-
-    kernelModules = [ "ntfs3" ];
     };
 
+    kernelModules = [ "ntfs3" ];
+  };
+
   # Select internationalisation properties.
-    i18n.defaultLocale = "en_US.UTF-8";
-    i18n.extraLocaleSettings = {
+  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
     LC_MEASUREMENT = "en_US.UTF-8";
@@ -46,5 +51,5 @@
 
   # Zram for memory efficiency
   zramSwap.enable = true;
-  zramSwap.memoryPercent = 50;  # Use half of RAM for zram
+  zramSwap.memoryPercent = 50; # Use half of RAM for zram
 }

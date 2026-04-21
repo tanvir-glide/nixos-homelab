@@ -1,9 +1,14 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
-  
-  serverIP = "YOUR_SERVER_IP"; 
-  appToken = "YOUR_GOTIFY_APP_TOKEN"; 
+
+  serverIP = "YOUR_SERVER_IP";
+  appToken = "YOUR_GOTIFY_APP_TOKEN";
 
   gotify-alert = pkgs.writeShellScriptBin "gotify-alert" ''
     ${pkgs.curl}/bin/curl -s -X POST "http://${serverIP}:8085/message?token=${appToken}" \

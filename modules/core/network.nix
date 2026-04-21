@@ -1,19 +1,24 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
-    networking = {
-        hostName = "nixos";
-        networkmanager.enable = true;
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
 
-        # DNS
-        nameservers = [
-            "1.1.1.1"
-            "8.8.8.8"
-        ];
-    };
+    # DNS
+    nameservers = [
+      "1.1.1.1"
+      "8.8.8.8"
+    ];
+  };
 
-    # Enable tailscale
-    services.tailscale.enable = true;
-    services.tailscale.permitCertUid = "caddy";
+  # Enable tailscale
+  services.tailscale.enable = true;
+  services.tailscale.permitCertUid = "caddy";
 
 }

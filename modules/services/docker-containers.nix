@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   dataDir = "/var/lib/docker-containers";
@@ -24,7 +29,7 @@ let
       directories:
         - /music
 
-    '';
+  '';
 
 in
 
@@ -59,7 +64,7 @@ in
             "${slskdConfig}:/app/slskd.yml"
           ];
         };
-        
+
         # qBittorrent
         qbittorrent = {
           image = "lscr.io/linuxserver/qbittorrent:latest";
@@ -95,7 +100,7 @@ in
             "${mkData "microbin-data"}:/app/persist"
           ];
         };
-        
+
         # Music Metadata Editor
         metadata-remote = {
           image = "ghcr.io/wow-signal-dev/metadata-remote:latest";
@@ -130,18 +135,16 @@ in
           ];
         };
 
-                
       };
     };
   };
 
-  systemd.tmpfiles.rules =
-    map (d: "d ${mkData d} 0755 tanvir users -") [
-      "data"
-      "config"
-      "fbdata"
-      "microbin-data"
-      "slskd/config"
-      "slskd/data"
-    ];
+  systemd.tmpfiles.rules = map (d: "d ${mkData d} 0755 tanvir users -") [
+    "data"
+    "config"
+    "fbdata"
+    "microbin-data"
+    "slskd/config"
+    "slskd/data"
+  ];
 }
