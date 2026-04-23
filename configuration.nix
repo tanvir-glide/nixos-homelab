@@ -11,6 +11,9 @@
 
   ];
 
+  # sudo but written in rust, good for memory safety
+  security.sudo-rs.enable = true;
+
   # Enabling flakes
   nix = {
     settings = {
