@@ -16,7 +16,7 @@
       "docker"
     ];
 
-    hashedPassword = "$6$gzeT9LDJejt49n84$/YkYbEFhO1ZktJJzVEVBkAOL3yhkVCurwcU6B4LAKpJB6wCEkb51HnMVFBuoPo6EXGz08OyBksLzinT.8rX8v1"
+    hashedPassword = "$6$gzeT9LDJejt49n84$/YkYbEFhO1ZktJJzVEVBkAOL3yhkVCurwcU6B4LAKpJB6wCEkb51HnMVFBuoPo6EXGz08OyBksLzinT.8rX8v1";
 
     shell = pkgs.bash;
 
