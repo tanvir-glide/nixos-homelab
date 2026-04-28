@@ -12,7 +12,6 @@
       # Environment variables
       ScanSchedule = "1h";
       LogLevel = "info";
-      SessionTimeout = "24h";
       ImageCacheSize = "500MB";
       LastFM.Enabled = true;
     };
