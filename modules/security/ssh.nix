@@ -9,8 +9,13 @@
   services.openssh = {
     enable = true;
     ports = [ 2222 ];
+
+    extraConfig = ''
+      UseDNS no
+      '';
+    
     settings = {
-      PasswordAuthentication = false;
+      PasswordAuthentication = true;
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
     };
