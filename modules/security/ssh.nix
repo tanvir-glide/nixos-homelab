@@ -1,8 +1,7 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
+{ config
+, pkgs
+, lib
+, ...
 }:
 
 {
@@ -12,8 +11,8 @@
 
     extraConfig = ''
       UseDNS no
-      '';
-    
+    '';
+
     settings = {
       PasswordAuthentication = false;
       KbdInteractiveAuthentication = false;
