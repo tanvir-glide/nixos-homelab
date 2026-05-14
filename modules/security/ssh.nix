@@ -24,7 +24,7 @@
 
   # Pubkey
   users.users.tanvir.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB6KaudWVwILSHjzNOCF3RDH27uiJOTlRXzkpVbeHvAf mac -> hp"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICsz5bi/aOn2PBoaAJ7fYU2glIutxUC86Ki9lIQIMTLV mac -> homelab"
   ];
 
 }
