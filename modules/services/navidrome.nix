@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  age.secrets.lastfm = {
+    file = ../../secrets/lastfm.age;
+    owner = "navidrome";
+  };
+
   services.navidrome = {
     enable = true;
 

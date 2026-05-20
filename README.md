@@ -277,7 +277,7 @@ Example skeleton for a new service:
 - [x] Better CI implementation
 - [ ] Actual CD implementation
 - [ ] Email or discord notification to show which services are hanging and crashed
-- [ ] Encrypting ssh keys and lastfm api keys via agenix
+- [x] Encrypting ssh keys and lastfm api keys via agenix
 - [ ] Use of home manager to be able to reproduce user's home directory
 
 ---
