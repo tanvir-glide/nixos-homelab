@@ -25,6 +25,7 @@
   systemd.services.navidrome = {
     serviceConfig = {
       SupplementaryGroups = [ "users" ];
+      EnvironmentFile = config.age.secrets.lastfm.path;
     };
     requires = [ "mnt-Files.mount" ];
     after = [ "mnt-Files.mount" ];
