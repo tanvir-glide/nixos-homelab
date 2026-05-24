@@ -35,10 +35,16 @@ in
 
 {
   virtualisation = {
-    docker.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+
+      dockerSocket.enable = true;
+    };
 
     oci-containers = {
-      backend = "docker";
+      backend = "podman";
 
       containers = {
 

@@ -5,7 +5,7 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 ![NixOS](https://img.shields.io/badge/NixOS-25.11-blue?logo=nixos&logoColor=white) 
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Architecture](https://img.shields.io/badge/arch-x86_64--linux-lightgrey)
-![Docker](https://img.shields.io/badge/Docker-enabled-2496ED?logo=docker&logoColor=white)
+![Podman](https://img.shields.io/badge/Podman-enabled-892CA0?logo=podman&logoColor=white)
 ![Tailscale](https://img.shields.io/badge/Tailscale-enabled-242424?logo=tailscale&logoColor=white)
 ![Reverse Proxy: Caddy](https://img.shields.io/badge/Reverse_Proxy-Caddy-125da9?logo=caddy&logoColor=white)
 ![Nix Flakes](https://img.shields.io/badge/Nix-Flakes-5277C3?logo=nixos&logoColor=white)
@@ -24,7 +24,7 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 - [System Overview](#system-overview)
 - [Hardware](#hardware)
 - [Native Services](#native-services)
-- [Docker Services](#docker-services)
+- [Podman Services](#Podman-services)
 - [Networking & Security](#networking--security)
 - [Automation & Maintenance](#automation--maintenance)
 - [Shell Aliases](#shell-aliases)
@@ -44,7 +44,7 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 
 ## Overview
 
-This repository hosts the complete NixOS configuration for a home server running several self-hosted services via Docker. The entire system is defined declaratively using **Nix Flakes**, making it fully reproducible and easy to roll back.
+This repository hosts the complete NixOS configuration for a home server running several self-hosted services via Podman. The entire system is defined declaratively using **Nix Flakes**, making it fully reproducible and easy to roll back.
 
 **Key highlights:**
 - Declarative infrastructure, so no manual configuration drift
@@ -84,7 +84,7 @@ nixos-homelab/
 │   │   └── ssh.nix
 │   └── services
 │       ├── caddy.nix
-│       ├── docker-containers.nix
+│       ├── containers.nix
 │       ├── gotify.nix
 │       ├── minecraft.nix
 │       ├── monitoring.nix
@@ -150,7 +150,7 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 | [Prometheus](https://prometheus.io/) | `9090` | The open-source monitoring and alerting toolkit |
 | [Minecraft (PaperMC)](https://papermc.io/) | `46565` | Minecraft game server |
 
-## Docker Services
+## Podman Services
 
 | Service | Port(s) | Description |
 |---|---|---|
@@ -227,7 +227,7 @@ Update the following files to match your system:
 - `modules/core/users.nix` - set your username and SSH public key
 - `modules/core/system.nix` - set your hostname, timezone, locale, bootloader
 - `modules/hardware/storage.nix` - update UUIDs and mount paths
-- `modules/services/docker-containers.nix` - adjust service ports and volume paths
+- `modules/services/podman-containers.nix` - adjust service ports and volume paths
 
 ### 4. Apply the configuration
 
@@ -244,7 +244,7 @@ nix-switch
 ### 5. Verify services
 
 ```bash
-docker ps          # Check running containers
+podman ps          # Check running containers
 systemctl status   # Check systemd service health
 ```
 
@@ -273,11 +273,8 @@ Example skeleton for a new service:
 ---
 
 ## To-do
-- [x] Implementing monitoring tools
-- [x] Better CI implementation
 - [ ] Actual CD implementation
 - [ ] Email or discord notification to show which services are hanging and crashed
-- [x] Encrypting ssh keys and lastfm api keys via agenix
 - [ ] Use of home manager to be able to reproduce user's home directory
 
 ---

@@ -46,7 +46,7 @@
           ./modules/core/packages/user-pkgs.nix
 
           # Services
-          ./modules/services/docker-containers.nix
+          ./modules/services/containers.nix
           ./modules/services/minecraft.nix
           ./modules/services/caddy.nix
           ./modules/services/navidrome.nix
