@@ -295,6 +295,6 @@ Please keep changes modular - one logical change per PR. If you're adding a new 
 
 ## License
 
-This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the **GPLv3 License** - see the [LICENSE](./LICENSE) file for details.
 
 Copyright (c) 2026 [@Tanvir101cmd](https://github.com/Tanvir101cmd)
