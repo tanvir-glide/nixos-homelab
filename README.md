@@ -90,7 +90,6 @@ nixos-homelab/
 │       ├── monitoring.nix
 │       └── navidrome.nix
 ├── README.md
-└── setup.sh
 ```
 
 ---
