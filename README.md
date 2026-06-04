@@ -2,15 +2,18 @@
 
 A fully declarative, reproducible NixOS server configuration for self-hosted services, managed with Nix Flakes.
 
-![NixOS](https://img.shields.io/badge/NixOS-25.11-blue?logo=nixos&logoColor=white) 
-![License](https://img.shields.io/badge/license-MIT-green)
-![Architecture](https://img.shields.io/badge/arch-x86_64--linux-lightgrey)
-![Podman](https://img.shields.io/badge/Podman-enabled-892CA0?logo=podman&logoColor=white)
-![Tailscale](https://img.shields.io/badge/Tailscale-enabled-242424?logo=tailscale&logoColor=white)
-![Reverse Proxy: Caddy](https://img.shields.io/badge/Reverse_Proxy-Caddy-125da9?logo=caddy&logoColor=white)
-![Nix Flakes](https://img.shields.io/badge/Nix-Flakes-5277C3?logo=nixos&logoColor=white)
-![Fail2ban](https://img.shields.io/badge/Fail2ban-active-green)
-![SSH Hardened](https://img.shields.io/badge/SSH-hardened-orange)
+<p align="center">
+  <!-- Project Status & Meta -->
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Architecture-x86_64--linux-lightgrey?style=flat-square" alt="Architecture">
+  <img src="https://img.shields.io/badge/NixOS-25.11-5277C3?style=flat-square&logo=nixos&logoColor=white" alt="NixOS">
+  <img src="https://img.shields.io/badge/Nix-Flakes-5277C3?style=flat-square&logo=nixos&logoColor=white" alt="Nix Flakes">
+  <img src="https://img.shields.io/badge/Tailscale-Enabled-5B49E9?style=flat-square&logo=tailscale&logoColor=white" alt="Tailscale">
+  <img src="https://img.shields.io/badge/Reverse_Proxy-Caddy-00A2D1?style=flat-square&logo=caddy&logoColor=white" alt="Reverse Proxy: Caddy">
+  <img src="https://img.shields.io/badge/Podman-Enabled-892CA0?style=flat-square&logo=podman&logoColor=white" alt="Podman">
+  <img src="https://img.shields.io/badge/Fail2ban-Active-green?style=flat-square" alt="Fail2ban">
+  <img src="https://img.shields.io/badge/SSH-Hardened-orange?style=flat-square" alt="SSH Hardened">
+</p>
 
 ---
 
@@ -172,13 +175,13 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 
 ## Automation & Maintenance
 
-| Feature | Schedule / Detail |
-|---|---|
-| **System Upgrades** | Weekly, Fridays at 04:00 (no auto-reboot) |
-| **Garbage Collection** | Weekly, removes generations older than 7 days |
-| **Store Optimization** | Automatic Nix store deduplication |
-| **Memory** | Zram swap enabled |
-| **Power** | Laptop lid ignored; stays awake on external power |
+| Feature                | Schedule / Detail                                 |
+| ------------------------| ---------------------------------------------------|
+| **System Upgrades**    | Weekly, Fridays at 04:00 (no auto-reboot)         |
+| **Garbage Collection** | Weekly, removes generations older than 7 days     |
+| **Store Optimization** | Automatic Nix store deduplication                 |
+| **Memory**             | Zram swap enabled                                 |
+| **Power**              | Laptop lid ignored; stays awake on external power |
 
 ---
 
