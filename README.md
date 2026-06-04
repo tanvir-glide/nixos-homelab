@@ -3,7 +3,7 @@
 A fully declarative, reproducible NixOS server configuration for self-hosted services, managed with Nix Flakes.
 
 ![NixOS](https://img.shields.io/badge/NixOS-25.11-blue?logo=nixos&logoColor=white) 
-![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green)
 ![Architecture](https://img.shields.io/badge/arch-x86_64--linux-lightgrey)
 ![Podman](https://img.shields.io/badge/Podman-enabled-892CA0?logo=podman&logoColor=white)
 ![Tailscale](https://img.shields.io/badge/Tailscale-enabled-242424?logo=tailscale&logoColor=white)
@@ -294,6 +294,6 @@ Please keep changes modular - one logical change per PR. If you're adding a new 
 
 ## License
 
-This project is licensed under the **GPLv3 License** - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
 
 Copyright (c) 2026 [@Tanvir101cmd](https://github.com/Tanvir101cmd)
