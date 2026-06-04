@@ -3,7 +3,7 @@
 A fully declarative, reproducible NixOS server configuration for self-hosted services, managed with Nix Flakes.
 
 ![NixOS](https://img.shields.io/badge/NixOS-25.11-blue?logo=nixos&logoColor=white) 
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
 ![Architecture](https://img.shields.io/badge/arch-x86_64--linux-lightgrey)
 ![Podman](https://img.shields.io/badge/Podman-enabled-892CA0?logo=podman&logoColor=white)
 ![Tailscale](https://img.shields.io/badge/Tailscale-enabled-242424?logo=tailscale&logoColor=white)
