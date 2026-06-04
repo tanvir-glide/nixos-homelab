@@ -11,8 +11,6 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 ![Nix Flakes](https://img.shields.io/badge/Nix-Flakes-5277C3?logo=nixos&logoColor=white)
 ![Fail2ban](https://img.shields.io/badge/Fail2ban-active-green)
 ![SSH Hardened](https://img.shields.io/badge/SSH-hardened-orange)
-![Last Commit](https://img.shields.io/github/last-commit/Tanvir101cmd/nixos-homelab)
-![Repo Size](https://img.shields.io/github/repo-size/Tanvir101cmd/nixos-homelab)
 
 ---
 
