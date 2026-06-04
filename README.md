@@ -165,10 +165,10 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 
 - **Tailscale** enabled with firewall support for the `tailscale0` interface
 - **Firewall:** 
-  - Open TCP ports: `80`, `443`, `2222` (SSH), `4533` (Navidrome), `5030` (slskd), `8080` (qBittorrent), `8081` (microbin) and `46565` (Minecraft)
+  - Open TCP ports: None (because tailscale0 has unrestricted access to all ports)
   - Open UDP ports: `50300` (slskd-transfer), and `41641` (tailscale)
 - **SSH:** Port `2222`, password auth disabled, public key only, root login prohibited
-- **Fail2ban:** Active intrusion prevention
+- **Fail2ban:** Active
 
 ---
 
