@@ -277,6 +277,8 @@ Example skeleton for a new service:
 - [ ] Email or discord notification to show which services are hanging and crashed
 - [ ] Use of home manager to be able to reproduce user's home directory
 
+### For a full list of changes, see [CHANGELOG.md](./CHANGELOG.md).
+
 ---
 
 ## Contributing
