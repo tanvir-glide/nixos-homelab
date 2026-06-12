@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, vars, ... }:
 
 {
   services.caddy = {
@@ -8,7 +8,7 @@
 
     virtualHosts = {
       # Main Dashboard
-      "nixos-server.tail223014.ts.net" = {
+      "${vars.tailscaleHostname}" = {
         extraConfig = ''
           root * /var/www/
           file_server
@@ -16,17 +16,17 @@
       };
 
       # Navidrome
-      "nixos-server.tail223014.ts.net:14533" = {
+      "${vars.tailscaleHostname}:14533" = {
         extraConfig = "reverse_proxy 127.0.0.1:4533";
       };
 
       # Slskd
-      "nixos-server.tail223014.ts.net:15030" = {
+      "${vars.tailscaleHostname}:15030" = {
         extraConfig = "reverse_proxy 127.0.0.1:5030";
       };
 
       # qBittorrent
-      "nixos-server.tail223014.ts.net:18080" = {
+      "${vars.tailscaleHostname}:18080" = {
         extraConfig = ''
           reverse_proxy 127.0.0.1:8080 {
             header_up Host 127.0.0.1:8080
@@ -35,17 +35,17 @@
       };
 
       # Focalboard
-      "nixos-server.tail223014.ts.net:18000" = {
+      "${vars.tailscaleHostname}:18000" = {
         extraConfig = "reverse_proxy 127.0.0.1:8000";
       };
 
       # Microbin
-      "nixos-server.tail223014.ts.net:18081" = {
+      "${vars.tailscaleHostname}:18081" = {
         extraConfig = "reverse_proxy 127.0.0.1:8081";
       };
 
       # Metadata-remote
-      "nixos-server.tail223014.ts.net:18338" = {
+      "${vars.tailscaleHostname}:18338" = {
         extraConfig = "reverse_proxy 127.0.0.1:8338";
       };
     };

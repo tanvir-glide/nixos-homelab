@@ -9,9 +9,6 @@
     # Hardware support (auto-cpufreq, Intel microcode)
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
-    # Utility for simplifying flake setups
-    flake-utils.url = "github:numtide/flake-utils";
-
     # Optional but recommended for secrets management
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
@@ -30,7 +27,11 @@
 
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs;
+                        vars = {
+                            tailscaleHostname = "nixos-server.tail223014.ts.net";
+                        }; 
+                      };
         modules = [
           nixos-hardware.nixosModules.common-cpu-intel
           ./configuration.nix
