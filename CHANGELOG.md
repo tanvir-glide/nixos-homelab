@@ -2,341 +2,354 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-06-12
+
+### Refactoring
+- Extract tailscale hostname to vars and remove unused flake-utils ([34a0020](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/34a0020))
+
+### Other Changes
+- Hasedpassword as it is crackable ([b853c6d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b853c6d))
+
+## 2026-06-10
+
+### Documentation
+- Added changelog.md ([65fe968](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/65fe968))
+
 ## 2026-06-04
 
 ### Documentation
-- Improved banners with center align ([046ead4](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/046ead4))
-- Removed repo size & last commit banners ([e111d03](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e111d03))
-- Changed license & its banner ([d500971](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d500971))
-- Changed license banner ([049d155](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/049d155))
-- Fixed minor inconsistency ([42f10d2](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/42f10d2))
+- Improved banners with center align ([1ac1320](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1ac1320))
+- Removed repo size & last commit banners ([c210187](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c210187))
+- Changed license & its banner ([b74023b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b74023b))
+- Changed license banner ([3074454](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3074454))
+- Fixed minor inconsistency ([525bc53](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/525bc53))
 
 ### Other Changes
-- Changed from gplv3 to mit ([ede2677](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ede2677))
-- Revert "removed: hardware-configuration.nix" ([5e4c00a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5e4c00a))
+- Changed from gplv3 to mit ([2823360](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/2823360))
+- Revert "removed: hardware-configuration.nix" ([22ee71d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/22ee71d))
 
 ## 2026-06-03
 
 ### Other Changes
-- Setup bash script as it its redundant ([903ddf3](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/903ddf3))
-- Revert "removed: setup bash script as it its redundant" ([194541f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/194541f))
-- Setup bash script as it its redundant ([b647d77](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b647d77))
+- Setup bash script as it its redundant ([9fad505](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9fad505))
+- Revert "removed: setup bash script as it its redundant" ([81c8be4](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/81c8be4))
+- Setup bash script as it its redundant ([5eef6a7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5eef6a7))
 
 ## 2026-06-02
 
 ### Other Changes
-- Hardware-configuration.nix ([e291b20](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e291b20))
-- Change project license from MIT to GPLv3 ([081f8fd](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/081f8fd))
-- Update copyright year and author in LICENSE ([9b94ce3](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9b94ce3))
+- Hardware-configuration.nix ([995cbbc](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/995cbbc))
+- Change project license from MIT to GPLv3 ([5b167d1](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5b167d1))
+- Update copyright year and author in LICENSE ([91abb00](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/91abb00))
 
 ## 2026-05-24
 
 ### Other Changes
-- From docker to podman ([6b3f3c8](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6b3f3c8))
+- From docker to podman ([0b72729](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0b72729))
 
 ## 2026-05-23
 
 ### Other Changes
-- Secret management of api keys ([8592234](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8592234))
+- Secret management of api keys ([6cdd644](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6cdd644))
 
 ## 2026-05-20
 
 ### Other Changes
-- switched to rfc style ([4b5db5b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4b5db5b))
-- switched to rfc style ([978041c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/978041c))
-- To rfc style ([fd0bf73](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/fd0bf73))
-- Api keys handled by agenix ([5294dcf](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5294dcf))
+- switched to rfc style ([5a117f9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5a117f9))
+- switched to rfc style ([5445684](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5445684))
+- To rfc style ([96f9524](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/96f9524))
+- Api keys handled by agenix ([0640037](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0640037))
 
 ## 2026-05-14
 
 ### Other Changes
-- Ssh pubkey ([7cb2c9e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7cb2c9e))
+- Ssh pubkey ([d643ce5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d643ce5))
 
 ## 2026-05-09
 
 ### Other Changes
-- Formatting again ([5f70026](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5f70026))
-- Formatting ([1947297](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1947297))
-- Password auth disabled ([b7dd3a3](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b7dd3a3))
-- Delay on login via ssh ([71663fe](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/71663fe))
-- For detecting liveiso ([16a6c6d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/16a6c6d))
+- Formatting again ([85891cf](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/85891cf))
+- Formatting ([0de3ebc](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0de3ebc))
+- Password auth disabled ([50ddaaa](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/50ddaaa))
+- Delay on login via ssh ([237330b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/237330b))
+- For detecting liveiso ([de4afb0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/de4afb0))
 
 ## 2026-04-28
 
 ### Other Changes
-- Remove SessionTimeout default from Navidrome module ([d78823c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d78823c))
-- Add missing semicolon in users.nix ([a9f9f67](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a9f9f67))
-- Add hashed password to users module ([bdb698a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/bdb698a))
+- Remove SessionTimeout default from Navidrome module ([0126eca](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0126eca))
+- Add missing semicolon in users.nix ([8ca360f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8ca360f))
+- Add hashed password to users module ([76b60bb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/76b60bb))
 
 ## 2026-04-23
 
 ### Other Changes
-- Enable sudo-rs ([6044508](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6044508))
+- Enable sudo-rs ([c74ea2a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c74ea2a))
 
 ## 2026-04-21
 
 ### Other Changes
-- Restrict Nix formatting check to .nix files ([db6df96](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/db6df96))
-- Format nix files ([6156706](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6156706))
-- Add CI concurrency, magic Nix cache and nixfmt ([403344c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/403344c))
+- Restrict Nix formatting check to .nix files ([272bc5a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/272bc5a))
+- Format nix files ([e0aace1](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e0aace1))
+- Add CI concurrency, magic Nix cache and nixfmt ([ae90a64](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ae90a64))
 
 ## 2026-04-20
 
 ### Other Changes
-- Add Caddy reverse proxy badge to README ([c4ae847](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c4ae847))
-- Remove allowed TCP ports from firewall ([d2793fe](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d2793fe))
+- Add Caddy reverse proxy badge to README ([357b157](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/357b157))
+- Remove allowed TCP ports from firewall ([7b0d344](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7b0d344))
 
 ## 2026-04-19
 
 ### Other Changes
-- Unauthorized access on qbittorrent ([4ba22df](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4ba22df))
+- Unauthorized access on qbittorrent ([b9653fb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b9653fb))
 
 ## 2026-04-18
 
 ### Other Changes
-- "fix(network): allow caddy to fetch tailscale certificates" ([dc57f01](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/dc57f01))
+- "fix(network): allow caddy to fetch tailscale certificates" ([0b8dcc2](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0b8dcc2))
 
 ## 2026-04-16
 
 ### Other Changes
-- removed duplicaed btop ([3dcfad9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3dcfad9))
+- removed duplicaed btop ([8025e57](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8025e57))
 
 ## 2026-04-14
 
 ### Other Changes
-- fixed virtualHosts redundancy ([55b8350](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/55b8350))
-- implemented reverse proxy using caddy ([3e8ff70](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3e8ff70))
+- fixed virtualHosts redundancy ([c09f772](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c09f772))
+- implemented reverse proxy using caddy ([fd4e727](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/fd4e727))
 
 ## 2026-04-10
 
 ### Other Changes
-- removed unnecessary path names in the file + better spacing ([4a18986](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4a18986))
+- removed unnecessary path names in the file + better spacing ([f85f599](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f85f599))
 
 ## 2026-04-08
 
 ### Other Changes
-- removed reverse proxy sections as it is not implemented yet ([699a24d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/699a24d))
+- removed reverse proxy sections as it is not implemented yet ([dd7d396](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/dd7d396))
 
 ## 2026-04-07
 
 ### Other Changes
-- added ctop ([3929ff2](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3929ff2))
-- added Microbin to the firewall ([7e2335a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7e2335a))
-- shell alias fixed ([694ac7c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/694ac7c))
-- fixed wrong port number ([b4a760f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b4a760f))
-- made setup.sh generate hw config first ([62d5d4e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/62d5d4e))
-- removed redundant grub code ([b57c2ff](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b57c2ff))
+- added ctop ([f16b8e9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f16b8e9))
+- added Microbin to the firewall ([46b6693](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/46b6693))
+- shell alias fixed ([e603454](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e603454))
+- fixed wrong port number ([9222438](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9222438))
+- made setup.sh generate hw config first ([9dcb2b6](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9dcb2b6))
+- removed redundant grub code ([94fca8f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/94fca8f))
 
 ## 2026-04-05
 
 ### Other Changes
-- fixed a typo :) ([0b20f53](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0b20f53))
+- fixed a typo :) ([9d1bae8](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9d1bae8))
 
 ## 2026-03-29
 
 ### Other Changes
-- updated file structure ([633abfa](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/633abfa))
-- Added push notification service via Gotify ([ab67fed](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ab67fed))
+- updated file structure ([3d10e14](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3d10e14))
+- Added push notification service via Gotify ([7a17a23](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7a17a23))
 
 ## 2026-03-24
 
 ### Other Changes
-- fixed slskd login ([bf1d4c9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/bf1d4c9))
+- fixed slskd login ([9ae9878](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9ae9878))
 
 ## 2026-03-21
 
 ### Other Changes
-- added grub bootloader ([88f271b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/88f271b))
+- added grub bootloader ([805c644](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/805c644))
 
 ## 2026-03-19
 
 ### Other Changes
-- added a setup.sh ([e9a372b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e9a372b))
+- added a setup.sh ([0bc994e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0bc994e))
 
 ## 2026-03-16
 
 ### Other Changes
-- added git + tldr to pkgs ([e69463c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e69463c))
+- added git + tldr to pkgs ([41be342](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/41be342))
 
 ## 2026-03-13
 
 ### Other Changes
-- caution to not use the pre-existed hardware-conf.nix file ([9d30166](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9d30166))
+- caution to not use the pre-existed hardware-conf.nix file ([afcd86a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/afcd86a))
 
 ## 2026-03-12
 
 ### Other Changes
-- Remove Caddy badge from README ([01f21b4](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/01f21b4))
+- Remove Caddy badge from README ([1b141f7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1b141f7))
 
 ## 2026-03-11
 
 ### Other Changes
-- added dir the ntfs drives that I mounted ([521c318](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/521c318))
-- removed reverse proxy cause its yet to implement ([9c0cedb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9c0cedb))
+- added dir the ntfs drives that I mounted ([f59b9e3](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f59b9e3))
+- removed reverse proxy cause its yet to implement ([c9a354f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c9a354f))
 
 ## 2026-03-10
 
 ### Other Changes
-- fixed nix-switch command ([33f550f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/33f550f))
-- rewrote docker codes for better readability ([52d7d57](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/52d7d57))
-- added os-prober for detecting windows in grub ([ff6c7d3](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ff6c7d3))
-- Remove unnecessary horizontal lines from README ([65387ac](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/65387ac))
-- make the backaground transparent ([33e37ef](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/33e37ef))
-- small typo ([a734e69](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a734e69))
-- optimized the ss ([1357f59](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1357f59))
-- added a ss of fastfetch ([a76b2e0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a76b2e0))
-- deleted Features section as it is redundant ([42d53e4](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/42d53e4))
-- added Features section ([cf2f117](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cf2f117))
+- fixed nix-switch command ([7887adb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7887adb))
+- rewrote docker codes for better readability ([1662d91](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1662d91))
+- added os-prober for detecting windows in grub ([6927ff6](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6927ff6))
+- Remove unnecessary horizontal lines from README ([8b29b52](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8b29b52))
+- make the backaground transparent ([3bf8de2](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3bf8de2))
+- small typo ([04fb089](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/04fb089))
+- optimized the ss ([901379f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/901379f))
+- added a ss of fastfetch ([1dedb95](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1dedb95))
+- deleted Features section as it is redundant ([7b32f94](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7b32f94))
+- added Features section ([e0b23b7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e0b23b7))
 
 ## 2026-03-09
 
 ### Other Changes
-- fixed to-do to be more coherent ([ca18c6f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ca18c6f))
-- Yet to implement Continious Deployment ([05bb48e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/05bb48e))
-- done with "better CI/CD" ([0962483](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0962483))
-- fixed all statix warning by reformatting up the code ([44d3cc7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/44d3cc7))
-- fixed statix warning for repeated boot attribute keys ([bec1edc](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/bec1edc))
-- added check for dead or redundant code ([07ea1ac](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/07ea1ac))
-- added flake check ([70ae258](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/70ae258))
-- fixed nix-clean alias ([a27a651](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a27a651))
-- marked done in "monitoring tools" in todo section ([45d91c2](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/45d91c2))
-- Update README.md Added Prometheus section ([ac97086](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ac97086))
-- added prometheus service for collecting data ([3d4182d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3d4182d))
-- Fixed some mistake ([b6a03e9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b6a03e9))
-- added grafana for monitoring ([6929036](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6929036))
+- fixed to-do to be more coherent ([26e3521](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/26e3521))
+- Yet to implement Continious Deployment ([31f65b1](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/31f65b1))
+- done with "better CI/CD" ([8c71e01](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8c71e01))
+- fixed all statix warning by reformatting up the code ([5893ad4](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5893ad4))
+- fixed statix warning for repeated boot attribute keys ([4f98492](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4f98492))
+- added check for dead or redundant code ([ed24105](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ed24105))
+- added flake check ([66b5b3f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/66b5b3f))
+- fixed nix-clean alias ([de8d1c5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/de8d1c5))
+- marked done in "monitoring tools" in todo section ([d567aba](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d567aba))
+- Update README.md Added Prometheus section ([8974e7a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8974e7a))
+- added prometheus service for collecting data ([ae25fcd](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ae25fcd))
+- Fixed some mistake ([74b4e6c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/74b4e6c))
+- added grafana for monitoring ([75d4f39](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/75d4f39))
 
 ## 2026-03-08
 
 ### Other Changes
-- Fixed metadata-remote url ([0d5d7ac](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0d5d7ac))
-- fixed wrong filename ([ec89233](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ec89233))
-- fixed nix-clean alias, removed redundant microcode declearation ([814c39f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/814c39f))
-- Fix nix-clean command to use nix instead of nixos ([70944e5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/70944e5))
-- Updated with new hardware section ([373d678](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/373d678))
-- Update README.md ([b5f1fe2](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b5f1fe2))
+- Fixed metadata-remote url ([7f38a11](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7f38a11))
+- fixed wrong filename ([ee266e0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ee266e0))
+- fixed nix-clean alias, removed redundant microcode declearation ([5087e25](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5087e25))
+- Fix nix-clean command to use nix instead of nixos ([0b15f59](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0b15f59))
+- Updated with new hardware section ([926bf19](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/926bf19))
+- Update README.md ([6db3d6e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6db3d6e))
 
 ## 2026-03-07
 
 ### Other Changes
-- added more badges ([80fc72c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/80fc72c))
-- added TOC ([37e0680](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/37e0680))
-- Added To-do section ([1c20652](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1c20652))
-- removed dozzle section from README.md ([9b4c29b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9b4c29b))
-- fixed nix-clean alias, there was redundant commands ([7f3985e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7f3985e))
-- Rewrote README.md ([e9c3e8c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e9c3e8c))
-- went back to old ci ([ff2c17a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ff2c17a))
-- revamped ci again :) ([01076ac](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/01076ac))
-- showing trace on ci :) ([77ed408](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/77ed408))
-- removed dulpicated nixos directory ([933e363](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/933e363))
-- Warning are normal, letting it know ([ceb976c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ceb976c))
-- now ci.yml checks the configuration, not builds it ([9581714](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9581714))
-- made storage.nix detect if its on CI ([4b013c7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4b013c7))
-- changed nix build run ([a233514](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a233514))
-- Added Nix CI workflow with flake checks ([e3066ad](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e3066ad))
-- Add MIT License to the project ([cc1803f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cc1803f))
-- added more env variables to slskd section ([ba64489](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ba64489))
+- added more badges ([8f840af](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8f840af))
+- added TOC ([bb80a0d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/bb80a0d))
+- Added To-do section ([0542b64](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0542b64))
+- removed dozzle section from README.md ([cdcee3f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cdcee3f))
+- fixed nix-clean alias, there was redundant commands ([d8e51c0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d8e51c0))
+- Rewrote README.md ([ac5c0ad](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ac5c0ad))
+- went back to old ci ([1d997fb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1d997fb))
+- revamped ci again :) ([925646b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/925646b))
+- showing trace on ci :) ([ba7d7ec](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ba7d7ec))
+- removed dulpicated nixos directory ([3aa0bd5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3aa0bd5))
+- Warning are normal, letting it know ([cc3219d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cc3219d))
+- now ci.yml checks the configuration, not builds it ([fd54197](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/fd54197))
+- made storage.nix detect if its on CI ([ea45659](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ea45659))
+- changed nix build run ([eaae14f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/eaae14f))
+- Added Nix CI workflow with flake checks ([6631ba9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6631ba9))
+- Add MIT License to the project ([f6a041d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f6a041d))
+- added more env variables to slskd section ([98e5f09](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/98e5f09))
 
 ## 2026-03-06
 
 ### Other Changes
-- README.md got outdated :) ([3228973](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3228973))
-- fixed unnecessary comments on flake.nix ([19f73c2](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/19f73c2))
-- fixed warning related to docker-containers.nix and changed some aliases ([75b0058](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/75b0058))
-- Modularized nixOS config using flakes and removed old configs ([f7d41c0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f7d41c0))
+- README.md got outdated :) ([eac9d47](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/eac9d47))
+- fixed unnecessary comments on flake.nix ([d9c69e4](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d9c69e4))
+- fixed warning related to docker-containers.nix and changed some aliases ([102b6b9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/102b6b9))
+- Modularized nixOS config using flakes and removed old configs ([094f599](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/094f599))
 
 ## 2026-02-14
 
 ### Other Changes
-- removed the homepage ([0e62b78](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0e62b78))
+- removed the homepage ([148e404](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/148e404))
 
 ## 2026-02-13
 
 ### Other Changes
-- Cleaned focalboard docker data ([7828018](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7828018))
-- added notion like service (focalboard) as docker app ([6355f0d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6355f0d))
-- added a bash script to update all docker images at once ([cf5dccc](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cf5dccc))
+- Cleaned focalboard docker data ([7de5653](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7de5653))
+- added notion like service (focalboard) as docker app ([f00539e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f00539e))
+- added a bash script to update all docker images at once ([c1a03fa](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c1a03fa))
 
 ## 2026-02-11
 
 ### Other Changes
-- added index.html to right dir ([361f3ed](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/361f3ed))
-- removed index.html ([3e88212](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3e88212))
-- fixed some typo :) ([343289b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/343289b))
-- Updated readme.md with what 2 new docker apps do ([e540136](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e540136))
-- added extra docker.service tweaks ([a396e18](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a396e18))
+- added index.html to right dir ([e22ed21](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e22ed21))
+- removed index.html ([ff40032](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ff40032))
+- fixed some typo :) ([36e3173](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/36e3173))
+- Updated readme.md with what 2 new docker apps do ([98945c3](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/98945c3))
+- added extra docker.service tweaks ([dfa6566](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/dfa6566))
 
 ## 2026-02-10
 
 ### Other Changes
-- changed the index.html title ([034a60f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/034a60f))
-- Made a homepage using caddy ([f98ff6d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f98ff6d))
+- changed the index.html title ([9d6cee1](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9d6cee1))
+- Made a homepage using caddy ([a7f4f50](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a7f4f50))
 
 ## 2026-02-09
 
 ### Other Changes
-- Added metadata-remote service ([01496f0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/01496f0))
+- Added metadata-remote service ([ae4014d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ae4014d))
 
 ## 2026-02-05
 
 ### Other Changes
-- made slskd config persistent ([ee41651](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ee41651))
+- made slskd config persistent ([7c98c7e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7c98c7e))
 
 ## 2026-02-03
 
 ### Other Changes
-- fixed the daily -> weekly updates in the docs ([a9a914c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a9a914c))
-- fixed formatting slightly ([58dc8bb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/58dc8bb))
-- updated README.md to add the qbittorrent section ([4558f04](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4558f04))
-- fixed docker-compose files to work better ([5eb8b9a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5eb8b9a))
-- Updated docker-compose of qbittorrent to work perfectly ([6500e4a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6500e4a))
-- Updated docker-compose of qbittorrent to work perfectly ([67f0673](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/67f0673))
-- Removed rootless docker ([0ce550a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0ce550a))
+- fixed the daily -> weekly updates in the docs ([c76f1b9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c76f1b9))
+- fixed formatting slightly ([5223ada](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5223ada))
+- updated README.md to add the qbittorrent section ([587641f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/587641f))
+- fixed docker-compose files to work better ([f0dd35d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f0dd35d))
+- Updated docker-compose of qbittorrent to work perfectly ([cfd2d35](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cfd2d35))
+- Updated docker-compose of qbittorrent to work perfectly ([34d139b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/34d139b))
+- Removed rootless docker ([7cea5b6](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7cea5b6))
 
 ## 2026-02-01
 
 ### Other Changes
-- implemented fail2ban ([1a0e467](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1a0e467))
-- Updated firewall as well as switched to weekly update ([76f0a03](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/76f0a03))
+- implemented fail2ban ([08f510f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/08f510f))
+- Updated firewall as well as switched to weekly update ([7a3c5ec](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7a3c5ec))
 
 ## 2026-01-31
 
 ### Other Changes
-- Changed pubkey ([2c4168c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/2c4168c))
-- updated configuration with more docker containers ([06c842b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/06c842b))
+- Changed pubkey ([f154cc5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f154cc5))
+- updated configuration with more docker containers ([b99070e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b99070e))
 
 ## 2026-01-26
 
 ### Other Changes
-- Updated README to add Navidrome section ([c2ed698](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c2ed698))
-- removed unnecessary .DS_Store ([246674f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/246674f))
-- added navidrome + slskd for music streaming ([c458f05](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c458f05))
-- added navidrome + slskd for music streaming ([039d7c1](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/039d7c1))
-- removed navidrome support ([a3232bc](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a3232bc))
+- Updated README to add Navidrome section ([d029dd7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d029dd7))
+- removed unnecessary .DS_Store ([927fd8f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/927fd8f))
+- added navidrome + slskd for music streaming ([6cc5b79](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6cc5b79))
+- added navidrome + slskd for music streaming ([8ff1a24](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8ff1a24))
+- removed navidrome support ([f591dfa](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f591dfa))
 
 ## 2026-01-23
 
 ### Other Changes
-- Update Navidrome description to include Docker ([c809c0a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c809c0a))
-- remove DS_Store ([8aa31be](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8aa31be))
-- configured navidrome server using docker now instead of native ([6a3c0c4](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6a3c0c4))
+- Update Navidrome description to include Docker ([7316e8d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7316e8d))
+- remove DS_Store ([cc00414](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cc00414))
+- configured navidrome server using docker now instead of native ([1d860cb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1d860cb))
 
 ## 2026-01-22
 
 ### Other Changes
-- fixed borked ssh key ([b0996c0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b0996c0))
-- Removed navidrome ([102ce62](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/102ce62))
+- fixed borked ssh key ([62c1611](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/62c1611))
+- Removed navidrome ([5e0918a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5e0918a))
 
 ## 2026-01-17
 
 ### Other Changes
-- Correct capitalization in README.md ([442f423](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/442f423))
-- Fix formatting in SSH configuration section ([c00fbeb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c00fbeb))
-- Slightly reformatted README.md ([442cb2d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/442cb2d))
-- Slightly reformatted README.md ([225457b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/225457b))
-- Slightly edited README.md ([04b3497](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/04b3497))
-- Slightly edited README.md ([ef7f7f7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ef7f7f7))
-- Added README.md ([43b1aba](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/43b1aba))
-- Deleted README.md ([e3415d1](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e3415d1))
-- Updated format of README.md ([ba45da8](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ba45da8))
-- Added configuration.nix and README.md ([18d0060](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/18d0060))
-- Added configuration.nix and README.md ([e488846](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e488846))
+- Correct capitalization in README.md ([fe4098b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/fe4098b))
+- Fix formatting in SSH configuration section ([9742e2d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9742e2d))
+- Slightly reformatted README.md ([4acb9d0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4acb9d0))
+- Slightly reformatted README.md ([2ce522d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/2ce522d))
+- Slightly edited README.md ([720d8ea](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/720d8ea))
+- Slightly edited README.md ([8c46001](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8c46001))
+- Added README.md ([cc05758](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cc05758))
+- Deleted README.md ([cf35ca5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cf35ca5))
+- Updated format of README.md ([a37211b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a37211b))
+- Added configuration.nix and README.md ([1aa5b1c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1aa5b1c))
+- Added configuration.nix and README.md ([1304e1e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1304e1e))

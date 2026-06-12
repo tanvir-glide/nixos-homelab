@@ -1,11 +1,12 @@
 let
 
-  server = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIONaxNrdBoqgDjhHXe7JW4LMxI9uXIB5u9QdTexJDq+u root@nixos";
-  user = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA4T+hDRRT6cezLQ8VRTYoBLS48HB6fiI0atupZJ6Eko tanvir@nixos";
+  server = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAbmKYPiyqyRMUNolrb7H8NEzuBppW4Rqpn5L+rXAmiV root@nixos";
+  mac = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDh9crtIuxl/zQyH+mUX+5WjsfwLLN8f76fM+VG9bE7w tanvir@Tanvirs-MacBook-Air.local";
+
 in
 {
   "lastfm.age".publicKeys = [
     server
-    user
+    mac
   ];
 }
