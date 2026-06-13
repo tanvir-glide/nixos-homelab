@@ -25,7 +25,7 @@
       ClientAliveCountMax = 2;
       MaxAuthTries = 3;
       MaxSessions = 2;
-      TCPKeepAlive=false;
+      TCPKeepAlive = false;
       AllowAgentForwarding = false;
     };
 

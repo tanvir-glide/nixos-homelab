@@ -42,5 +42,4 @@
     "-a always,exit -F arch=b64 -S execve -k exec"
   ];
 
-  
 }

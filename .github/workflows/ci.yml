@@ -28,7 +28,7 @@ jobs:
         run: nix flake check
 
       - name: Check formatting
-        run: find . -name "*.nix" | xargs nix run nixpkgs#nixfmt-rfc-style -- --check
+        run: find . -name "*.nix" | xargs nix run nixpkgs#nixfmt -- --check
 
       - name: Lint (statix)
         run: nix run nixpkgs#statix check .

@@ -27,11 +27,12 @@
 
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs;
-                        vars = {
-                            tailscaleHostname = "nixos-server.tail223014.ts.net";
-                        }; 
-                      };
+        specialArgs = {
+          inherit inputs;
+          vars = {
+            tailscaleHostname = "nixos-server.tail223014.ts.net";
+          };
+        };
         modules = [
           nixos-hardware.nixosModules.common-cpu-intel
           ./configuration.nix
@@ -51,7 +52,7 @@
           ./modules/services/minecraft.nix
           ./modules/services/caddy.nix
           ./modules/services/navidrome.nix
-          
+
           # Monitoring
           ./modules/services/monitoring.nix
 

@@ -14,7 +14,7 @@
       "wheel"
       "networkmanager"
     ];
-    
+
     shell = pkgs.bash;
 
   };
