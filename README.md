@@ -211,7 +211,7 @@ Re-key Secrets (Run after changing keys in secrets/secrets.nix):
 
 ### Consuming Secrets in Modules
 
-Reference the decrypted runtime path in your NixOS configuration, for example, for navidrome:
+Reference the decrypted runtime path in your NixOS configuration, for navidrome as an example:
 
 ```nix
 age.secrets.lastfm.file = ../../secrets/lastfm.age;
