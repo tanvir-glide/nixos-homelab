@@ -29,7 +29,7 @@
 
   # ----------------------------------------------- Audit daemon ------------------------------------------
 
-  secruity = {
+  security = {
     auditd.enable = true;
     audit = {
       enable = true;
