@@ -2,12 +2,38 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-06-13
+
+### Features
+- ***(security)*** Add kernel hardening module & auditd for advanced logging ([eaaf80b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/eaaf80b))
+- ***(security)*** Harden sshd forwarding, and session limits ([482344f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/482344f))
+- ***(security)*** Harden sshd forwarding, and session limits ([41ddc0a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/41ddc0a))
+
+### Bug Fixes
+- ***(lynis)*** Nested security attributes to resolve lint error ([50d37d6](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/50d37d6))
+- ***(users)*** Removed 'docker' group from tanvir ([175bf1c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/175bf1c))
+- ***(containers)*** Removed dockersocket to close root access ([ab7fad0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ab7fad0))
+
+### Documentation
+- Mentioned tailscale firewall mechanics clearly and updated service ports table with rev proxy ([10fe5cd](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/10fe5cd))
+- Rephrased agenix section for better clarity ([8adcdf0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8adcdf0))
+- Added agenix secret management section ([72db499](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/72db499))
+
+### Miscellaneous Tasks
+- Apply nixfmt formatting across repo ([4ce253a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4ce253a))
+- ***(flake)*** Plugged hardening module & removed gotify ([09d2298](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/09d2298))
+
+### Other Changes
+- ***(kernel)*** Enable structural memory hardening options ([853ce9d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/853ce9d))
+- Typo 'security' ([2253de9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/2253de9))
+
 ## 2026-06-12
 
 ### Refactoring
 - Extract tailscale hostname to vars and remove unused flake-utils ([34a0020](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/34a0020))
 
 ### Other Changes
+- Secrets.nix with macos's ssh key as backup key ([fd474c5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/fd474c5))
 - Hasedpassword as it is crackable ([b853c6d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b853c6d))
 
 ## 2026-06-10
