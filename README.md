@@ -25,9 +25,10 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 - [System Overview](#system-overview)
 - [Hardware](#hardware)
 - [Native Services](#native-services)
-- [Podman Services](#Podman-services)
+- [Podman Services](#podman-services)
 - [Networking & Security](#networking--security)
 - [Automation & Maintenance](#automation--maintenance)
+- [Secret Management (Agenix)](#secret-management-agenix)
 - [Shell Aliases](#shell-aliases)
 - [Quick Start](#quick-start)
   - [Prerequisites](#prerequisites)
@@ -62,8 +63,8 @@ This repository hosts the complete NixOS configuration for a home server running
 ## Repository Structure
 
 ```bash
-nixos-homelab/
 .
+├── CHANGELOG.md
 ├── configuration.nix
 ├── flake.lock
 ├── flake.nix
@@ -82,15 +83,18 @@ nixos-homelab/
 │   ├── security
 │   │   ├── fail2ban.nix
 │   │   ├── firewall.nix
+│   │   ├── lynis.nix
 │   │   └── ssh.nix
 │   └── services
 │       ├── caddy.nix
 │       ├── containers.nix
-│       ├── gotify.nix
 │       ├── minecraft.nix
 │       ├── monitoring.nix
 │       └── navidrome.nix
 ├── README.md
+└── secrets
+    ├── lastfm.age
+    └── secrets.nix
 ```
 
 ---
@@ -185,6 +189,38 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 
 ---
 
+## Secret Management (Agenix)
+
+This repository uses [agenix](https://github.com/ryantm/agenix) to securely manage and deploy encrypted secrets using SSH keys. Secrets are declared in `secrets/secrets.nix` and stored as encrypted `.age` files.
+
+### Usage Instructions
+
+Always run commands from the repository root:
+
+**Create/Edit a Secret:**
+
+```bash
+  nix run github:ryantm/agenix -- -e secrets/<api/service_name>.age
+```
+
+Re-key Secrets (Run after changing keys in secrets/secrets.nix):
+
+```bash
+  nix run github:ryantm/agenix -- --rekey
+```
+
+### Consuming Secrets in Modules
+
+Reference the decrypted runtime path in your NixOS configuration, for example, for navidrome:
+
+```nix
+age.secrets.lastfm.file = ../../secrets/lastfm.age;
+
+systemd.services.navidrome.serviceConfig.EnvironmentFile = config.age.secrets.lastfm.path;
+```
+
+---
+
 ## Shell Aliases
 
 | Alias | Command | Description |
@@ -273,6 +309,7 @@ Example skeleton for a new service:
 ---
 
 ## To-do
+
 - [ ] Actual CD implementation
 - [ ] Email or discord notification to show which services are hanging and crashed
 - [ ] Use of home manager to be able to reproduce user's home directory
