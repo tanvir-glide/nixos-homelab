@@ -147,33 +147,35 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 
 ## Native Services
 
-| Service | Port(s) | Description |
-|---|---|---|
-| [Navidrome](https://www.navidrome.org/) | `4533` | Music streaming server (Subsonic-compatible) |
-| [Grafana](https://grafana.com/) | `3000` | The open-source platform for monitoring and observability |
-| [Prometheus](https://prometheus.io/) | `9090` | The open-source monitoring and alerting toolkit |
-| [Minecraft (PaperMC)](https://papermc.io/) | `46565` | Minecraft game server |
+| Service                                    | Internal Port | Public Tailscale Proxy Port | Description                                               |
+| :-------------------------------------------| :-------------:| :---------------------------:| :----------------------------------------------------------|
+| [Navidrome](https://www.navidrome.org/)    | `4533`        | `14533`                     | Music streaming server (Subsonic-compatible)              |
+| [Grafana](https://grafana.com/)            | `3000`        | Direct LAN Only             | The open-source platform for monitoring and observability |
+| [Prometheus](https://prometheus.io/)       | `9090`        | Direct LAN Only             | The open-source monitoring and alerting toolkit           |
+| [Minecraft (PaperMC)](https://papermc.io/) | `46565`       | `46565` (Direct)            | Minecraft game server                                     |
 
 ## Podman Services
 
-| Service | Port(s) | Description |
-|---|---|---|
-| [slskd](https://github.com/slskd/slskd) | `5030` / `50300` | Soulseek web client |
-| [qBittorrent](https://www.qbittorrent.org/) | `8080` | BitTorrent client with Web UI |
-| [Metadata-remote](https://github.com/wow-signal-dev/metadata-remote) | `8338` | Music metadata management |
-| [Focalboard](https://www.focalboard.com/) | `8000` | Notion-like project management board |
-| [Microbin](https://microbin.eu/) | `8081` | Pastebin alternative
+| Service                                                              | Internal Port | Public Tailscale Proxy Port | Description                          |
+| :---------------------------------------------------------------------| :-------------:| :---------------------------:| :-------------------------------------|
+| [slskd](https://github.com/slskd/slskd)                              | `5030`        | `15030`                     | Soulseek web client                  |
+| [qBittorrent](https://www.qbittorrent.org/)                          | `8080`        | `18080`                     | BitTorrent client with Web UI        |
+| [Metadata-remote](https://github.com/wow-signal-dev/metadata-remote) | `8338`        | `18338`                     | Music metadata management            |
+| [Focalboard](https://www.focalboard.com/)                            | `8000`        | `18000`                     | Notion-like project management board |
+| [Microbin](https://microbin.eu/)                                     | `8081`        | `18081`                     | Pastebin alternative                 |
 
 ---
 
 ## Networking & Security
 
 - **Tailscale** enabled with firewall support for the `tailscale0` interface
-- **Firewall:** 
-  - Open TCP ports: None (because tailscale0 has unrestricted access to all ports)
+- **Firewall:**
+  - Open TCP ports: None
   - Open UDP ports: `50300` (slskd-transfer), and `41641` (tailscale)
 - **SSH:** Port `2222`, password auth disabled, public key only, root login prohibited
 - **Fail2ban:** Active
+
+**Zero Trust Internal Firewall**: Standard physical local area network (LAN) access is blocked by default (`allowedTCPPorts = []`). Inbound traffic is exclusively accessible through authenticated tailscale connections via `trustedInterfaces = [ "tailscale0" ]`
 
 ---
 
