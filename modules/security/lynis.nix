@@ -27,13 +27,11 @@
     "net.ipv6.conf.default.accept_redirects" = 0;
   };
 
-  # Kernel mitigation options
-  security.protectKernelImage = true;
-  security.forcePageTableIsolation = true;
-
   # ----------------------------------------------- Audit daemon ------------------------------------------
 
   security = {
+    protectKernelImage = true;
+    forcePageTableIsolation = true;
     auditd.enable = true;
     audit = {
       enable = true;
