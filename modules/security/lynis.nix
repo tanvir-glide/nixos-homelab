@@ -29,17 +29,19 @@
 
   # ----------------------------------------------- Audit daemon ------------------------------------------
 
-  security.auditd.enable = true;
-  security.audit.enable = true;
-
-  security.audit.rules = [
-    "-w /etc/sudoers -p wa -k sudoers"
-    "-w /etc/sudoers.d/ -p wa -k sudoers"
-    "-w /etc/passwd -p wa -k identity"
-    "-w /etc/group -p wa -k identity"
-    "-w /etc/shadow -p wa -k identity"
-    "-w /etc/ssh/sshd_config -p wa -k sshd"
-    "-a always,exit -F arch=b64 -S execve -k exec"
-  ];
-
+  secruity = {
+    auditd.enable = true;
+    audit = {
+      enable = true;
+      rules = [
+        "-w /etc/sudoers -p wa -k sudoers"
+        "-w /etc/sudoers.d/ -p wa -k sudoers"
+        "-w /etc/passwd -p wa -k identity"
+        "-w /etc/group -p wa -k identity"
+        "-w /etc/shadow -p wa -k identity"
+        "-w /etc/ssh/sshd_config -p wa -k sshd"
+        "-a always,exit -F arch=b64 -S execve -k exec"
+      ];
+    };
+  };
 }
