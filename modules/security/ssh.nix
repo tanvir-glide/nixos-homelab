@@ -27,7 +27,6 @@
       MaxSessions = 2;
       TCPKeepAlive=false;
       AllowAgentForwarding = false;
-      
     };
 
   };
