@@ -18,6 +18,16 @@
       PasswordAuthentication = false;
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
+      AllowUsers = [ "tanvir" ];
+      X11Forwarding = false;
+      LogLevel = "VERBOSE";
+      AllowTcpForwarding = false;
+      ClientAliveCountMax = 2;
+      MaxAuthTries = 3;
+      MaxSessions = 2;
+      TCPKeepAlive=false;
+      AllowAgentForwarding = false;
+      
     };
 
   };
