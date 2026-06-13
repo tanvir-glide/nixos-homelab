@@ -51,8 +51,7 @@
           ./modules/services/minecraft.nix
           ./modules/services/caddy.nix
           ./modules/services/navidrome.nix
-          ./modules/services/gotify.nix
-
+          
           # Monitoring
           ./modules/services/monitoring.nix
 
@@ -60,6 +59,7 @@
           ./modules/security/ssh.nix
           ./modules/security/firewall.nix
           ./modules/security/fail2ban.nix
+          ./modules/security/lynis.nix
 
         ];
       };
