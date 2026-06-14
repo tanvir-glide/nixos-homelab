@@ -3,8 +3,8 @@
   description = "Tanvir's NixOS Home Server - Declarative DevOps Infrastructure";
 
   inputs = {
-    # Core NixOS upstream, tracks current state version (25.11)
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    # Core NixOS upstream, tracks current state version (26.05)
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
     # Hardware support (auto-cpufreq, Intel microcode)
     nixos-hardware.url = "github:NixOS/nixos-hardware";
