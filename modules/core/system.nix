@@ -55,7 +55,7 @@
       SystemMaxUse=500M
       SystemMaxFileUse=50M
       MaxRetentSec=2week
-      '';
+    '';
   };
 
   # Zram for memory efficiency
