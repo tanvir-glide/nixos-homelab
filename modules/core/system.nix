@@ -41,12 +41,21 @@
   services.auto-cpufreq.enable = true;
 
   # Making sure closing the laptop lid doesn't put it to sleep
-  services.logind.settings = {
-    Login = {
-      HandleLidSwitch = "ignore";
-      HandleLidSwitchExternalPower = "lock";
-      HandleLidSwitchDocked = "ignore";
+  services = {
+    logind.settings = {
+      Login = {
+        HandleLidSwitch = "ignore";
+        HandleLidSwitchExternalPower = "lock";
+        HandleLidSwitchDocked = "ignore";
+      };
     };
+
+    # Journal size limit and cleanup
+    journald.extraConfig = ''
+      SystemMaxUse=500M
+      SystemMaxFileUse=50M
+      MaxRetentSec=2week
+      '';
   };
 
   # Zram for memory efficiency
