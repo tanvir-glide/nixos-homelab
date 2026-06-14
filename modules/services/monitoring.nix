@@ -19,7 +19,6 @@
       enable = true;
 
       settings.security.secret_key = "$__env{GRAFANA_SECRET_KEY}";
-      secretFile = config.age.secrets.grafana-key.path;
 
       settings.server = {
         http_addr = "0.0.0.0";
@@ -46,4 +45,5 @@
       port = 9100;
     };
   };
+  systemd.services.grafana.serviceConfig.EnvironmentFile = config.age.secrets.grafana-key.path;
 }
