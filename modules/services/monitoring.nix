@@ -6,10 +6,21 @@
 }:
 
 {
-  # Grafana & Prompetheus combo
+  # grafana key encrypted
+  age.secrets.grafana-key = {
+    file = ../../secrets/grafana-key.age;
+    owner = "grafana";
+    group = "grafana";
+  };
+
+  # Grafana & Prompetheus combo                                                                 
   services = {
-    grafana = {
+    grafana = {                                                                                     
       enable = true;
+
+      settings.security.secret_key = "$__env{GRAFANA_SECRET_KEY}";
+      secretFile = config.age.secrets.grafana-key.path;
+
       settings.server = {
         http_addr = "0.0.0.0";
         http_port = 3000;

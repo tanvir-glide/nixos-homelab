@@ -9,4 +9,10 @@ in
     server
     mac
   ];
+
+  "grafana-key.age".publicKeys = [
+    server
+    mac
+  ];
+
 }
