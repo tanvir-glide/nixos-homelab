@@ -7,7 +7,7 @@
 
 {
   # System state and timezone
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
   time.timeZone = "Asia/Dhaka";
 
   # Bootloader

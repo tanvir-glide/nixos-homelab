@@ -103,12 +103,12 @@ This repository hosts the complete NixOS configuration for a home server running
 
 Defined in [`flake.nix`](./flake.nix):
 
-| Input | Source | Purpose |
-|---|---|---|
-| `nixpkgs` | `NixOS/nixpkgs/nixos-25.11` | Core NixOS packages & modules |
-| `nixos-hardware` | `NixOS/nixos-hardware` | Hardware-specific modules (Intel CPU) |
-| `flake-utils` | `numtide/flake-utils` | Flake helper utilities |
-| `agenix` | `ryantm/agenix` | Secret management |
+| Input            | Source                      | Purpose                               |
+| ------------------| -----------------------------| ---------------------------------------|
+| `nixpkgs`        | `NixOS/nixpkgs/nixos-26.05` | Core NixOS packages & modules         |
+| `nixos-hardware` | `NixOS/nixos-hardware`      | Hardware-specific modules (Intel CPU) |
+| `flake-utils`    | `numtide/flake-utils`       | Flake helper utilities                |
+| `agenix`         | `ryantm/agenix`             | Secret management                     |
 
 ---
 
@@ -119,7 +119,7 @@ Defined in [`flake.nix`](./flake.nix):
 | **Hostname** | `nixos` |
 | **Primary User** | `tanvir` |
 | **Architecture** | `x86_64-linux` |
-| **NixOS Version** | `25.11` |
+| **NixOS Version** | `26.05` |
 | **Timezone** | `Asia/Dhaka` |
 | **Bootloader** | GRUB on `/dev/sda` |
 | **CPU** | Intel (microcode + auto-cpufreq) |
