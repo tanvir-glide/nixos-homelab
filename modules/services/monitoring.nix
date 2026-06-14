@@ -13,9 +13,9 @@
     group = "grafana";
   };
 
-  # Grafana & Prompetheus combo                                                                 
+  # Grafana & Prompetheus combo
   services = {
-    grafana = {                                                                                     
+    grafana = {
       enable = true;
 
       settings.security.secret_key = "$__env{GRAFANA_SECRET_KEY}";
