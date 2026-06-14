@@ -6,7 +6,7 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
   <!-- Project Status & Meta -->
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License">
   <img src="https://img.shields.io/badge/Architecture-x86_64--linux-lightgrey?style=flat-square" alt="Architecture">
-  <img src="https://img.shields.io/badge/NixOS-25.11-5277C3?style=flat-square&logo=nixos&logoColor=white" alt="NixOS">
+  <img src="https://img.shields.io/badge/NixOS-26.05-5277C3?style=flat-square&logo=nixos&logoColor=white" alt="NixOS">
   <img src="https://img.shields.io/badge/Nix-Flakes-5277C3?style=flat-square&logo=nixos&logoColor=white" alt="Nix Flakes">
   <img src="https://img.shields.io/badge/Tailscale-Enabled-5B49E9?style=flat-square&logo=tailscale&logoColor=white" alt="Tailscale">
   <img src="https://img.shields.io/badge/Reverse_Proxy-Caddy-00A2D1?style=flat-square&logo=caddy&logoColor=white" alt="Reverse Proxy: Caddy">
@@ -49,6 +49,7 @@ A fully declarative, reproducible NixOS server configuration for self-hosted ser
 This repository hosts the complete NixOS configuration for a home server running several self-hosted services via Podman. The entire system is defined declaratively using **Nix Flakes**, making it fully reproducible and easy to roll back.
 
 **Key highlights:**
+
 - Declarative infrastructure, so no manual configuration drift
 - Modular layout separating core, services, security, and hardware
 - Automated weekly upgrades and garbage collection
@@ -114,16 +115,16 @@ Defined in [`flake.nix`](./flake.nix):
 
 ## System Overview
 
-| Property | Value |
-|---|---|
-| **Hostname** | `nixos` |
-| **Primary User** | `tanvir` |
-| **Architecture** | `x86_64-linux` |
-| **NixOS Version** | `26.05` |
-| **Timezone** | `Asia/Dhaka` |
-| **Bootloader** | GRUB on `/dev/sda` |
-| **CPU** | Intel (microcode + auto-cpufreq) |
-| **Filesystem** | ext4 root + NTFS FUSE mount at `/mnt/Files`, `/mnt/Games` & `/mnt/More` |
+| Property          | Value                                                                   |
+| -------------------| -------------------------------------------------------------------------|
+| **Hostname**      | `nixos`                                                                 |
+| **Primary User**  | `tanvir`                                                                |
+| **Architecture**  | `x86_64-linux`                                                          |
+| **NixOS Version** | `26.05`                                                                 |
+| **Timezone**      | `Asia/Dhaka`                                                            |
+| **Bootloader**    | GRUB on `/dev/sda`                                                      |
+| **CPU**           | Intel (microcode + auto-cpufreq)                                        |
+| **Filesystem**    | ext4 root + NTFS FUSE mount at `/mnt/Files`, `/mnt/Games` & `/mnt/More` |
 
 ---
 
