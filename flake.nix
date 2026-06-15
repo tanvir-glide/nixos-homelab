@@ -56,6 +56,10 @@
           # Monitoring
           ./modules/services/monitoring.nix
 
+          # Notification
+          ./modules/services/ntfy.nix
+          ./modules/services/notify.nix
+
           # Security Hardening
           ./modules/security/ssh.nix
           ./modules/security/firewall.nix
