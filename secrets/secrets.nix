@@ -10,6 +10,11 @@ in
     mac
   ];
 
+  "ntfy-topic.age".publicKeys = [
+    server
+    mac
+  ];
+
   "grafana-key.age".publicKeys = [
     server
     mac
