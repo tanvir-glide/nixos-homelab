@@ -18,8 +18,8 @@ let
 
   slskdConfig = pkgs.writeText "slskd.yml" ''
     soulseek:
-      username: "YourSoulseekUsername"
-      password: "YourSoulseekPassword"
+      username: "Tanvirkdsw2345678io"
+      password: "CWE$%^7ijft6ytre56789o"
 
     directories:
       downloads: /music
@@ -70,29 +70,7 @@ in
           ];
         };
 
-        # qBittorrent
-        qbittorrent = {
-          image = "lscr.io/linuxserver/qbittorrent:latest";
-
-          ports = [
-            "127.0.0.1:8080:8080"
-            "6881:6881"
-            "6881:6881/udp"
-          ];
-
-          environment = commonEnv // {
-            WEBUI_PORT = "8080";
-
-            WEBUI_REVERSE_PROXY = "true";
-            WEBUI_HOST_HEADER_VALIDATION = "false";
-          };
-
-          volumes = [
-            "${mkData "config"}:/config"
-            "/mnt/More/Torrent:/downloads"
-          ];
-        };
-
+ 
         # Microbin
         microbin = {
           image = "danielszabo99/microbin:latest";
@@ -140,6 +118,20 @@ in
           ];
         };
 
+        stump = {
+          image = "aaronleopold/stump:latest";
+
+          # Binds host port 5000 to Stump's internal default port 10801
+          ports = [ "5000:10801" ]; 
+
+          environment = commonEnv;
+
+          volumes = [
+            "${mkData "stump/config"}:/config"
+            "/mnt/More/Manga:/manga" # <-- Replace with your actual host manga folder
+          ];
+        };
+        
       };
     };
   };
@@ -151,5 +143,6 @@ in
     "microbin-data"
     "slskd/config"
     "slskd/data"
+    "stump/config"
   ];
 }

@@ -38,7 +38,19 @@
   };
 
   # Hardware optimization
-  services.auto-cpufreq.enable = true;
+  services = {
+    auto-cpufreq = {
+      enable = true;
+      };
+
+    thermald = {
+      enable = true;
+      };
+
+    };
+
+  # Power saving mode
+  powerManagement.cpuFreqGovernor = "powersave";
 
   # Making sure closing the laptop lid doesn't put it to sleep
   services = {

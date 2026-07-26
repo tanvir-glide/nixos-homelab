@@ -23,17 +23,18 @@ in
   networking.firewall = {
     enable = true;
 
-    # Trust Tailscale interface
-    trustedInterfaces = [ "tailscale0" ];
+    # Trust Tailscale & Podman interface
+    trustedInterfaces = [ "tailscale0" "podman0" ];
 
     # Open TCP ports
-    allowedTCPPorts = [
+    allowedTCPPorts = [ 53
     ];
 
     # Open UDP ports
     allowedUDPPorts = [
       ports.slskd-transfer
       ports.tailscale
+      53
     ];
 
     checkReversePath = "loose";

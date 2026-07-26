@@ -22,6 +22,7 @@
         "flakes"
       ];
       auto-optimise-store = true;
+      
     };
 
     # Settings up garbage collector
@@ -31,6 +32,17 @@
       options = "--delete-older-than 7d";
     };
   };
+
+  services.journald.extraConfig = ''
+    # Keep a maximum of 50MB of logs in memory cache
+    RuntimeMaxUse=50M
+  
+    # Keep a maximum of 2G of logs on the local disk total
+    SystemMaxUse=2G
+  
+    # Max time to keep a log file before rotating it
+    MaxFileSec=1month
+  '';
 
   # Some shell aliases for long commands
   environment.shellAliases = {
@@ -45,5 +57,7 @@
     allowReboot = false;
     dates = "Fri 04:00";
   };
+
+  
 
 }

@@ -27,12 +27,7 @@
 
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
-          vars = {
-            tailscaleHostname = "nixos-server.tail223014.ts.net";
-          };
-        };
+
         modules = [
           nixos-hardware.nixosModules.common-cpu-intel
           ./configuration.nix
@@ -49,16 +44,15 @@
 
           # Services
           ./modules/services/containers.nix
-          ./modules/services/minecraft.nix
+          #./modules/services/minecraft.nix
           ./modules/services/caddy.nix
           ./modules/services/navidrome.nix
+          #./modules/services/kavita.nix
+          ./modules/services/transmission.nix
+          ./modules/services/homepage.nix
 
           # Monitoring
           ./modules/services/monitoring.nix
-
-          # Notification
-          ./modules/services/ntfy.nix
-          ./modules/services/notify.nix
 
           # Security Hardening
           ./modules/security/ssh.nix

@@ -1,49 +1,23 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ config, pkgs, vars, ... }:
 
 {
-  # grafana key encrypted
-  age.secrets.grafana-key = {
-    file = ../../secrets/grafana-key.age;
-    owner = "grafana";
-    group = "grafana";
-  };
-
-  # Grafana & Prompetheus combo
-  services = {
-    grafana = {
+  services.beszel = {
+    # ---------------- Hub (The Dashboard) ----------------
+    hub = {
       enable = true;
+      port = 8090;
+    };
 
-      settings.security.secret_key = "$__env{GRAFANA_SECRET_KEY}";
-
-      settings.server = {
-        http_addr = "0.0.0.0";
-        http_port = 3000;
+    # ---------------- Agent (The Metrics Collector) ----------------
+    agent = {
+      enable = true;
+      # Internal metrics port defaults to 45876
+      
+      environment = {
+        PORT = "45876";
+        # PASTE YOUR BESZEL HUB PUBLIC KEY HERE AFTER INITIAL SETUP
+        KEY = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAppkfYYIwphOA0EBL071i5tJZsKmi06QCurT1M924/z";
       };
     };
-
-    prometheus = {
-      enable = true;
-      scrapeConfigs = [
-        {
-          job_name = "node";
-          static_configs = [
-            {
-              targets = [ "localhost:9100" ];
-            }
-          ];
-        }
-      ];
-    };
-
-    prometheus.exporters.node = {
-      enable = true;
-      port = 9100;
-    };
   };
-  systemd.services.grafana.serviceConfig.EnvironmentFile = config.age.secrets.grafana-key.path;
 }

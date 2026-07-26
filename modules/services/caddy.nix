@@ -13,25 +13,22 @@
 
     virtualHosts = {
       # Main Dashboard
-      "${vars.tailscaleHostname}" = {
-        extraConfig = ''
-          root * /var/www/
-          file_server
-        '';
+      "nixos.tail223014.ts.net" = {
+        extraConfig = "reverse_proxy 127.0.0.1:3000";
       };
 
       # Navidrome
-      "${vars.tailscaleHostname}:14533" = {
+      "nixos.tail223014.ts.net:14533" = {
         extraConfig = "reverse_proxy 127.0.0.1:4533";
       };
 
       # Slskd
-      "${vars.tailscaleHostname}:15030" = {
+      "nixos.tail223014.ts.net:15030" = {
         extraConfig = "reverse_proxy 127.0.0.1:5030";
       };
 
-      # qBittorrent
-      "${vars.tailscaleHostname}:18080" = {
+      # Transmission torrent client
+      "nixos.tail223014.ts.net:18080" = {
         extraConfig = ''
           reverse_proxy 127.0.0.1:8080 {
             header_up Host 127.0.0.1:8080
@@ -39,18 +36,28 @@
         '';
       };
 
+      # Beszel
+      "nixos.tail223014.ts.net:18090" = {
+        extraConfig = "reverse_proxy 127.0.0.1:8090";
+      };
+
       # Focalboard
-      "${vars.tailscaleHostname}:18000" = {
+      "nixos.tail223014.ts.net:18000" = {
         extraConfig = "reverse_proxy 127.0.0.1:8000";
       };
 
       # Microbin
-      "${vars.tailscaleHostname}:18081" = {
+      "nixos.tail223014.ts.net:18081" = {
         extraConfig = "reverse_proxy 127.0.0.1:8081";
       };
 
+      # Kavita (Manga Reader)
+      "nixos.tail223014.ts.net:15000" = {
+        extraConfig = "reverse_proxy 127.0.0.1:5000";
+      };
+
       # Metadata-remote
-      "${vars.tailscaleHostname}:18338" = {
+      "nixos.tail223014.ts.net:18338" = {
         extraConfig = "reverse_proxy 127.0.0.1:8338";
       };
     };
