@@ -22,7 +22,6 @@
         "flakes"
       ];
       auto-optimise-store = true;
-
     };
 
     # Settings up garbage collector
