@@ -1,9 +1,11 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   services.homepage-dashboard = {
     enable = true;
-    listenPort = 3000;    
+    listenPort = 3000;
 
     widgets = [
       {
@@ -40,11 +42,11 @@
           }
 
           {
-            "Stump" = {
-              icon = "https://raw.githubusercontent.com/stumpapp/stump/refs/heads/main/.github/images/logo.svg";
+            "Komga" = {
+              icon = "komga.png";
               href = "http://nixos.tail223014.ts.net:15000";
-              description = "Manga, comic, and book reader";
-              };
+              description = "Comic & Manga Media Server";
+            };
           }
 
           {
@@ -96,7 +98,6 @@
                 password = "linux4lyf";
                 version = 2;
               };
-
             };
           }
 

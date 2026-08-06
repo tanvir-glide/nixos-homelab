@@ -3,9 +3,7 @@
   pkgs,
   lib,
   ...
-}:
-
-{
+}: {
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
@@ -20,5 +18,4 @@
   # Enable tailscale
   services.tailscale.enable = true;
   services.tailscale.permitCertUid = "caddy";
-
 }

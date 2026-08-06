@@ -3,15 +3,12 @@
   pkgs,
   lib,
   ...
-}:
-
-let
+}: let
   # User-specific package lists
   userPackages = with pkgs; [
-    # fetch 
+    # fetch
     fastfetch
     pfetch-rs
-    
 
     # Help
     tldr
@@ -33,10 +30,8 @@ let
 
     # Extras
     ffmpeg
-    
   ];
-in
-{
+in {
   # Apply to your user
   users.users.tanvir = {
     packages = userPackages;

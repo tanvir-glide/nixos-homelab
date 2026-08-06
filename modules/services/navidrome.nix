@@ -1,11 +1,12 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   age.secrets.lastfm = {
     file = ../../secrets/lastfm.age;
     owner = "navidrome";
- };
-
+  };
 
   services.navidrome = {
     enable = true;
@@ -25,10 +26,10 @@
 
   systemd.services.navidrome = {
     serviceConfig = {
-      SupplementaryGroups = [ "users" ];
-    EnvironmentFile = config.age.secrets.lastfm.path;
+      SupplementaryGroups = ["users"];
+      EnvironmentFile = config.age.secrets.lastfm.path;
     };
-    requires = [ "mnt-Files.mount" ];
-    after = [ "mnt-Files.mount" ];
+    requires = ["mnt-Files.mount"];
+    after = ["mnt-Files.mount"];
   };
 }

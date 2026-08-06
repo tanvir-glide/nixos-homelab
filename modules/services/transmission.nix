@@ -3,16 +3,14 @@
   config,
   pkgs,
   ...
-}:
-
-{
+}: {
   services.transmission = {
     enable = true;
     package = pkgs.transmission_4; # Uses Transmission 4
 
     user = "tanvir";
     group = "users";
-    
+
     # Enable peer-to-peer incoming port forwarding automatically in the firewall
     openPeerPorts = true;
 
@@ -20,7 +18,7 @@
       # Bind RPC to localhost so only Caddy accesses it directly
       rpc-bind-address = "127.0.0.1";
       rpc-port = 8080;
-      rpc-whitelist-enabled = false; 
+      rpc-whitelist-enabled = false;
 
       # File layout mapping matching your system
       download-dir = "/mnt/More/Torrent";
@@ -32,7 +30,7 @@
     };
   };
 
-  # Give your user direct read/write rights to torrent directories 
+  # Give your user direct read/write rights to torrent directories
   # by putting your primary user account in the transmission group
-  users.users.tanvir.extraGroups = [ "transmission" ];
+  users.users.tanvir.extraGroups = ["transmission"];
 }

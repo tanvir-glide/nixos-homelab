@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-
-let
+}: let
   dataDir = "/var/lib/docker-containers";
 
   commonEnv = {
@@ -30,23 +28,18 @@ let
         - /music
 
   '';
-
-in
-
-{
+in {
   virtualisation = {
     podman = {
       enable = true;
       dockerCompat = true;
       defaultNetwork.settings.dns_enabled = true;
-
     };
 
     oci-containers = {
       backend = "podman";
 
       containers = {
-
         # SLSKD
         slskd = {
           image = "ghcr.io/slskd/slskd:latest";
@@ -58,9 +51,11 @@ in
             "50300:50300/udp"
           ];
 
-          environment = commonEnv // {
-            SLSKD_REMOTE_CONFIGURATION = "true";
-          };
+          environment =
+            commonEnv
+            // {
+              SLSKD_REMOTE_CONFIGURATION = "true";
+            };
 
           volumes = [
             "${mkData "slskd/config"}:/config"
@@ -70,12 +65,11 @@ in
           ];
         };
 
- 
         # Microbin
         microbin = {
           image = "danielszabo99/microbin:latest";
 
-          ports = [ "127.0.0.1:8081:8080" ];
+          ports = ["127.0.0.1:8081:8080"];
 
           environment = commonEnv;
 
@@ -88,7 +82,7 @@ in
         metadata-remote = {
           image = "ghcr.io/wow-signal-dev/metadata-remote:latest";
 
-          ports = [ "127.0.0.1:8338:8338" ];
+          ports = ["127.0.0.1:8338:8338"];
 
           environment = commonEnv;
 
@@ -109,7 +103,7 @@ in
         focalboard = {
           image = "mattermost/focalboard:latest";
 
-          ports = [ "127.0.0.1:8000:8000" ];
+          ports = ["127.0.0.1:8000:8000"];
 
           environment = commonEnv;
 
@@ -118,20 +112,16 @@ in
           ];
         };
 
-        stump = {
-          image = "aaronleopold/stump:latest";
+        # Manga Reader
+        komga = {
+          image = "gotson/komga:latest";
 
-          # Binds host port 5000 to Stump's internal default port 10801
-          ports = [ "5000:10801" ]; 
-
-          environment = commonEnv;
-
+          ports = ["5000:25600"];
           volumes = [
-            "${mkData "stump/config"}:/config"
-            "/mnt/More/Manga:/manga" # <-- Replace with your actual host manga folder
+            "/var/lib/komga:/config"
+            "/mnt/More/Manga:/data"
           ];
         };
-        
       };
     };
   };
@@ -143,6 +133,5 @@ in
     "microbin-data"
     "slskd/config"
     "slskd/data"
-    "stump/config"
   ];
 }

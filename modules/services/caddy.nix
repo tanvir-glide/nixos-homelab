@@ -3,9 +3,7 @@
   pkgs,
   vars,
   ...
-}:
-
-{
+}: {
   services.caddy = {
     enable = true;
     user = "caddy";
