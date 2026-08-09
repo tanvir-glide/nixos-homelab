@@ -3,10 +3,8 @@
   pkgs,
   lib,
   ...
-}:
-{
+}: {
   fileSystems = {
-
     "/mnt/Files" = {
       device = "/dev/disk/by-uuid/01D858C886F164A0";
       fsType = "ntfs3";

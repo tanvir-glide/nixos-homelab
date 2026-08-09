@@ -3,10 +3,7 @@
   pkgs,
   lib,
   ...
-}:
-
-{
-
+}: {
   environment.systemPackages = with pkgs; [
     # Essential system tools
     wget
@@ -41,10 +38,8 @@
     go
 
     #
-
   ];
 
   # Default editor for system (sudo will use this)
   environment.variables.EDITOR = "vim";
-
 }
