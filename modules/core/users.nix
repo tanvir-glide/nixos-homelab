@@ -3,9 +3,7 @@
   pkgs,
   lib,
   ...
-}:
-
-{
+}: {
   # User configuration
   users.users.tanvir = {
     isNormalUser = true;
@@ -16,6 +14,5 @@
     ];
 
     shell = pkgs.bash;
-
   };
 }

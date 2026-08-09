@@ -2,380 +2,455 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-08-06
+
+### Documentation
+- Updated with komga, and swapped promptheus + grafana combo with beszel, and transmission torrent client ([f626954](https://github.com/tanvir-glide/nixos-homelab/commit/f626954))
+
+### Miscellaneous Tasks
+- Updated changelog as of 6-aug-2026 ([9f49dbd](https://github.com/tanvir-glide/nixos-homelab/commit/9f49dbd))
+
+### CI/CD Framework
+- Removing lint as it is cumbersome ([633abbb](https://github.com/tanvir-glide/nixos-homelab/commit/633abbb))
+- Changed to alejandra formatting check ([94bc934](https://github.com/tanvir-glide/nixos-homelab/commit/94bc934))
+
+### Other Changes
+- - removed rfc style formatter - updated docs with new nix files in the dir tree ([98e657b](https://github.com/tanvir-glide/nixos-homelab/commit/98e657b))
+- Again statix comment to skip hardware-conf.nix ([5828e7c](https://github.com/tanvir-glide/nixos-homelab/commit/5828e7c))
+- Add statix.toml to ignore repeated keys lint ([a38d307](https://github.com/tanvir-glide/nixos-homelab/commit/a38d307))
+- Reformatted again with alajandra, was reverted ([e48af04](https://github.com/tanvir-glide/nixos-homelab/commit/e48af04))
+- Merge pull request #3 from tanvir-glide/copilot/fix-nix-job-failure ([eaf8a3b](https://github.com/tanvir-glide/nixos-homelab/commit/eaf8a3b))
+- Fix nix CI formatting failure in hardware config ([1e568a4](https://github.com/tanvir-glide/nixos-homelab/commit/1e568a4))
+- Initial plan ([107363b](https://github.com/tanvir-glide/nixos-homelab/commit/107363b))
+- Statix to not check hardware-conf.nix ([1a11423](https://github.com/tanvir-glide/nixos-homelab/commit/1a11423))
+- Statix to not check hardware-conf.nix ([a59bbf9](https://github.com/tanvir-glide/nixos-homelab/commit/a59bbf9))
+- Reformatted config.nix ([a9c6863](https://github.com/tanvir-glide/nixos-homelab/commit/a9c6863))
+- Formatted nix files with alejandra ([467c2c8](https://github.com/tanvir-glide/nixos-homelab/commit/467c2c8))
+- Network file system (nfs) for easy access to my movies & anime ([9e52ff3](https://github.com/tanvir-glide/nixos-homelab/commit/9e52ff3))
+
+## 2026-07-28
+
+### Other Changes
+- Redundant kavita service as backup ([815e77f](https://github.com/tanvir-glide/nixos-homelab/commit/815e77f))
+
+## 2026-07-26
+
+### Other Changes
+- 1. nix: bump nixpkgs and nixos-hardware flake inputs ([b6dcb34](https://github.com/tanvir-glide/nixos-homelab/commit/b6dcb34))
+
+## 2026-06-16
+
+### Features
+- ***(notify)*** Added push notifications for system events ([055d964](https://github.com/tanvir-glide/nixos-homelab/commit/055d964))
+- ***(ntfy)*** Added ntfy.sh secret and apprise ([364c9dc](https://github.com/tanvir-glide/nixos-homelab/commit/364c9dc))
+
+### Miscellaneous Tasks
+- Fixed fmt formatting ([24cf6d5](https://github.com/tanvir-glide/nixos-homelab/commit/24cf6d5))
+- ***(secrets)*** Added ntfy-topic secret ([afa75ed](https://github.com/tanvir-glide/nixos-homelab/commit/afa75ed))
+
+### Other Changes
+- Ntfy.nix and notify.nix for new notification system via ntfy.sh ([abd1f54](https://github.com/tanvir-glide/nixos-homelab/commit/abd1f54))
+
+## 2026-06-15
+
+### Bug Fixes
+- ***(monitoring)*** Use systemd environmentfile for grafana secret key ([3c29b7d](https://github.com/tanvir-glide/nixos-homelab/commit/3c29b7d))
+- ***(monitoring)*** Configure grafana secret key via agenix ([ce7b547](https://github.com/tanvir-glide/nixos-homelab/commit/ce7b547))
+
+### Other Changes
+- Format and lint codebase from macos environment ([43f6b1d](https://github.com/tanvir-glide/nixos-homelab/commit/43f6b1d))
+
+## 2026-06-14
+
+### Documentation
+- Changed banner to 26.05 ([bd109a4](https://github.com/tanvir-glide/nixos-homelab/commit/bd109a4))
+
+### Miscellaneous Tasks
+- Include missing flake.lock for 26.05 upgrade ([fb1ae38](https://github.com/tanvir-glide/nixos-homelab/commit/fb1ae38))
+- Upgrade system baseline to 26.05 (nix flake) ([08971ab](https://github.com/tanvir-glide/nixos-homelab/commit/08971ab))
+- Upgrade nixpkgs channel from 25.11 to 26.05 ([db8acc0](https://github.com/tanvir-glide/nixos-homelab/commit/db8acc0))
+
+### Other Changes
+- Format modules/core/system.nix with nixfmt ([bcdaaa0](https://github.com/tanvir-glide/nixos-homelab/commit/bcdaaa0))
+- Limited journal size and periodic cleanup ([216fa9e](https://github.com/tanvir-glide/nixos-homelab/commit/216fa9e))
+- Gotify ssh port leftover ([385954e](https://github.com/tanvir-glide/nixos-homelab/commit/385954e))
+- Linting issues ([0cbaaff](https://github.com/tanvir-glide/nixos-homelab/commit/0cbaaff))
+
 ## 2026-06-13
 
 ### Features
-- ***(security)*** Add kernel hardening module & auditd for advanced logging ([eaaf80b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/eaaf80b))
-- ***(security)*** Harden sshd forwarding, and session limits ([482344f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/482344f))
-- ***(security)*** Harden sshd forwarding, and session limits ([41ddc0a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/41ddc0a))
+- ***(security)*** Add kernel hardening module & auditd for advanced logging ([eaaf80b](https://github.com/tanvir-glide/nixos-homelab/commit/eaaf80b))
+- ***(security)*** Harden sshd forwarding, and session limits ([482344f](https://github.com/tanvir-glide/nixos-homelab/commit/482344f))
+- ***(security)*** Harden sshd forwarding, and session limits ([41ddc0a](https://github.com/tanvir-glide/nixos-homelab/commit/41ddc0a))
 
 ### Bug Fixes
-- ***(lynis)*** Nested security attributes to resolve lint error ([50d37d6](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/50d37d6))
-- ***(users)*** Removed 'docker' group from tanvir ([175bf1c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/175bf1c))
-- ***(containers)*** Removed dockersocket to close root access ([ab7fad0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ab7fad0))
+- ***(lynis)*** Nested security attributes to resolve lint error ([50d37d6](https://github.com/tanvir-glide/nixos-homelab/commit/50d37d6))
+- ***(users)*** Removed 'docker' group from tanvir ([175bf1c](https://github.com/tanvir-glide/nixos-homelab/commit/175bf1c))
+- ***(containers)*** Removed dockersocket to close root access ([ab7fad0](https://github.com/tanvir-glide/nixos-homelab/commit/ab7fad0))
 
 ### Documentation
-- Mentioned tailscale firewall mechanics clearly and updated service ports table with rev proxy ([10fe5cd](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/10fe5cd))
-- Rephrased agenix section for better clarity ([8adcdf0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8adcdf0))
-- Added agenix secret management section ([72db499](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/72db499))
+- ***(changelog)*** Updated for 13-05-2026 ([d6bbb03](https://github.com/tanvir-glide/nixos-homelab/commit/d6bbb03))
+- Mentioned tailscale firewall mechanics clearly and updated service ports table with rev proxy ([10fe5cd](https://github.com/tanvir-glide/nixos-homelab/commit/10fe5cd))
+- Rephrased agenix section for better clarity ([8adcdf0](https://github.com/tanvir-glide/nixos-homelab/commit/8adcdf0))
+- Added agenix secret management section ([72db499](https://github.com/tanvir-glide/nixos-homelab/commit/72db499))
 
 ### Miscellaneous Tasks
-- Apply nixfmt formatting across repo ([4ce253a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4ce253a))
-- ***(flake)*** Plugged hardening module & removed gotify ([09d2298](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/09d2298))
+- Apply nixfmt formatting across repo ([4ce253a](https://github.com/tanvir-glide/nixos-homelab/commit/4ce253a))
+- ***(flake)*** Plugged hardening module & removed gotify ([09d2298](https://github.com/tanvir-glide/nixos-homelab/commit/09d2298))
 
 ### Other Changes
-- ***(kernel)*** Enable structural memory hardening options ([853ce9d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/853ce9d))
-- Typo 'security' ([2253de9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/2253de9))
+- ***(kernel)*** Enable structural memory hardening options ([853ce9d](https://github.com/tanvir-glide/nixos-homelab/commit/853ce9d))
+- Typo 'security' ([2253de9](https://github.com/tanvir-glide/nixos-homelab/commit/2253de9))
 
 ## 2026-06-12
 
 ### Refactoring
-- Extract tailscale hostname to vars and remove unused flake-utils ([34a0020](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/34a0020))
+- Extract tailscale hostname to vars and remove unused flake-utils ([34a0020](https://github.com/tanvir-glide/nixos-homelab/commit/34a0020))
 
 ### Other Changes
-- Secrets.nix with macos's ssh key as backup key ([fd474c5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/fd474c5))
-- Hasedpassword as it is crackable ([b853c6d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b853c6d))
+- Secrets.nix with macos's ssh key as backup key ([fd474c5](https://github.com/tanvir-glide/nixos-homelab/commit/fd474c5))
+- Hasedpassword as it is crackable ([b853c6d](https://github.com/tanvir-glide/nixos-homelab/commit/b853c6d))
 
 ## 2026-06-10
 
 ### Documentation
-- Added changelog.md ([65fe968](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/65fe968))
+- Added changelog.md ([65fe968](https://github.com/tanvir-glide/nixos-homelab/commit/65fe968))
 
 ## 2026-06-04
 
 ### Documentation
-- Improved banners with center align ([1ac1320](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1ac1320))
-- Removed repo size & last commit banners ([c210187](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c210187))
-- Changed license & its banner ([b74023b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b74023b))
-- Changed license banner ([3074454](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3074454))
-- Fixed minor inconsistency ([525bc53](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/525bc53))
+- Improved banners with center align ([1ac1320](https://github.com/tanvir-glide/nixos-homelab/commit/1ac1320))
+- Removed repo size & last commit banners ([c210187](https://github.com/tanvir-glide/nixos-homelab/commit/c210187))
+- Changed license & its banner ([b74023b](https://github.com/tanvir-glide/nixos-homelab/commit/b74023b))
+- Changed license banner ([3074454](https://github.com/tanvir-glide/nixos-homelab/commit/3074454))
+- Fixed minor inconsistency ([525bc53](https://github.com/tanvir-glide/nixos-homelab/commit/525bc53))
 
 ### Other Changes
-- Changed from gplv3 to mit ([2823360](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/2823360))
-- Revert "removed: hardware-configuration.nix" ([22ee71d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/22ee71d))
+- Changed from gplv3 to mit ([2823360](https://github.com/tanvir-glide/nixos-homelab/commit/2823360))
+- Revert "removed: hardware-configuration.nix" ([22ee71d](https://github.com/tanvir-glide/nixos-homelab/commit/22ee71d))
 
 ## 2026-06-03
 
 ### Other Changes
-- Setup bash script as it its redundant ([9fad505](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9fad505))
-- Revert "removed: setup bash script as it its redundant" ([81c8be4](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/81c8be4))
-- Setup bash script as it its redundant ([5eef6a7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5eef6a7))
+- Setup bash script as it its redundant ([9fad505](https://github.com/tanvir-glide/nixos-homelab/commit/9fad505))
+- Revert "removed: setup bash script as it its redundant" ([81c8be4](https://github.com/tanvir-glide/nixos-homelab/commit/81c8be4))
+- Setup bash script as it its redundant ([5eef6a7](https://github.com/tanvir-glide/nixos-homelab/commit/5eef6a7))
 
 ## 2026-06-02
 
 ### Other Changes
-- Hardware-configuration.nix ([995cbbc](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/995cbbc))
-- Change project license from MIT to GPLv3 ([5b167d1](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5b167d1))
-- Update copyright year and author in LICENSE ([91abb00](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/91abb00))
+- Hardware-configuration.nix ([995cbbc](https://github.com/tanvir-glide/nixos-homelab/commit/995cbbc))
+- Change project license from MIT to GPLv3 ([5b167d1](https://github.com/tanvir-glide/nixos-homelab/commit/5b167d1))
+- Update copyright year and author in LICENSE ([91abb00](https://github.com/tanvir-glide/nixos-homelab/commit/91abb00))
 
 ## 2026-05-24
 
 ### Other Changes
-- From docker to podman ([0b72729](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0b72729))
+- From docker to podman ([0b72729](https://github.com/tanvir-glide/nixos-homelab/commit/0b72729))
 
 ## 2026-05-23
 
 ### Other Changes
-- Secret management of api keys ([6cdd644](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6cdd644))
+- Secret management of api keys ([6cdd644](https://github.com/tanvir-glide/nixos-homelab/commit/6cdd644))
 
 ## 2026-05-20
 
 ### Other Changes
-- switched to rfc style ([5a117f9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5a117f9))
-- switched to rfc style ([5445684](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5445684))
-- To rfc style ([96f9524](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/96f9524))
-- Api keys handled by agenix ([0640037](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0640037))
+- switched to rfc style ([5a117f9](https://github.com/tanvir-glide/nixos-homelab/commit/5a117f9))
+- switched to rfc style ([5445684](https://github.com/tanvir-glide/nixos-homelab/commit/5445684))
+- To rfc style ([96f9524](https://github.com/tanvir-glide/nixos-homelab/commit/96f9524))
+- Api keys handled by agenix ([0640037](https://github.com/tanvir-glide/nixos-homelab/commit/0640037))
 
 ## 2026-05-14
 
 ### Other Changes
-- Ssh pubkey ([d643ce5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d643ce5))
+- Ssh pubkey ([d643ce5](https://github.com/tanvir-glide/nixos-homelab/commit/d643ce5))
 
 ## 2026-05-09
 
 ### Other Changes
-- Formatting again ([85891cf](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/85891cf))
-- Formatting ([0de3ebc](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0de3ebc))
-- Password auth disabled ([50ddaaa](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/50ddaaa))
-- Delay on login via ssh ([237330b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/237330b))
-- For detecting liveiso ([de4afb0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/de4afb0))
+- Formatting again ([85891cf](https://github.com/tanvir-glide/nixos-homelab/commit/85891cf))
+- Formatting ([0de3ebc](https://github.com/tanvir-glide/nixos-homelab/commit/0de3ebc))
+- Password auth disabled ([50ddaaa](https://github.com/tanvir-glide/nixos-homelab/commit/50ddaaa))
+- Delay on login via ssh ([237330b](https://github.com/tanvir-glide/nixos-homelab/commit/237330b))
+- For detecting liveiso ([de4afb0](https://github.com/tanvir-glide/nixos-homelab/commit/de4afb0))
 
 ## 2026-04-28
 
 ### Other Changes
-- Remove SessionTimeout default from Navidrome module ([0126eca](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0126eca))
-- Add missing semicolon in users.nix ([8ca360f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8ca360f))
-- Add hashed password to users module ([76b60bb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/76b60bb))
+- Remove SessionTimeout default from Navidrome module ([0126eca](https://github.com/tanvir-glide/nixos-homelab/commit/0126eca))
+- Add missing semicolon in users.nix ([8ca360f](https://github.com/tanvir-glide/nixos-homelab/commit/8ca360f))
+- Add hashed password to users module ([76b60bb](https://github.com/tanvir-glide/nixos-homelab/commit/76b60bb))
 
 ## 2026-04-23
 
 ### Other Changes
-- Enable sudo-rs ([c74ea2a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c74ea2a))
+- Enable sudo-rs ([c74ea2a](https://github.com/tanvir-glide/nixos-homelab/commit/c74ea2a))
 
 ## 2026-04-21
 
 ### Other Changes
-- Restrict Nix formatting check to .nix files ([272bc5a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/272bc5a))
-- Format nix files ([e0aace1](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e0aace1))
-- Add CI concurrency, magic Nix cache and nixfmt ([ae90a64](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ae90a64))
+- Restrict Nix formatting check to .nix files ([272bc5a](https://github.com/tanvir-glide/nixos-homelab/commit/272bc5a))
+- Format nix files ([e0aace1](https://github.com/tanvir-glide/nixos-homelab/commit/e0aace1))
+- Add CI concurrency, magic Nix cache and nixfmt ([ae90a64](https://github.com/tanvir-glide/nixos-homelab/commit/ae90a64))
 
 ## 2026-04-20
 
 ### Other Changes
-- Add Caddy reverse proxy badge to README ([357b157](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/357b157))
-- Remove allowed TCP ports from firewall ([7b0d344](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7b0d344))
+- Add Caddy reverse proxy badge to README ([357b157](https://github.com/tanvir-glide/nixos-homelab/commit/357b157))
+- Remove allowed TCP ports from firewall ([7b0d344](https://github.com/tanvir-glide/nixos-homelab/commit/7b0d344))
 
 ## 2026-04-19
 
 ### Other Changes
-- Unauthorized access on qbittorrent ([b9653fb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b9653fb))
+- Unauthorized access on qbittorrent ([b9653fb](https://github.com/tanvir-glide/nixos-homelab/commit/b9653fb))
 
 ## 2026-04-18
 
 ### Other Changes
-- "fix(network): allow caddy to fetch tailscale certificates" ([0b8dcc2](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0b8dcc2))
+- "fix(network): allow caddy to fetch tailscale certificates" ([0b8dcc2](https://github.com/tanvir-glide/nixos-homelab/commit/0b8dcc2))
 
 ## 2026-04-16
 
 ### Other Changes
-- removed duplicaed btop ([8025e57](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8025e57))
+- removed duplicaed btop ([8025e57](https://github.com/tanvir-glide/nixos-homelab/commit/8025e57))
 
 ## 2026-04-14
 
 ### Other Changes
-- fixed virtualHosts redundancy ([c09f772](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c09f772))
-- implemented reverse proxy using caddy ([fd4e727](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/fd4e727))
+- fixed virtualHosts redundancy ([c09f772](https://github.com/tanvir-glide/nixos-homelab/commit/c09f772))
+- implemented reverse proxy using caddy ([fd4e727](https://github.com/tanvir-glide/nixos-homelab/commit/fd4e727))
 
 ## 2026-04-10
 
 ### Other Changes
-- removed unnecessary path names in the file + better spacing ([f85f599](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f85f599))
+- removed unnecessary path names in the file + better spacing ([f85f599](https://github.com/tanvir-glide/nixos-homelab/commit/f85f599))
 
 ## 2026-04-08
 
 ### Other Changes
-- removed reverse proxy sections as it is not implemented yet ([dd7d396](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/dd7d396))
+- removed reverse proxy sections as it is not implemented yet ([dd7d396](https://github.com/tanvir-glide/nixos-homelab/commit/dd7d396))
 
 ## 2026-04-07
 
 ### Other Changes
-- added ctop ([f16b8e9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f16b8e9))
-- added Microbin to the firewall ([46b6693](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/46b6693))
-- shell alias fixed ([e603454](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e603454))
-- fixed wrong port number ([9222438](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9222438))
-- made setup.sh generate hw config first ([9dcb2b6](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9dcb2b6))
-- removed redundant grub code ([94fca8f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/94fca8f))
+- added ctop ([f16b8e9](https://github.com/tanvir-glide/nixos-homelab/commit/f16b8e9))
+- added Microbin to the firewall ([46b6693](https://github.com/tanvir-glide/nixos-homelab/commit/46b6693))
+- shell alias fixed ([e603454](https://github.com/tanvir-glide/nixos-homelab/commit/e603454))
+- fixed wrong port number ([9222438](https://github.com/tanvir-glide/nixos-homelab/commit/9222438))
+- made setup.sh generate hw config first ([9dcb2b6](https://github.com/tanvir-glide/nixos-homelab/commit/9dcb2b6))
+- removed redundant grub code ([94fca8f](https://github.com/tanvir-glide/nixos-homelab/commit/94fca8f))
 
 ## 2026-04-05
 
 ### Other Changes
-- fixed a typo :) ([9d1bae8](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9d1bae8))
+- fixed a typo :) ([9d1bae8](https://github.com/tanvir-glide/nixos-homelab/commit/9d1bae8))
 
 ## 2026-03-29
 
 ### Other Changes
-- updated file structure ([3d10e14](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3d10e14))
-- Added push notification service via Gotify ([7a17a23](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7a17a23))
+- updated file structure ([3d10e14](https://github.com/tanvir-glide/nixos-homelab/commit/3d10e14))
+- Added push notification service via Gotify ([7a17a23](https://github.com/tanvir-glide/nixos-homelab/commit/7a17a23))
 
 ## 2026-03-24
 
 ### Other Changes
-- fixed slskd login ([9ae9878](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9ae9878))
+- fixed slskd login ([9ae9878](https://github.com/tanvir-glide/nixos-homelab/commit/9ae9878))
 
 ## 2026-03-21
 
 ### Other Changes
-- added grub bootloader ([805c644](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/805c644))
+- added grub bootloader ([805c644](https://github.com/tanvir-glide/nixos-homelab/commit/805c644))
 
 ## 2026-03-19
 
 ### Other Changes
-- added a setup.sh ([0bc994e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0bc994e))
+- added a setup.sh ([0bc994e](https://github.com/tanvir-glide/nixos-homelab/commit/0bc994e))
 
 ## 2026-03-16
 
 ### Other Changes
-- added git + tldr to pkgs ([41be342](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/41be342))
+- added git + tldr to pkgs ([41be342](https://github.com/tanvir-glide/nixos-homelab/commit/41be342))
 
 ## 2026-03-13
 
 ### Other Changes
-- caution to not use the pre-existed hardware-conf.nix file ([afcd86a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/afcd86a))
+- caution to not use the pre-existed hardware-conf.nix file ([afcd86a](https://github.com/tanvir-glide/nixos-homelab/commit/afcd86a))
 
 ## 2026-03-12
 
 ### Other Changes
-- Remove Caddy badge from README ([1b141f7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1b141f7))
+- Remove Caddy badge from README ([1b141f7](https://github.com/tanvir-glide/nixos-homelab/commit/1b141f7))
 
 ## 2026-03-11
 
 ### Other Changes
-- added dir the ntfs drives that I mounted ([f59b9e3](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f59b9e3))
-- removed reverse proxy cause its yet to implement ([c9a354f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c9a354f))
+- added dir the ntfs drives that I mounted ([f59b9e3](https://github.com/tanvir-glide/nixos-homelab/commit/f59b9e3))
+- removed reverse proxy cause its yet to implement ([c9a354f](https://github.com/tanvir-glide/nixos-homelab/commit/c9a354f))
 
 ## 2026-03-10
 
 ### Other Changes
-- fixed nix-switch command ([7887adb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7887adb))
-- rewrote docker codes for better readability ([1662d91](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1662d91))
-- added os-prober for detecting windows in grub ([6927ff6](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6927ff6))
-- Remove unnecessary horizontal lines from README ([8b29b52](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8b29b52))
-- make the backaground transparent ([3bf8de2](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3bf8de2))
-- small typo ([04fb089](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/04fb089))
-- optimized the ss ([901379f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/901379f))
-- added a ss of fastfetch ([1dedb95](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1dedb95))
-- deleted Features section as it is redundant ([7b32f94](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7b32f94))
-- added Features section ([e0b23b7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e0b23b7))
+- fixed nix-switch command ([7887adb](https://github.com/tanvir-glide/nixos-homelab/commit/7887adb))
+- rewrote docker codes for better readability ([1662d91](https://github.com/tanvir-glide/nixos-homelab/commit/1662d91))
+- added os-prober for detecting windows in grub ([6927ff6](https://github.com/tanvir-glide/nixos-homelab/commit/6927ff6))
+- Remove unnecessary horizontal lines from README ([8b29b52](https://github.com/tanvir-glide/nixos-homelab/commit/8b29b52))
+- make the backaground transparent ([3bf8de2](https://github.com/tanvir-glide/nixos-homelab/commit/3bf8de2))
+- small typo ([04fb089](https://github.com/tanvir-glide/nixos-homelab/commit/04fb089))
+- optimized the ss ([901379f](https://github.com/tanvir-glide/nixos-homelab/commit/901379f))
+- added a ss of fastfetch ([1dedb95](https://github.com/tanvir-glide/nixos-homelab/commit/1dedb95))
+- deleted Features section as it is redundant ([7b32f94](https://github.com/tanvir-glide/nixos-homelab/commit/7b32f94))
+- added Features section ([e0b23b7](https://github.com/tanvir-glide/nixos-homelab/commit/e0b23b7))
 
 ## 2026-03-09
 
 ### Other Changes
-- fixed to-do to be more coherent ([26e3521](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/26e3521))
-- Yet to implement Continious Deployment ([31f65b1](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/31f65b1))
-- done with "better CI/CD" ([8c71e01](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8c71e01))
-- fixed all statix warning by reformatting up the code ([5893ad4](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5893ad4))
-- fixed statix warning for repeated boot attribute keys ([4f98492](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4f98492))
-- added check for dead or redundant code ([ed24105](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ed24105))
-- added flake check ([66b5b3f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/66b5b3f))
-- fixed nix-clean alias ([de8d1c5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/de8d1c5))
-- marked done in "monitoring tools" in todo section ([d567aba](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d567aba))
-- Update README.md Added Prometheus section ([8974e7a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8974e7a))
-- added prometheus service for collecting data ([ae25fcd](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ae25fcd))
-- Fixed some mistake ([74b4e6c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/74b4e6c))
-- added grafana for monitoring ([75d4f39](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/75d4f39))
+- fixed to-do to be more coherent ([26e3521](https://github.com/tanvir-glide/nixos-homelab/commit/26e3521))
+- Yet to implement Continious Deployment ([31f65b1](https://github.com/tanvir-glide/nixos-homelab/commit/31f65b1))
+- done with "better CI/CD" ([8c71e01](https://github.com/tanvir-glide/nixos-homelab/commit/8c71e01))
+- fixed all statix warning by reformatting up the code ([5893ad4](https://github.com/tanvir-glide/nixos-homelab/commit/5893ad4))
+- fixed statix warning for repeated boot attribute keys ([4f98492](https://github.com/tanvir-glide/nixos-homelab/commit/4f98492))
+- added check for dead or redundant code ([ed24105](https://github.com/tanvir-glide/nixos-homelab/commit/ed24105))
+- added flake check ([66b5b3f](https://github.com/tanvir-glide/nixos-homelab/commit/66b5b3f))
+- fixed nix-clean alias ([de8d1c5](https://github.com/tanvir-glide/nixos-homelab/commit/de8d1c5))
+- marked done in "monitoring tools" in todo section ([d567aba](https://github.com/tanvir-glide/nixos-homelab/commit/d567aba))
+- Update README.md Added Prometheus section ([8974e7a](https://github.com/tanvir-glide/nixos-homelab/commit/8974e7a))
+- added prometheus service for collecting data ([ae25fcd](https://github.com/tanvir-glide/nixos-homelab/commit/ae25fcd))
+- Fixed some mistake ([74b4e6c](https://github.com/tanvir-glide/nixos-homelab/commit/74b4e6c))
+- added grafana for monitoring ([75d4f39](https://github.com/tanvir-glide/nixos-homelab/commit/75d4f39))
 
 ## 2026-03-08
 
 ### Other Changes
-- Fixed metadata-remote url ([7f38a11](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7f38a11))
-- fixed wrong filename ([ee266e0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ee266e0))
-- fixed nix-clean alias, removed redundant microcode declearation ([5087e25](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5087e25))
-- Fix nix-clean command to use nix instead of nixos ([0b15f59](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0b15f59))
-- Updated with new hardware section ([926bf19](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/926bf19))
-- Update README.md ([6db3d6e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6db3d6e))
+- Fixed metadata-remote url ([7f38a11](https://github.com/tanvir-glide/nixos-homelab/commit/7f38a11))
+- fixed wrong filename ([ee266e0](https://github.com/tanvir-glide/nixos-homelab/commit/ee266e0))
+- fixed nix-clean alias, removed redundant microcode declearation ([5087e25](https://github.com/tanvir-glide/nixos-homelab/commit/5087e25))
+- Fix nix-clean command to use nix instead of nixos ([0b15f59](https://github.com/tanvir-glide/nixos-homelab/commit/0b15f59))
+- Updated with new hardware section ([926bf19](https://github.com/tanvir-glide/nixos-homelab/commit/926bf19))
+- Update README.md ([6db3d6e](https://github.com/tanvir-glide/nixos-homelab/commit/6db3d6e))
 
 ## 2026-03-07
 
 ### Other Changes
-- added more badges ([8f840af](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8f840af))
-- added TOC ([bb80a0d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/bb80a0d))
-- Added To-do section ([0542b64](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/0542b64))
-- removed dozzle section from README.md ([cdcee3f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cdcee3f))
-- fixed nix-clean alias, there was redundant commands ([d8e51c0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d8e51c0))
-- Rewrote README.md ([ac5c0ad](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ac5c0ad))
-- went back to old ci ([1d997fb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1d997fb))
-- revamped ci again :) ([925646b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/925646b))
-- showing trace on ci :) ([ba7d7ec](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ba7d7ec))
-- removed dulpicated nixos directory ([3aa0bd5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/3aa0bd5))
-- Warning are normal, letting it know ([cc3219d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cc3219d))
-- now ci.yml checks the configuration, not builds it ([fd54197](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/fd54197))
-- made storage.nix detect if its on CI ([ea45659](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ea45659))
-- changed nix build run ([eaae14f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/eaae14f))
-- Added Nix CI workflow with flake checks ([6631ba9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6631ba9))
-- Add MIT License to the project ([f6a041d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f6a041d))
-- added more env variables to slskd section ([98e5f09](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/98e5f09))
+- added more badges ([8f840af](https://github.com/tanvir-glide/nixos-homelab/commit/8f840af))
+- added TOC ([bb80a0d](https://github.com/tanvir-glide/nixos-homelab/commit/bb80a0d))
+- Added To-do section ([0542b64](https://github.com/tanvir-glide/nixos-homelab/commit/0542b64))
+- removed dozzle section from README.md ([cdcee3f](https://github.com/tanvir-glide/nixos-homelab/commit/cdcee3f))
+- fixed nix-clean alias, there was redundant commands ([d8e51c0](https://github.com/tanvir-glide/nixos-homelab/commit/d8e51c0))
+- Rewrote README.md ([ac5c0ad](https://github.com/tanvir-glide/nixos-homelab/commit/ac5c0ad))
+- went back to old ci ([1d997fb](https://github.com/tanvir-glide/nixos-homelab/commit/1d997fb))
+- revamped ci again :) ([925646b](https://github.com/tanvir-glide/nixos-homelab/commit/925646b))
+- showing trace on ci :) ([ba7d7ec](https://github.com/tanvir-glide/nixos-homelab/commit/ba7d7ec))
+- removed dulpicated nixos directory ([3aa0bd5](https://github.com/tanvir-glide/nixos-homelab/commit/3aa0bd5))
+- Warning are normal, letting it know ([cc3219d](https://github.com/tanvir-glide/nixos-homelab/commit/cc3219d))
+- now ci.yml checks the configuration, not builds it ([fd54197](https://github.com/tanvir-glide/nixos-homelab/commit/fd54197))
+- made storage.nix detect if its on CI ([ea45659](https://github.com/tanvir-glide/nixos-homelab/commit/ea45659))
+- changed nix build run ([eaae14f](https://github.com/tanvir-glide/nixos-homelab/commit/eaae14f))
+- Added Nix CI workflow with flake checks ([6631ba9](https://github.com/tanvir-glide/nixos-homelab/commit/6631ba9))
+- Add MIT License to the project ([f6a041d](https://github.com/tanvir-glide/nixos-homelab/commit/f6a041d))
+- added more env variables to slskd section ([98e5f09](https://github.com/tanvir-glide/nixos-homelab/commit/98e5f09))
 
 ## 2026-03-06
 
 ### Other Changes
-- README.md got outdated :) ([eac9d47](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/eac9d47))
-- fixed unnecessary comments on flake.nix ([d9c69e4](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d9c69e4))
-- fixed warning related to docker-containers.nix and changed some aliases ([102b6b9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/102b6b9))
-- Modularized nixOS config using flakes and removed old configs ([094f599](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/094f599))
+- README.md got outdated :) ([eac9d47](https://github.com/tanvir-glide/nixos-homelab/commit/eac9d47))
+- fixed unnecessary comments on flake.nix ([d9c69e4](https://github.com/tanvir-glide/nixos-homelab/commit/d9c69e4))
+- fixed warning related to docker-containers.nix and changed some aliases ([102b6b9](https://github.com/tanvir-glide/nixos-homelab/commit/102b6b9))
+- Modularized nixOS config using flakes and removed old configs ([094f599](https://github.com/tanvir-glide/nixos-homelab/commit/094f599))
 
 ## 2026-02-14
 
 ### Other Changes
-- removed the homepage ([148e404](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/148e404))
+- removed the homepage ([148e404](https://github.com/tanvir-glide/nixos-homelab/commit/148e404))
 
 ## 2026-02-13
 
 ### Other Changes
-- Cleaned focalboard docker data ([7de5653](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7de5653))
-- added notion like service (focalboard) as docker app ([f00539e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f00539e))
-- added a bash script to update all docker images at once ([c1a03fa](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c1a03fa))
+- Cleaned focalboard docker data ([7de5653](https://github.com/tanvir-glide/nixos-homelab/commit/7de5653))
+- added notion like service (focalboard) as docker app ([f00539e](https://github.com/tanvir-glide/nixos-homelab/commit/f00539e))
+- added a bash script to update all docker images at once ([c1a03fa](https://github.com/tanvir-glide/nixos-homelab/commit/c1a03fa))
 
 ## 2026-02-11
 
 ### Other Changes
-- added index.html to right dir ([e22ed21](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/e22ed21))
-- removed index.html ([ff40032](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ff40032))
-- fixed some typo :) ([36e3173](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/36e3173))
-- Updated readme.md with what 2 new docker apps do ([98945c3](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/98945c3))
-- added extra docker.service tweaks ([dfa6566](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/dfa6566))
+- added index.html to right dir ([e22ed21](https://github.com/tanvir-glide/nixos-homelab/commit/e22ed21))
+- removed index.html ([ff40032](https://github.com/tanvir-glide/nixos-homelab/commit/ff40032))
+- fixed some typo :) ([36e3173](https://github.com/tanvir-glide/nixos-homelab/commit/36e3173))
+- Updated readme.md with what 2 new docker apps do ([98945c3](https://github.com/tanvir-glide/nixos-homelab/commit/98945c3))
+- added extra docker.service tweaks ([dfa6566](https://github.com/tanvir-glide/nixos-homelab/commit/dfa6566))
 
 ## 2026-02-10
 
 ### Other Changes
-- changed the index.html title ([9d6cee1](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9d6cee1))
-- Made a homepage using caddy ([a7f4f50](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a7f4f50))
+- changed the index.html title ([9d6cee1](https://github.com/tanvir-glide/nixos-homelab/commit/9d6cee1))
+- Made a homepage using caddy ([a7f4f50](https://github.com/tanvir-glide/nixos-homelab/commit/a7f4f50))
 
 ## 2026-02-09
 
 ### Other Changes
-- Added metadata-remote service ([ae4014d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/ae4014d))
+- Added metadata-remote service ([ae4014d](https://github.com/tanvir-glide/nixos-homelab/commit/ae4014d))
 
 ## 2026-02-05
 
 ### Other Changes
-- made slskd config persistent ([7c98c7e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7c98c7e))
+- made slskd config persistent ([7c98c7e](https://github.com/tanvir-glide/nixos-homelab/commit/7c98c7e))
 
 ## 2026-02-03
 
 ### Other Changes
-- fixed the daily -> weekly updates in the docs ([c76f1b9](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/c76f1b9))
-- fixed formatting slightly ([5223ada](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5223ada))
-- updated README.md to add the qbittorrent section ([587641f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/587641f))
-- fixed docker-compose files to work better ([f0dd35d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f0dd35d))
-- Updated docker-compose of qbittorrent to work perfectly ([cfd2d35](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cfd2d35))
-- Updated docker-compose of qbittorrent to work perfectly ([34d139b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/34d139b))
-- Removed rootless docker ([7cea5b6](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7cea5b6))
+- fixed the daily -> weekly updates in the docs ([c76f1b9](https://github.com/tanvir-glide/nixos-homelab/commit/c76f1b9))
+- fixed formatting slightly ([5223ada](https://github.com/tanvir-glide/nixos-homelab/commit/5223ada))
+- updated README.md to add the qbittorrent section ([587641f](https://github.com/tanvir-glide/nixos-homelab/commit/587641f))
+- fixed docker-compose files to work better ([f0dd35d](https://github.com/tanvir-glide/nixos-homelab/commit/f0dd35d))
+- Updated docker-compose of qbittorrent to work perfectly ([cfd2d35](https://github.com/tanvir-glide/nixos-homelab/commit/cfd2d35))
+- Updated docker-compose of qbittorrent to work perfectly ([34d139b](https://github.com/tanvir-glide/nixos-homelab/commit/34d139b))
+- Removed rootless docker ([7cea5b6](https://github.com/tanvir-glide/nixos-homelab/commit/7cea5b6))
 
 ## 2026-02-01
 
 ### Other Changes
-- implemented fail2ban ([08f510f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/08f510f))
-- Updated firewall as well as switched to weekly update ([7a3c5ec](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7a3c5ec))
+- implemented fail2ban ([08f510f](https://github.com/tanvir-glide/nixos-homelab/commit/08f510f))
+- Updated firewall as well as switched to weekly update ([7a3c5ec](https://github.com/tanvir-glide/nixos-homelab/commit/7a3c5ec))
 
 ## 2026-01-31
 
 ### Other Changes
-- Changed pubkey ([f154cc5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f154cc5))
-- updated configuration with more docker containers ([b99070e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/b99070e))
+- Changed pubkey ([f154cc5](https://github.com/tanvir-glide/nixos-homelab/commit/f154cc5))
+- updated configuration with more docker containers ([b99070e](https://github.com/tanvir-glide/nixos-homelab/commit/b99070e))
 
 ## 2026-01-26
 
 ### Other Changes
-- Updated README to add Navidrome section ([d029dd7](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/d029dd7))
-- removed unnecessary .DS_Store ([927fd8f](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/927fd8f))
-- added navidrome + slskd for music streaming ([6cc5b79](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/6cc5b79))
-- added navidrome + slskd for music streaming ([8ff1a24](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8ff1a24))
-- removed navidrome support ([f591dfa](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/f591dfa))
+- Updated README to add Navidrome section ([d029dd7](https://github.com/tanvir-glide/nixos-homelab/commit/d029dd7))
+- removed unnecessary .DS_Store ([927fd8f](https://github.com/tanvir-glide/nixos-homelab/commit/927fd8f))
+- added navidrome + slskd for music streaming ([6cc5b79](https://github.com/tanvir-glide/nixos-homelab/commit/6cc5b79))
+- added navidrome + slskd for music streaming ([8ff1a24](https://github.com/tanvir-glide/nixos-homelab/commit/8ff1a24))
+- removed navidrome support ([f591dfa](https://github.com/tanvir-glide/nixos-homelab/commit/f591dfa))
 
 ## 2026-01-23
 
 ### Other Changes
-- Update Navidrome description to include Docker ([7316e8d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/7316e8d))
-- remove DS_Store ([cc00414](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cc00414))
-- configured navidrome server using docker now instead of native ([1d860cb](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1d860cb))
+- Update Navidrome description to include Docker ([7316e8d](https://github.com/tanvir-glide/nixos-homelab/commit/7316e8d))
+- remove DS_Store ([cc00414](https://github.com/tanvir-glide/nixos-homelab/commit/cc00414))
+- configured navidrome server using docker now instead of native ([1d860cb](https://github.com/tanvir-glide/nixos-homelab/commit/1d860cb))
 
 ## 2026-01-22
 
 ### Other Changes
-- fixed borked ssh key ([62c1611](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/62c1611))
-- Removed navidrome ([5e0918a](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/5e0918a))
+- fixed borked ssh key ([62c1611](https://github.com/tanvir-glide/nixos-homelab/commit/62c1611))
+- Removed navidrome ([5e0918a](https://github.com/tanvir-glide/nixos-homelab/commit/5e0918a))
 
 ## 2026-01-17
 
 ### Other Changes
-- Correct capitalization in README.md ([fe4098b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/fe4098b))
-- Fix formatting in SSH configuration section ([9742e2d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/9742e2d))
-- Slightly reformatted README.md ([4acb9d0](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/4acb9d0))
-- Slightly reformatted README.md ([2ce522d](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/2ce522d))
-- Slightly edited README.md ([720d8ea](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/720d8ea))
-- Slightly edited README.md ([8c46001](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/8c46001))
-- Added README.md ([cc05758](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cc05758))
-- Deleted README.md ([cf35ca5](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/cf35ca5))
-- Updated format of README.md ([a37211b](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/a37211b))
-- Added configuration.nix and README.md ([1aa5b1c](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1aa5b1c))
-- Added configuration.nix and README.md ([1304e1e](https://github.com/Tanvir101cmd/ansible-linux-baseline/commit/1304e1e))
+- Correct capitalization in README.md ([fe4098b](https://github.com/tanvir-glide/nixos-homelab/commit/fe4098b))
+- Fix formatting in SSH configuration section ([9742e2d](https://github.com/tanvir-glide/nixos-homelab/commit/9742e2d))
+- Slightly reformatted README.md ([4acb9d0](https://github.com/tanvir-glide/nixos-homelab/commit/4acb9d0))
+- Slightly reformatted README.md ([2ce522d](https://github.com/tanvir-glide/nixos-homelab/commit/2ce522d))
+- Slightly edited README.md ([720d8ea](https://github.com/tanvir-glide/nixos-homelab/commit/720d8ea))
+- Slightly edited README.md ([8c46001](https://github.com/tanvir-glide/nixos-homelab/commit/8c46001))
+- Added README.md ([cc05758](https://github.com/tanvir-glide/nixos-homelab/commit/cc05758))
+- Deleted README.md ([cf35ca5](https://github.com/tanvir-glide/nixos-homelab/commit/cf35ca5))
+- Updated format of README.md ([a37211b](https://github.com/tanvir-glide/nixos-homelab/commit/a37211b))
+- Added configuration.nix and README.md ([1aa5b1c](https://github.com/tanvir-glide/nixos-homelab/commit/1aa5b1c))
+- Added configuration.nix and README.md ([1304e1e](https://github.com/tanvir-glide/nixos-homelab/commit/1304e1e))

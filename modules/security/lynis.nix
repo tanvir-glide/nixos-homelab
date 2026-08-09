@@ -3,9 +3,7 @@
   pkgs,
   lib,
   ...
-}:
-
-{
+}: {
   boot.kernel.sysctl = {
     "dev.tty.ldisc_autoload" = 0;
     "fs.protected_fifos" = 2;
@@ -32,9 +30,19 @@
   security = {
     protectKernelImage = true;
     forcePageTableIsolation = true;
-    auditd.enable = true;
+    auditd = {
+      enable = true;
+
+      settings = {
+        max_log_file = 20;
+        max_log_file_action = "ROTATE";
+        num_logs = 3;
+      };
+    };
+
     audit = {
       enable = true;
+
       rules = [
         "-w /etc/sudoers -p wa -k sudoers"
         "-w /etc/sudoers.d/ -p wa -k sudoers"

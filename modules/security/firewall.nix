@@ -4,8 +4,7 @@
   pkgs,
   lib,
   ...
-}:
-let
+}: let
   ports = {
     navidrome = 14533;
     slskd-web = 15030;
@@ -18,25 +17,35 @@ let
     caddy = 80;
     caddy-ssl = 443;
   };
-in
-{
+in {
   networking.firewall = {
     enable = true;
 
-    # Trust Tailscale interface
-    trustedInterfaces = [ "tailscale0" ];
+    # Trust Tailscale & Podman interface
+    trustedInterfaces = ["tailscale0" "podman0"];
 
     # Open TCP ports
     allowedTCPPorts = [
+      53
+      111
+      2049
+      4000
+      4001
+      4002
     ];
 
     # Open UDP ports
     allowedUDPPorts = [
       ports.slskd-transfer
       ports.tailscale
+      53
+      111
+      2049
+      4000
+      4001
+      4002
     ];
 
     checkReversePath = "loose";
   };
-
 }

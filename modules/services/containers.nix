@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-
-let
+}: let
   dataDir = "/var/lib/docker-containers";
 
   commonEnv = {
@@ -18,8 +16,8 @@ let
 
   slskdConfig = pkgs.writeText "slskd.yml" ''
     soulseek:
-      username: "YourSoulseekUsername"
-      password: "YourSoulseekPassword"
+      username: "YourSoulSeekUsername"
+      password: "YourSoulSeekPasswd"
 
     directories:
       downloads: /music
@@ -30,23 +28,18 @@ let
         - /music
 
   '';
-
-in
-
-{
+in {
   virtualisation = {
     podman = {
       enable = true;
       dockerCompat = true;
       defaultNetwork.settings.dns_enabled = true;
-
     };
 
     oci-containers = {
       backend = "podman";
 
       containers = {
-
         # SLSKD
         slskd = {
           image = "ghcr.io/slskd/slskd:latest";
@@ -58,9 +51,11 @@ in
             "50300:50300/udp"
           ];
 
-          environment = commonEnv // {
-            SLSKD_REMOTE_CONFIGURATION = "true";
-          };
+          environment =
+            commonEnv
+            // {
+              SLSKD_REMOTE_CONFIGURATION = "true";
+            };
 
           volumes = [
             "${mkData "slskd/config"}:/config"
@@ -70,34 +65,11 @@ in
           ];
         };
 
-        # qBittorrent
-        qbittorrent = {
-          image = "lscr.io/linuxserver/qbittorrent:latest";
-
-          ports = [
-            "127.0.0.1:8080:8080"
-            "6881:6881"
-            "6881:6881/udp"
-          ];
-
-          environment = commonEnv // {
-            WEBUI_PORT = "8080";
-
-            WEBUI_REVERSE_PROXY = "true";
-            WEBUI_HOST_HEADER_VALIDATION = "false";
-          };
-
-          volumes = [
-            "${mkData "config"}:/config"
-            "/mnt/More/Torrent:/downloads"
-          ];
-        };
-
         # Microbin
         microbin = {
           image = "danielszabo99/microbin:latest";
 
-          ports = [ "127.0.0.1:8081:8080" ];
+          ports = ["127.0.0.1:8081:8080"];
 
           environment = commonEnv;
 
@@ -110,7 +82,7 @@ in
         metadata-remote = {
           image = "ghcr.io/wow-signal-dev/metadata-remote:latest";
 
-          ports = [ "127.0.0.1:8338:8338" ];
+          ports = ["127.0.0.1:8338:8338"];
 
           environment = commonEnv;
 
@@ -131,7 +103,7 @@ in
         focalboard = {
           image = "mattermost/focalboard:latest";
 
-          ports = [ "127.0.0.1:8000:8000" ];
+          ports = ["127.0.0.1:8000:8000"];
 
           environment = commonEnv;
 
@@ -140,6 +112,16 @@ in
           ];
         };
 
+        # Manga Reader
+        komga = {
+          image = "gotson/komga:latest";
+
+          ports = ["127.0.0.1:5000:25600"];
+          volumes = [
+            "/var/lib/komga:/config"
+            "/mnt/More/Manga:/data"
+          ];
+        };
       };
     };
   };

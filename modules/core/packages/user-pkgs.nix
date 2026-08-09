@@ -3,15 +3,12 @@
   pkgs,
   lib,
   ...
-}:
-
-let
+}: let
   # User-specific package lists
   userPackages = with pkgs; [
-    # fetch / montioring tools
+    # fetch
     fastfetch
     pfetch-rs
-    ctop
 
     # Help
     tldr
@@ -30,9 +27,11 @@ let
     # Text processing
     jq # JSON processor
     yq # YAML processor
+
+    # Extras
+    ffmpeg
   ];
-in
-{
+in {
   # Apply to your user
   users.users.tanvir = {
     packages = userPackages;

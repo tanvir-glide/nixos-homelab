@@ -64,11 +64,11 @@ This repository hosts the complete NixOS configuration for a home server running
 ## Repository Structure
 
 ```bash
-.
 ├── CHANGELOG.md
 ├── configuration.nix
 ├── flake.lock
 ├── flake.nix
+├── generate-changelog.py
 ├── hardware-configuration.nix
 ├── LICENSE
 ├── modules
@@ -89,13 +89,17 @@ This repository hosts the complete NixOS configuration for a home server running
 │   └── services
 │       ├── caddy.nix
 │       ├── containers.nix
+│       ├── homepage.nix
 │       ├── minecraft.nix
 │       ├── monitoring.nix
-│       └── navidrome.nix
+│       ├── navidrome.nix
+│       ├── nfs.nix
+│       └── transmission.nix
 ├── README.md
-└── secrets
-    ├── lastfm.age
-    └── secrets.nix
+├── secrets
+│   ├── lastfm.age
+│   └── secrets.nix
+└── statix.toml
 ```
 
 ---
@@ -148,19 +152,22 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 
 ## Native Services
 
-| Service                                    | Internal Port | Public Tailscale Proxy Port | Description                                               |
-| :-------------------------------------------| :-------------:| :---------------------------:| :----------------------------------------------------------|
-| [Navidrome](https://www.navidrome.org/)    | `4533`        | `14533`                     | Music streaming server (Subsonic-compatible)              |
-| [Grafana](https://grafana.com/)            | `3000`        | Direct LAN Only             | The open-source platform for monitoring and observability |
-| [Prometheus](https://prometheus.io/)       | `9090`        | Direct LAN Only             | The open-source monitoring and alerting toolkit           |
-| [Minecraft (PaperMC)](https://papermc.io/) | `46565`       | `46565` (Direct)            | Minecraft game server                                     |
+> [!NOTE]
+> All services are accessible through MagicDNS (for e.g., https://nixos.tail223014.ts.net/)
+
+| Service                                    | Internal Port | Public Tailscale Proxy Port | Description                                        |
+| :-------------------------------------------| :-------------:| :---------------------------:| :---------------------------------------------------|
+| [Navidrome](https://www.navidrome.org/)    | `4533`        | `14533`                     | Music streaming server (Subsonic-compatible)       |
+| [Beszel](https://beszel.dev/)              | `8090`        | `18090`                     | The FOSS platform for monitoring and observability |
+| [Minecraft (PaperMC)](https://papermc.io/) | `46565`       | `46565`                     | Minecraft server                                   |
 
 ## Podman Services
 
 | Service                                                              | Internal Port | Public Tailscale Proxy Port | Description                          |
 | :---------------------------------------------------------------------| :-------------:| :---------------------------:| :-------------------------------------|
+| [Komga](https://komga.org)                                           | `5000`        | `15000`                     | Book and Manga Reader                |
 | [slskd](https://github.com/slskd/slskd)                              | `5030`        | `15030`                     | Soulseek web client                  |
-| [qBittorrent](https://www.qbittorrent.org/)                          | `8080`        | `18080`                     | BitTorrent client with Web UI        |
+| [Transmission](https://transmissionbt.com/)                          | `8080`        | `18080`                     | Dead simple Torrent client           |
 | [Metadata-remote](https://github.com/wow-signal-dev/metadata-remote) | `8338`        | `18338`                     | Music metadata management            |
 | [Focalboard](https://www.focalboard.com/)                            | `8000`        | `18000`                     | Notion-like project management board |
 | [Microbin](https://microbin.eu/)                                     | `8081`        | `18081`                     | Pastebin alternative                 |
@@ -170,13 +177,14 @@ This configuration runs on a repurposed laptop serving as a 24/7 home server.
 ## Networking & Security
 
 - **Tailscale** enabled with firewall support for the `tailscale0` interface
+- **NFS (Network File System)** enabled with directory `/mnt/Files/Movies` and `/mnt/More/Anime` with read-only permission
 - **Firewall:**
-  - Open TCP ports: None
-  - Open UDP ports: `50300` (slskd-transfer), and `41641` (tailscale)
+  - Open TCP ports: `111` `2049` `4000` `4001` `4002` (For NFS)
+  - Open UDP ports: `50300` (slskd-transfer), `41641` (tailscale) and `111` `2049` `4000` `4001` `4002` (For NFS)
 - **SSH:** Port `2222`, password auth disabled, public key only, root login prohibited
 - **Fail2ban:** Active
 
-**Zero Trust Internal Firewall**: Standard physical local area network (LAN) access is blocked by default (`allowedTCPPorts = []`). Inbound traffic is exclusively accessible through authenticated tailscale connections via `trustedInterfaces = [ "tailscale0" ]`
+**Zero Trust Internal Firewall**: Standard physical local area network (LAN) access is blocked by default (aside from the NFS ports as they are accessed via local ip, not tailscale). Inbound traffic is exclusively accessible through authenticated tailscale connections via `trustedInterfaces = [ "tailscale0" ]`
 
 ---
 

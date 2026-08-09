@@ -3,9 +3,7 @@
   pkgs,
   lib,
   ...
-}:
-
-{
+}: {
   # System state and timezone
   system.stateVersion = "26.05";
   time.timeZone = "Asia/Dhaka";
@@ -20,7 +18,7 @@
       };
     };
 
-    kernelModules = [ "ntfs3" ];
+    kernelModules = ["ntfs3"];
   };
 
   # Select internationalisation properties.
@@ -38,7 +36,18 @@
   };
 
   # Hardware optimization
-  services.auto-cpufreq.enable = true;
+  services = {
+    auto-cpufreq = {
+      enable = true;
+    };
+
+    thermald = {
+      enable = true;
+    };
+  };
+
+  # Power saving mode
+  powerManagement.cpuFreqGovernor = "powersave";
 
   # Making sure closing the laptop lid doesn't put it to sleep
   services = {

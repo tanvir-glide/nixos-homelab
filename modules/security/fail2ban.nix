@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Fail2Ban to automatically ban sus IPs
   services.fail2ban = {
     enable = true;
